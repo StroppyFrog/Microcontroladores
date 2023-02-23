@@ -1,0 +1,5 @@
+Compiling C:\Users\Ernesto VC\Documents\Programas en c\SemaforoF\SemaforoF on 20-feb.-23 at 10:19
+>>> Warning 203 "C:\Users\Ernesto VC\Documents\Programas en c\SemaforoF\SemaforoF.c" Line 57(1,1): Condition always TRUE
+      Memory usage:   ROM=2%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.

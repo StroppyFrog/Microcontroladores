@@ -1,0 +1,11 @@
+ÀÄSemaforoF
+   ÀÄMAIN  0/30  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄgreen  0/33  Ram=2
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÃÄyellow  0/33  Ram=2
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÀÄred  0/28  Ram=2
+         ÀÄ@delay_ms1  0/21  Ram=1
