@@ -1,0 +1,40 @@
+[PROJECT]
+Target=Practica2F.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=Practica2F.c
+[Practica2F.c]
+Type=4
+[mru-list]
+1=Practica2F.c
+
+[defines]
+buildcount=83
+
+[ProjectLog]
+Days=2
+D1=28-02-2023
+D1_L=3
+D1_L1=[79577]Started Editing.
+D1_L2=[80967]Stopped Editing.
+D1_L3=[81691]Started Editing.
+D2=01-03-2023
+D2_L=2
+D2_L1=[2979]Stopped Editing.
+TotalEdit=147
+TotalDebug=0
+D2_E=147
+D2_D=0
+D2_L2=[2979]Project Closed.
+
+[Opened Files]
+1=Practica2F.c
+t1=7
+2=..\Semaforo\Semaforo.c
+t2=1
+Count=2
+[Units]
+Count=1
+1=Practica2F (main)
