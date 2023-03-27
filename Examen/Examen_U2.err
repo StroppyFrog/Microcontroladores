@@ -1,0 +1,5 @@
+Compiling C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen\Examen_U2 on 27-mar.-23 at 12:00
+>>> Warning 202 "C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen\Examen_U2.c" Line 36(9,14): Variable never used:   tecla
+      Memory usage:   ROM=10%      RAM=4% - 13%
+      0 Errors,  1 Warnings.
+Build Successful.

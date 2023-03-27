@@ -1,0 +1,64 @@
+[PROJECT]
+Target=Practica2F.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=Practica2F.c
+[Practica2F.c]
+Type=4
+[mru-list]
+1=Practica2F.c
+
+[defines]
+buildcount=120
+
+[ProjectLog]
+Days=5
+D1=28-02-2023
+D1_L=3
+D1_L1=[79577]Started Editing.
+D1_L2=[80967]Stopped Editing.
+D1_L3=[81691]Started Editing.
+D2=01-03-2023
+D2_L=11
+D2_L1=[2979]Stopped Editing.
+TotalEdit=186
+TotalDebug=0
+D2_E=186
+D2_D=0
+D2_L2=[2979]Project Closed.
+D2_L3=[36291]Project Opened.
+D2_L4=[36583]Started Editing.
+D2_L5=[37003]Project Closed.
+D2_L6=[37080]Project Opened.
+D2_L7=[37159]Started Editing.
+D2_L8=[38070]Stopped Editing.
+D2_L9=[38125]Started Editing.
+D2_L10=[39491]Stopped Editing.
+D2_L11=[39491]Project Closed.
+D3=06-03-2023
+D3_L=2
+D3_L1=[37772]Project Opened.
+D3_L2=[39565]Project Closed.
+D4=08-03-2023
+D4_L=2
+D4_L1=[47677]Project Opened.
+D4_L2=[47748]Project Closed.
+D5=27-03-2023
+D5_L=2
+D5_L1=[36563]Project Opened.
+D5_L2=[38204]Project Closed.
+
+[Opened Files]
+1=Practica2F.c
+t1=83
+2=..\..\..\Programas en c\Pruebapract2\Pruebapract2.c
+t2=21
+Count=1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=Practica2F (main)
