@@ -19,6 +19,19 @@
 #define S_Light PIN_B5
 #define boton_paro PIN_B7
 
+void main()
+{
+   lcd_init();
+   kbd_init();
+   paro();
+   input(boton_paro);
+   int16 menu;
+   
+
+   printf(lcd_putc,"\fFresa/Light: %3Lu", menu);
+   menu = get_num_lcd(9,2);
+}
+
 void paro()
 {
    output_low(M_Fresa);
@@ -32,24 +45,4 @@ void paro_emergencia()
    while(input(boton_paro) == 1){}
    printf(lcd_putc,"\fPRESS ANY KEY");
    char tecla = read_key();
-}
-
-
-void main()
-{
-   lcd_init();
-   kbd_init();
-   paro();
-   input(boton_paro);
-   int16 menu;
-   
-
-   printf(lcd_putc,"Fresa/Light: %3Lu", menu);
-   menu = get_num_lcd(9,2);
-   
-   switch(menu)
-   {
-      case 1:
-         
-   }
 }

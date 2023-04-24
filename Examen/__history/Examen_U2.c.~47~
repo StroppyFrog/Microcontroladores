@@ -5,7 +5,7 @@
 #use delay(crystal = 20000000)
 #FUSES NOWDT, NOBROWNOUT, NOLVP, HS
 
-#include <lcd_c.c>
+#include <lcd_d.c>
 #include <kbd4x4_d.c>
 #include <getNum16.c>
 
@@ -44,12 +44,6 @@ void main()
    int16 menu;
    
 
-   printf(lcd_putc,"Fresa/Light: %3Lu", menu);
+   printf(lcd_putc,"\fFresa/Light: %3Lu", menu);
    menu = get_num_lcd(9,2);
-   
-   switch(menu)
-   {
-      case 1:
-         
-   }
 }

@@ -1,9 +1,9 @@
-D G "__PCM__" 0 111 ""5.112""
-D G "__DEVICE__" 0 111 "877"
-D G "__DATE__" 0 111 ""27-Mar-23""
-D G "__TIME__" 0 111 ""19:40:35""
-D G "_UNICODE" 0 111 ""?""
-D G "__EVAL" 0 111 ""?"" "-. Motor DC .-"
+D G "__PCM__" 0 101 ""5.112""
+D G "__DEVICE__" 0 101 "877"
+D G "__DATE__" 0 101 ""24-Apr-23""
+D G "__TIME__" 0 101 ""16:37:25""
+D G "_UNICODE" 0 101 ""?""
+D G "__EVAL" 0 101 ""?"" "-. Motor bipolar .-"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 F N "set_tris_a" 1 37 ""
 V L "value" 1 37 "int8" `55 
@@ -1166,60 +1166,62 @@ D G "INT_BUSCOL" 1 702 "0x008D08"
 D G "INT_EEPROM" 1 703 "0x008D10"
 D G "INT_TIMER0" 1 704 "0x000B20"
 D G "INT_COMP" 1 705 "0x008D40"
-D G "LCD_DATA_PORT" 2 62 "0x07" "portc    LA PUSE YO"
+D G "LCD_DATA_PORT" 2 63 "0x08" "portd    LA PUSE YO"
+C L "jump_to_isr" 2 2 1 "FUNCTION"
 C L "jump_to_isr" 2 2 1 "FUNCTION"
 C L "jump_to_isr" 2 2 1 "FUNCTION"
 C L "jump_to_isr" 2 2 1 "FUNCTION"
 C L "jump_to_isr" 2 2 1 "FUNCTION"
 C L "jump_to_isr" 2 2 1 "FUNCTION"
 C L "jump_to_isr" 2 2 2 "FUNCTION"
-T G "LCD_PIN_MAP" 2 74 "{int1 enable,int1 rs,int1 rw,int1 unused,int4 data}" `706 
-D G "use_portb_lcd" 2 76 "TRUE"
-D G "lcd_output_enable" 2 91 "(x) lcdlat.enable=x"
-D G "lcd_enable_tris" 2 92 "()   lcdtris.enable=0"
-D G "lcd_output_rs" 2 99 "(x) lcdlat.rs=x"
-D G "lcd_rs_tris" 2 100 "()   lcdtris.rs=0"
-D G "lcd_output_rw" 2 107 "(x) lcdlat.rw=x"
-D G "lcd_rw_tris" 2 108 "()   lcdtris.rw=0"
-V G "lcd" 2 132 "LCD_PIN_MAP" `707 
-V G "lcdlat" 2 132 "LCD_PIN_MAP" `708 
-V G "lcdtris" 2 132 "LCD_PIN_MAP" `709 
-D G "LCD_TYPE" 2 149 "2" "0=5x7, 1=5x10, 2=2 lines"
-D G "LCD_LINE_TWO" 2 153 "0x40" "LCD RAM address for the second line"
-V G "LCD_INIT_STRING" 2 156 "[4]" `711 
-F N "lcd_read_nibble" 2 170 ""
-f G "lcd_read_nibble" 2 170 "int8()" `713 
-F N "lcd_read_byte" 2 172 ""
-F G "lcd_read_byte" 2 173 "int8()" `714 
-V L "low" 2 174 "int8" `715 
-V L "high" 2 174 "int8" `716 
-F N "lcd_read_nibble" 2 219 ""
-F G "lcd_read_nibble" 2 220 "int8()" `713 
-F N "lcd_send_nibble" 2 236 ""
-V L "n" 2 236 "int8" `718 
-F G "lcd_send_nibble" 2 237 "void(int8 n)" `717 
-F N "lcd_send_byte" 2 254 ""
-V L "address" 2 254 "int8" `720 
-V L "n" 2 254 "int8" `721 
-F G "lcd_send_byte" 2 255 "void(int8 address,int8 n)" `719 
-F N "lcd_init" 2 267 ""
-F G "lcd_init" 2 268 "void()" `722 
-V L "i" 2 269 "int8" `723 
-F N "lcd_gotoxy" 2 303 ""
-V L "x" 2 303 "int8" `725 
-V L "y" 2 303 "int8" `726 
-F G "lcd_gotoxy" 2 304 "void(int8 x,int8 y)" `724 
-V L "address" 2 305 "int8" `727 
-F N "lcd_putc" 2 316 ""
-V L "c" 2 316 "int8" `729 
-F G "lcd_putc" 2 317 "void(int8 c)" `728 
-F N "lcd_getc" 2 332 ""
-V L "x" 2 332 "int8" `731 
-V L "y" 2 332 "int8" `732 
-F G "lcd_getc" 2 333 "int8(int8 x,int8 y)" `730 
-V L "value" 2 334 "int8" `733 
+T G "LCD_PIN_MAP" 2 76 "{int1 enable,int1 rs,int1 rw,int1 unused,int4 data}" `706  "this is to improve compatability with previous LCD drivers that accepted"
+D G "lcd_output_enable" 2 95 "(x) lcdlat.enable=x"
+D G "lcd_enable_tris" 2 96 "()   lcdtris.enable=0"
+D G "lcd_output_rs" 2 103 "(x) lcdlat.rs=x"
+D G "lcd_rs_tris" 2 104 "()   lcdtris.rs=0"
+D G "lcd_output_rw" 2 111 "(x) lcdlat.rw=x"
+D G "lcd_rw_tris" 2 112 "()   lcdtris.rw=0"
+V G "lcd" 2 147 "LCD_PIN_MAP" `707 
+V G "lcdlat" 2 147 "LCD_PIN_MAP" `708 
+V G "lcdtris" 2 147 "LCD_PIN_MAP" `709 
+D G "LCD_TYPE" 2 165 "2" "0=5x7, 1=5x10, 2=2 lines"
+D G "LCD_LINE_TWO" 2 169 "0x40" "LCD RAM address for the second line"
+V G "LCD_INIT_STRING" 2 172 "[4]" `711 
+C L "jump_to_isr" 2 2 2 "FUNCTION"
+F N "lcd_read_nibble" 2 176 ""
+f G "lcd_read_nibble" 2 176 "int8()" `713 
+F N "lcd_read_byte" 2 178 ""
+F G "lcd_read_byte" 2 179 "int8()" `714 
+V L "low" 2 180 "int8" `715 
+V L "high" 2 180 "int8" `716 
+F N "lcd_read_nibble" 2 225 ""
+F G "lcd_read_nibble" 2 226 "int8()" `713 
+F N "lcd_send_nibble" 2 242 ""
+V L "n" 2 242 "int8" `718 
+F G "lcd_send_nibble" 2 243 "void(int8 n)" `717 
+F N "lcd_send_byte" 2 260 ""
+V L "address" 2 260 "int8" `720 
+V L "n" 2 260 "int8" `721 
+F G "lcd_send_byte" 2 261 "void(int8 address,int8 n)" `719 
+F N "lcd_init" 2 273 ""
+F G "lcd_init" 2 274 "void()" `722 
+V L "i" 2 275 "int8" `723 
+F N "lcd_gotoxy" 2 309 ""
+V L "x" 2 309 "int8" `725 
+V L "y" 2 309 "int8" `726 
+F G "lcd_gotoxy" 2 310 "void(int8 x,int8 y)" `724 
+V L "address" 2 311 "int8" `727 
+F N "lcd_putc" 2 322 ""
+V L "c" 2 322 "int8" `729 
+F G "lcd_putc" 2 323 "void(int8 c)" `728 
+F N "lcd_getc" 2 338 ""
+V L "x" 2 338 "int8" `731 
+V L "y" 2 338 "int8" `732 
+F G "lcd_getc" 2 339 "int8(int8 x,int8 y)" `730 
+V L "value" 2 340 "int8" `733 
 C L "lcd_getc" 2 2 1 "FUNCTION"
-D G "set_tris_kbd" 3 47 "(x) set_tris_d(x)"
+D G "use_portb_kbd" 3 24 "TRUE"
+D G "set_tris_kbd" 3 45 "(x) set_tris_b(x)"
 D G "COL0" 3 66 " (1 << 4)"
 D G "COL1" 3 67 " (1 << 5)"
 D G "COL2" 3 68 " (1 << 6)"
@@ -1269,20 +1271,29 @@ V L "cadena" 4 77 "int8[5]" `775
 V L "index" 4 78 "int8" `776 
 V L "tecla" 4 79 "int8" `777 
 V L "i" 4 94 "int8" `779 
-D G "M_Fresa" 0 16 "PIN_B0"
-D G "M_Light" 0 17 "PIN_B1"
-D G "S_Fresa" 0 18 "PIN_B4"
-D G "S_Light" 0 19 "PIN_B5"
-D G "boton_paro" 0 20 "PIN_B7"
-F N "paro" 0 22 ""
-F G "paro" 0 23 "void()" `781 
-F N "paro_emergencia" 0 28 ""
-F G "paro_emergencia" 0 29 "void()" `782 
-C L "paro_emergencia" 0 30 1 "FUNCTION"
-V L "tecla" 0 34 "int8" `785 
-F N "MAIN" 0 38 ""
-F G "MAIN" 0 39 "void()" `786 
-V L "menu" 0 44 "int16" `789 
+D G "MA1" 0 17 "PIN_A0"
+D G "MA2" 0 18 "PIN_A1"
+D G "MA3" 0 19 "PIN_A2"
+D G "MA4" 0 20 "PIN_A3"
+V G "pasos" 0 22 "[8]" `781 
+V G "step_index" 0 35 "int8" `783 
+F N "update_stepper" 0 37 ""
+F G "update_stepper" 0 37 "void()" `784 
+F N "step_up" 0 41 ""
+F G "step_up" 0 41 "void()" `785 
+F N "step_back" 0 50 ""
+F G "step_back" 0 50 "void()" `786 
+F N "MAIN" 0 58 ""
+F G "MAIN" 0 58 "void()" `787  "setup_uart(9600); //Configurar baudios"
+C L "MAIN" 0 60 1 "FUNCTION"
+V L "numero" 0 65 "int16" `790 
+V L "pos_actual" 0 66 "float" `791 
+V L "micro_paso" 0 67 "float" `792 
+V L "grados" 0 71 "float" `794 
+V L "pasos_totales" 0 78 "float" `803 
+V L "pasos_diferencia" 0 79 "float" `813 
+V L "i" 0 82 "int16" `825 
+V L "i" 0 90 "int16" `827 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

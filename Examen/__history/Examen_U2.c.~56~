@@ -46,10 +46,4 @@ void main()
 
    printf(lcd_putc,"Fresa/Light: %3Lu", menu);
    menu = get_num_lcd(9,2);
-   
-   switch(menu)
-   {
-      case 1:
-         
-   }
 }

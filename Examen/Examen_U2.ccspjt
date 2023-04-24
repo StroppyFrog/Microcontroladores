@@ -11,26 +11,43 @@ Type=4
 1=Examen_U2.c
 
 [defines]
-buildcount=16
+buildcount=46
 
 [ProjectLog]
-Days=1
+Days=2
 D1=27-03-2023
-D1_L=3
+D1_L=13
 D1_L1=[40250]Started Editing.
 D1_L2=[43299]Stopped Editing.
-TotalEdit=51
+TotalEdit=78
 TotalDebug=0
-D1_E=51
+D1_E=78
 D1_D=0
 D1_L3=[43299]Project Closed.
+D1_L4=[59437]Project Opened.
+D1_L5=[62282]Started Editing.
+D1_L6=[62583]Stopped Editing.
+D1_L7=[62842]Started Editing.
+D1_L8=[64102]Stopped Editing.
+D1_L9=[65723]Started Editing.
+D1_L10=[66332]Stopped Editing.
+D1_L11=[70480]Started Editing.
+D1_L12=[71116]Stopped Editing.
+D1_L13=[71902]Project Closed.
+D2=22-04-2023
+D2_L=2
+D2_L1=[50609]Project Opened.
+D2_L2=[50621]Project Closed.
 
 [Opened Files]
 1=Examen_U2.c
-t1=26
-Count=2
-2=..\..\..\..\Downloads\motorProyecto.c
-t2=139
+t1=25
+Count=1
+2=..\..\..\..\..\Downloads\motorProyecto.c
+t2=1
+
+[fileformats]
+forcecoff=0
 [Units]
 Count=1
 1=Examen_U2 (main)

@@ -1,5 +1,5 @@
 ÀÄExamen_U2
-   ÀÄMAIN  0/43  Ram=2
+   ÀÄMAIN  0/64  Ram=2
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@cinit2  (Inline)  Ram=0
       ÃÄlcd_init  0/48  Ram=2
@@ -16,7 +16,7 @@
       ³     ÀÄlcd_send_nibble  0/15  Ram=1
       ÃÄkbd_init  0/3  Ram=0
       ÃÄparo  0/11  Ram=0
-      ÃÄ@PSTRINGC7_728  0/86  Ram=4
+      ÃÄ@PSTRINGCN7_728  0/89  Ram=5
       ³  ÃÄlcd_putc  0/36  Ram=1
       ³  ³  ÃÄlcd_send_byte  0/61  Ram=3
       ³  ³  ³  ÀÄ*
@@ -30,12 +30,15 @@
       ³  ³     ÀÄ*
       ³  ÀÄlcd_putc  0/36  Ram=1
       ³     ÀÄ*
-      ÀÄget_num_lcd  0/216  Ram=15
+      ÃÄ@PRINTF_LU_728  0/101  Ram=9
+      ³  ÀÄlcd_putc  0/36  Ram=1
+      ³     ÀÄ*
+      ÀÄget_num_lcd  0/298  Ram=15
          ÃÄlcd_gotoxy  0/18  Ram=4
          ³  ÀÄ*
          ÃÄread_key  (Inline)  Ram=1
          ³  ÀÄkbd_getc  0/105  Ram=3
-         ³     ÃÄ@goto10671  0/8  Ram=0
+         ³     ÃÄ@goto4278  0/8  Ram=0
          ³     ÀÄ@const736  0/20  Ram=0
          ÃÄlcd_putc  0/36  Ram=1
          ³  ÀÄ*
@@ -47,8 +50,11 @@
          ³  ÀÄ*
          ÃÄlcd_gotoxy  0/18  Ram=4
          ³  ÀÄ*
-         ÃÄ@PSTRINGC7_728  0/86  Ram=4
-         ³  ÀÄ*
+         ÃÄ@PSTRINGC7_728  (Inline)  Ram=4
+         ³  ÃÄlcd_putc  0/36  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÀÄlcd_putc  0/36  Ram=1
+         ³     ÀÄ*
          ÃÄlcd_gotoxy  0/18  Ram=4
          ³  ÀÄ*
          ÃÄpow  (Inline)  Ram=7
