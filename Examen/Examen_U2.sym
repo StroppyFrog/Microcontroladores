@@ -1,7 +1,12 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
+<<<<<<< Updated upstream
 007     lcd
 007     lcdlat
+=======
+007     lcdlat
+007     lcd
+>>>>>>> Stashed changes
 008     kbd
 008     PSP_DATA
 015     CCP_1
@@ -16,6 +21,7 @@
 023     kbd_getc.col
 024-025 @sprintf_string
 026     @TRIS_C
+<<<<<<< Updated upstream
 027-028 MAIN.menu
 029     lcd_init.i
 029     get_num_lcd.x
@@ -74,6 +80,76 @@
 048     @MUL3232.@SCRATCH3
 049     @MUL3232.@SCRATCH4
 04A     @MUL3232.@SCRATCH5
+=======
+027-028 Cantidad
+029-02A MAIN.menu
+02B     lcd_init.i
+02B     Cantidad_F.i
+02B     Cantidad_L.i
+02B-02C delay_paro.segundos
+02B     get_num_lcd.x
+02C     get_num_lcd.y
+02C-02D @PRINTF_LU_728.P1
+02C     @PSTRINGCN7_728.P2
+02C     lcd_init.@SCRATCH1
+02D-02E get_num_lcd.numero
+02D-02E delay_paro.i
+02D     @PSTRINGCN7_728.@SCRATCH1
+02E     @PSTRINGCN7_728.@SCRATCH2
+02E     @PRINTF_LU_728.@SCRATCH1
+02F     paro_emergencia.tecla
+02F-033 get_num_lcd.cadena
+02F-030 @MUL1616.P1
+02F     @PSTRINGCN7_728.@SCRATCH3
+02F     @PRINTF_LU_728.@SCRATCH2
+030     @PSTRINGCN7_728.@SCRATCH4
+030     @PRINTF_LU_728.@SCRATCH3
+030     paro_emergencia.@SCRATCH1
+031-032 @MUL1616.P1
+031     @PRINTF_LU_728.@SCRATCH4
+032     @PRINTF_LU_728.@SCRATCH5
+033     @PRINTF_LU_728.@SCRATCH6
+033     @MUL1616.@SCRATCH1
+034     get_num_lcd.index
+034     @PRINTF_LU_728.@SCRATCH7
+035     get_num_lcd.tecla
+036     get_num_lcd.i
+037     read_key.c
+037     get_num_lcd.@SCRATCH1
+037     @PSTRINGC7_728.@SCRATCH1
+038     kbd_getc.kchar
+038     get_num_lcd.@SCRATCH2
+038     @PSTRINGC7_728.@SCRATCH2
+039     kbd_getc.row
+039     pow.base
+039     get_num_lcd.@SCRATCH3
+039     @PSTRINGC7_728.@SCRATCH3
+03A     pow.power
+03A     lcd_putc.c
+03A     kbd_getc.@SCRATCH1
+03A     @PSTRINGC7_728.@SCRATCH4
+03B     @delay_ms1.P1
+03B-03E pow.result
+03B     lcd_gotoxy.x
+03C     lcd_gotoxy.y
+03D     lcd_gotoxy.address
+03E     lcd_gotoxy.@SCRATCH1
+03F     pow.i
+03F     lcd_send_byte.address
+040-043 @MUL3232.P1
+040     lcd_send_byte.n
+041     lcd_read_byte.low
+041     lcd_send_byte.@SCRATCH1
+042     lcd_read_byte.high
+042     lcd_send_nibble.n
+043     lcd_read_byte.@SCRATCH1
+044-047 @MUL3232.P1
+048     @MUL3232.@SCRATCH1
+049     @MUL3232.@SCRATCH2
+04A     @MUL3232.@SCRATCH3
+04B     @MUL3232.@SCRATCH4
+04C     @MUL3232.@SCRATCH5
+>>>>>>> Stashed changes
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -82,8 +158,8 @@
 087     lcdtris
 09C.6   C1OUT
 09C.7   C2OUT
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
 000004  LCD_INIT_STRING.call
@@ -91,6 +167,7 @@ ROM Allocation:
 00000C  KEYS.call
 000010  KEYS.data
 000020  @const767.call
+<<<<<<< Updated upstream
 000023  @const783.call
 00002C  @const784.call
 000034  @const790.call
@@ -116,11 +193,47 @@ ROM Allocation:
 00039A  MAIN
 00039A  @cinit1
 0003A8  @cinit2
+=======
+000023  @const786.call
+00002A  @const793.call
+000031  @const796.call
+00003A  @const797.call
+000042  @const807.call
+00004C  @const808.call
+00005B  @delay_ms1
+00006F  lcd_send_nibble
+00007E  lcd_read_nibble
+000084  lcd_send_byte
+000085  lcd_read_byte
+0000C1  lcd_init
+0000F1  kbd_init
+0000F4  paro
+0000FD  lcd_gotoxy
+00010F  lcd_putc
+000133  @PSTRINGC7_728
+000189  kbd_getc
+0001F2  @goto48764
+0001FA  read_key
+000203  @MUL3232
+00022D  get_num_lcd
+0002AC  pow
+0002FE  @PSTRINGCN7_728
+000355  @PRINTF_LU_728
+0003B8  Cantidad_F
+0003DD  Cantidad_L
+000402  delay_paro
+00040B  @MUL1616
+000433  paro_emergencia
+000456  MAIN
+000456  @cinit1
+000464  @cinit2
+>>>>>>> Stashed changes
 
 Project Directory:
     C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen\
 
 Project Files:
+<<<<<<< Updated upstream
     Examen_U2.c                                             [27-mar.-23 19:40  CRC=F5F9F6CC]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_c.c [28-feb.-23 21:47  CRC=B171009B]
@@ -130,6 +243,17 @@ Project Files:
 Source signature=5BAA6BAD
 Program memory checksum=0000
 Hex file CRC=EF5C
+=======
+    Examen_U2.c                                             [28-mar.-23 10:31  CRC=61DDE650]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_c.c [21-feb.-23 10:20  CRC=B171009B]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd4x4_d.c [27-mar.-23 10:52  CRC=6CBC6270]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\getNum16.c [27-mar.-23 10:54  CRC=EEBE17EA]
+
+Source signature=C78E5B31
+Program memory checksum=0000
+Hex file CRC=E07C
+>>>>>>> Stashed changes
 
 Units:
     C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen\Examen_U2 (main)

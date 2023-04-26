@@ -11,19 +11,31 @@ Type=4
 1=Examen_U2.c
 
 [defines]
+<<<<<<< Updated upstream
 buildcount=46
 
 [ProjectLog]
 Days=2
+=======
+buildcount=21
+
+[ProjectLog]
+Days=3
+>>>>>>> Stashed changes
 D1=27-03-2023
 D1_L=13
 D1_L1=[40250]Started Editing.
 D1_L2=[43299]Stopped Editing.
+<<<<<<< Updated upstream
 TotalEdit=78
+=======
+TotalEdit=60
+>>>>>>> Stashed changes
 TotalDebug=0
 D1_E=78
 D1_D=0
 D1_L3=[43299]Project Closed.
+<<<<<<< Updated upstream
 D1_L4=[59437]Project Opened.
 D1_L5=[62282]Started Editing.
 D1_L6=[62583]Stopped Editing.
@@ -45,6 +57,29 @@ t1=25
 Count=1
 2=..\..\..\..\..\Downloads\motorProyecto.c
 t2=1
+=======
+D2=28-03-2023
+D2_L=6
+D2_L1=[36673]Project Opened.
+D2_L2=[36728]Started Editing.
+D2_L3=[37138]Stopped Editing.
+D2_L4=[37673]Started Editing.
+D2_L5=[38055]Stopped Editing.
+D2_E=9
+D2_D=0
+D2_L6=[38055]Project Closed.
+D3=21-04-2023
+D3_L=2
+D3_L1=[40914]Project Opened.
+D3_L2=[40935]Project Closed.
+
+[Opened Files]
+1=Examen_U2.c
+t1=100
+Count=2
+2=..\..\..\..\Downloads\motorProyecto.c
+t2=139
+>>>>>>> Stashed changes
 
 [fileformats]
 forcecoff=0

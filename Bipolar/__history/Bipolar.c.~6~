@@ -4,15 +4,8 @@
 #device ADC = 10
 #use delay(crystal = 20000000)
 #FUSES NOWDT, NOBROWNOUT, NOLVP, HS
-#define LCD_ENABLE_PIN  PIN_A3                                    ////
-#define LCD_RS_PIN      PIN_A5                                    ////
-#define LCD_RW_PIN      PIN_A4                                    ////
-#define LCD_DATA4       PIN_D4                                    ////
-#define LCD_DATA5       PIN_D5                                    ////
-#define LCD_DATA6       PIN_D6                                    ////
-#define LCD_DATA7       PIN_D7 
-#include <lcd.c>
-//#include <lcd_d.c>
+
+#include <lcd_b.c>
 //#include <kbd4x4_b.c>
 #include <kbd4x4_b_fisico.c> //para utilizarla en fisico
 #include <getNum16.c>

@@ -1,9 +1,19 @@
+<<<<<<< Updated upstream
 D G "__PCM__" 0 111 ""5.112""
 D G "__DEVICE__" 0 111 "877"
 D G "__DATE__" 0 111 ""27-Mar-23""
 D G "__TIME__" 0 111 ""19:40:35""
 D G "_UNICODE" 0 111 ""?""
 D G "__EVAL" 0 111 ""?"" "-. Motor DC .-"
+=======
+F N "MAIN" 0 90 ""
+D G "__PCM__" 0 120 ""5.112""
+D G "__DEVICE__" 0 120 "877"
+D G "__DATE__" 0 120 ""28-Mar-23""
+D G "__TIME__" 0 120 ""10:31:31""
+D G "_UNICODE" 0 120 ""?""
+D G "__EVAL" 0 120 ""?"" "-. Motor DC .-"
+>>>>>>> Stashed changes
 c L "set_tris_a" 1 1 6 "FUNCTION"
 F N "set_tris_a" 1 37 ""
 V L "value" 1 37 "int8" `55 
@@ -1274,6 +1284,7 @@ D G "M_Light" 0 17 "PIN_B1"
 D G "S_Fresa" 0 18 "PIN_B4"
 D G "S_Light" 0 19 "PIN_B5"
 D G "boton_paro" 0 20 "PIN_B7"
+<<<<<<< Updated upstream
 F N "paro" 0 22 ""
 F G "paro" 0 23 "void()" `781 
 F N "paro_emergencia" 0 28 ""
@@ -1283,6 +1294,32 @@ V L "tecla" 0 34 "int8" `785
 F N "MAIN" 0 38 ""
 F G "MAIN" 0 39 "void()" `786 
 V L "menu" 0 44 "int16" `789 
+=======
+F N "delay_paro" 0 22 ""
+V L "segundos" 0 22 "int16" `782 
+f G "delay_paro" 0 22 "int8(int16 segundos)" `781  "Declaramos función pero no la definimos"
+V G "Cantidad" 0 23 "int16" `783  "void girar_Fresa()"
+C L "delay_paro" 0 25 7 "FUNCTION"
+F N "paro" 0 37 ""
+F G "paro" 0 38 "void()" `784 
+F N "Cantidad_F" 0 43 ""
+F G "Cantidad_F" 0 44 "void()" `785 
+V L "i" 0 46 "int8" `791 
+F N "Cantidad_L" 0 59 ""
+F G "Cantidad_L" 0 60 "void()" `792 
+V L "i" 0 62 "int8" `794 
+F N "paro_emergencia" 0 70 ""
+F G "paro_emergencia" 0 71 "void()" `795 
+C L "paro_emergencia" 0 25 1 "FUNCTION"
+V L "tecla" 0 76 "int8" `798 
+F N "delay_paro" 0 79 ""
+V L "segundos" 0 79 "int16" `800 
+F G "delay_paro" 0 79 "int8(int16 segundos)" `781 
+V L "i" 0 80 "int16" `799 
+F N "MAIN" 0 90 ""
+F G "MAIN" 0 91 "void()" `803  "port_b_pullups(TRUE);"
+V L "menu" 0 97 "int16" `806 
+>>>>>>> Stashed changes
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

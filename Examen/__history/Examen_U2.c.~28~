@@ -5,8 +5,13 @@
 #use delay(crystal = 20000000)
 #FUSES NOWDT, NOBROWNOUT, NOLVP, HS
 
+<<<<<<< Updated upstream
 #include <lcd_d.c>
 #include <kbd4x4_b.c>
+=======
+#include <lcd_c.c>
+#include <kbd4x4_d.c>
+>>>>>>> Stashed changes
 #include <getNum16.c>
 
 #use STANDARD_IO(B)
@@ -19,6 +24,11 @@
 #define S_Light PIN_B5
 #define boton_paro PIN_B7
 
+<<<<<<< Updated upstream
+=======
+int1 delay_paro(int16 segundos);
+
+>>>>>>> Stashed changes
 void paro()
 {
    output_low(M_Fresa);

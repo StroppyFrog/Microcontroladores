@@ -19,10 +19,55 @@
 #define S_Light PIN_B5
 #define boton_paro PIN_B7
 
+<<<<<<< Updated upstream
+=======
+int1 delay_paro(int16 segundos); // Declaramos función pero no la definimos
+int16 Cantidad;
+
+/*void girar_Fresa()
+{
+   output_high(M_Fresa);
+   output_low(M_Light);
+}*/
+
+/*void girar_Light()
+{
+   output_high(M_Light);
+   output_low(M_fresa);
+}*/
+
+>>>>>>> Stashed changes
 void paro()
 {
    output_low(M_Fresa);
    output_low(M_Light);
+}
+
+void Cantidad_F()
+{
+   printf(lcd_putc,"\fCajas: %5Lu", Cantidad);
+   int8 i = 0;
+   while(i < Cantidad)
+   {
+      output_high(M_Fresa);
+      output_low(M_Light);
+      if(S_Fresa == TRUE)
+      {
+         i++;
+         return;
+      }
+   }
+}
+
+void Cantidad_L()
+{
+   printf(lcd_putc,"\fCajas: %5Lu", Cantidad);
+   int8 i = 0;
+   while(i < Cantidad)
+   {
+      output_high(M_Light);
+      output_low(M_Fresa);
+   }
 }
 
 void paro_emergencia()
@@ -34,15 +79,27 @@ void paro_emergencia()
    char tecla = read_key();
 }
 
+int1 delay_paro(int16 segundos){
+   for(int16 i = 0; i < segundos * 100; i++){
+      delay_ms(10);
+      if(input(boton_paro)){
+         paro_emergencia();
+         return 1;
+      }
+  }
+   return 0;
+}
 
 void main()
 {
+   //port_b_pullups(TRUE);
    lcd_init();
    kbd_init();
    paro();
    input(boton_paro);
    int16 menu;
    
+<<<<<<< Updated upstream
 
    printf(lcd_putc,"Fresa/Light: %3Lu", menu);
    menu = get_num_lcd(9,2);
@@ -51,5 +108,25 @@ void main()
    {
       case 1:
          
+=======
+   while (TRUE)
+   {
+      printf(lcd_putc,"\fFresa/light\n 1/3: ");
+      menu = get_num_lcd(9,2);
+      
+      if(menu == 1)
+      {
+       Cantidad_F();
+      }
+      else if (menu == 2)
+      {
+       Cantidad_L();         
+      }
+      else if(Cantidad <= 0 || cantidad > 2)
+      {
+        printf(lcd_putc,"\f**ERROR** \nNumero no valido");
+        delay_paro(2);
+      }
+>>>>>>> Stashed changes
    }
 }
