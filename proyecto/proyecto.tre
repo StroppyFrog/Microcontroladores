@@ -1,9 +1,9 @@
 ÀÄproyecto
-   ÀÄMAIN  1/585  Ram=30
+   ÀÄMAIN  1/587  Ram=30
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@cinit2  (Inline)  Ram=0
       ÃÄupdate_stepper  0/9  Ram=1
-      ³  ÀÄ@const783  0/12  Ram=0
+      ³  ÀÄ@const784  0/12  Ram=0
       ÃÄlcd_init  0/70  Ram=6
       ³  ÃÄ@delay_ms1  0/20  Ram=1
       ³  ÃÄlcd_send_nibble  0/46  Ram=1
@@ -38,7 +38,7 @@
       ³  ³  ÀÄ*
       ³  ÃÄread_key  (Inline)  Ram=1
       ³  ³  ÀÄkbd_getc  0/105  Ram=3
-      ³  ³     ÃÄ@goto1684  0/8  Ram=0
+      ³  ³     ÃÄ@goto33783  0/8  Ram=0
       ³  ³     ÀÄ@const738  0/20  Ram=0
       ³  ÃÄlcd_putc  0/44  Ram=1
       ³  ³  ÀÄ*

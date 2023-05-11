@@ -1,0 +1,192 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     lcdlat
+008     PSP_DATA
+008     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @TRIS_C
+02C-02D contador1
+02E-02F contador2
+030-031 contador3
+032-033 contador4
+034.0   huboCambio
+034.1   b4_previo
+034.2   b5_previo
+034.3   b6_previo
+034.4   b7_previo
+035     @PSTRINGCN7_728.P1
+035-036 @PRINTF_LU_728.P2
+035     lcd_init.i
+036     lcd_init.@SCRATCH1
+036     @PSTRINGCN7_728.@SCRATCH1
+037     @PSTRINGCN7_728.@SCRATCH2
+037     @PRINTF_LU_728.@SCRATCH1
+038     @PSTRINGCN7_728.@SCRATCH3
+038     @PRINTF_LU_728.@SCRATCH2
+039     @PSTRINGCN7_728.@SCRATCH4
+039     @PRINTF_LU_728.@SCRATCH3
+03A     @PRINTF_LU_728.@SCRATCH4
+03B     @PRINTF_LU_728.@SCRATCH5
+03C     @PRINTF_LU_728.@SCRATCH6
+03D     @PRINTF_LU_728.@SCRATCH7
+03E     lcd_putc.c
+03F     @delay_ms1.P1
+03F     lcd_gotoxy.x
+040     lcd_gotoxy.y
+041     lcd_gotoxy.address
+042     lcd_gotoxy.@SCRATCH1
+043     lcd_send_byte.address
+044     lcd_send_byte.n
+045     lcd_read_byte.low
+045     lcd_send_byte.@SCRATCH1
+046     lcd_read_byte.high
+046     lcd_send_nibble.n
+047     lcd_read_byte.@SCRATCH1
+048     rb_isr.@SCRATCH1
+049     rb_isr.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+107F     @INTERRUPT_AREA
+10FF     @INTERRUPT_AREA
+117F     @INTERRUPT_AREA
+11FF     @INTERRUPT_AREA
+127F     @INTERRUPT_AREA
+12FF     @INTERRUPT_AREA
+137F     @INTERRUPT_AREA
+13FF     @INTERRUPT_AREA
+147F     @INTERRUPT_AREA
+14FF     @INTERRUPT_AREA
+157F     @INTERRUPT_AREA
+15FF     @INTERRUPT_AREA
+167F     @INTERRUPT_AREA
+16FF     @INTERRUPT_AREA
+177F     @INTERRUPT_AREA
+17FF     @INTERRUPT_AREA
+187F     @INTERRUPT_AREA
+18FF     @INTERRUPT_AREA
+197F     @INTERRUPT_AREA
+19FF     @INTERRUPT_AREA
+1A7F     @INTERRUPT_AREA
+1AFF     @INTERRUPT_AREA
+1B7F     @INTERRUPT_AREA
+1BFF     @INTERRUPT_AREA
+1C7F     @INTERRUPT_AREA
+1CFF     @INTERRUPT_AREA
+1D7F     @INTERRUPT_AREA
+1DFF     @INTERRUPT_AREA
+1E7F     @INTERRUPT_AREA
+1EFF     @INTERRUPT_AREA
+1F7F     @INTERRUPT_AREA
+1FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000056  LCD_INIT_STRING.call
+00005A  LCD_INIT_STRING.data
+00005E  rb_isr
+0000A7  ext_isr
+0000B4  @const749.call
+0000C4  @delay_ms1
+0000D8  lcd_send_nibble
+0000E7  lcd_read_nibble
+0000ED  lcd_send_byte
+0000EE  lcd_read_byte
+00012A  lcd_init
+00015A  lcd_putc
+000171  lcd_gotoxy
+00018E  @PSTRINGCN7_728
+0001E5  @PRINTF_LU_728
+000248  MAIN
+000248  @cinit1
+000261  @cinit2
+
+Project Directory:
+    C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen_UIII\
+
+Project Files:
+    Examen_UIII.c                                           [03-may.-23 10:43  CRC=8DC617DC]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_d.c [21-feb.-23 10:20  CRC=F0850C2B]
+
+Source signature=D8D71234
+Program memory checksum=0000
+Hex file CRC=5914
+
+Units:
+    C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen_UIII\Examen_UIII (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   Examen_UIII.xsym
+    Errors:      Examen_UIII.err
+    Ext Symbols: Examen_UIII.esym
+    INHX8:       Examen_UIII.hex
+    Symbols:     Examen_UIII.sym
+    List:        Examen_UIII.lst
+    Debug/COFF:  Examen_UIII.cof
+    Project:     Examen_UIII.ccspjt
+    Call Tree:   Examen_UIII.tre
+    Statistics:  Examen_UIII.STA

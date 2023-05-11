@@ -11,7 +11,7 @@ Type=4
 1=proyecto.c
 
 [defines]
-buildcount=10
+buildcount=15
 
 [Opened Files]
 1=..\..\..\..\Downloads\LCD_D.C
@@ -23,7 +23,7 @@ t2=43
 t3=43
 
 [ProjectLog]
-Days=3
+Days=5
 D1=22-04-2023
 D1_L=4
 D1_L1=[50926]Stopped Editing.
@@ -52,6 +52,21 @@ D3_L1=[39646]Project Opened.
 D3_E=3
 D3_D=0
 D3_L2=[39968]Project Closed.
+D4=27-04-2023
+D4_L=7
+D4_L1=[37092]Project Opened.
+D4_L2=[37100]Project Closed.
+D4_L3=[37104]Project Opened.
+D4_L4=[37156]Started Editing.
+D4_L5=[37507]Stopped Editing.
+D4_L6=[38694]Started Editing.
+D4_L7=[39112]Stopped Editing.
+D5=02-05-2023
+D5_L=4
+D5_L1=[37131]Project Opened.
+D5_L2=[37132]Project Closed.
+D5_L3=[37133]Project Opened.
+D5_L4=[37233]Project Closed.
 
 [fileformats]
 forcecoff=0

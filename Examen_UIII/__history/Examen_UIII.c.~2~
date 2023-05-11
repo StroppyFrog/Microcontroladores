@@ -1,0 +1,44 @@
+#include <16F877a.h>
+#device ADC = 10
+#use delay(crystal = 20000000)
+#FUSES NOWDT, NOBROWNOUT, NOLVP, HS
+
+#include <lcd_c.c>
+#include <kbd4x4_d.c>
+#include <getNum16.c>
+
+#use STANDARD_IO(B)
+#use STANDARD_IO(C)
+
+int16 contador=0;
+int1 huboCambio = 0;
+int1 b4_previo = 0;
+int1 b7_previo = 0;
+
+#INT_RB
+void rb_isr(){
+   if(input(PIN_B4)==1 && b4_previo == 0)contador+=1;
+   if(input(PIN_B7)==1 && b7_previo == 0)contador+=10;
+   
+   b4_previo = input(PIN_B4);
+   b7_previo = input(PIN_B7);
+   huboCambio = 1;
+}
+
+void main()
+{
+   // Inicializar pines
+   lcd_init();
+   kbd_init();
+
+   printf(lcd_putc,"\fHola");
+   enable_interrupts(GLOBAL);
+   enable_interrupts(INT_RB);
+   while (TRUE)
+   {
+      if(huboCambio){
+         printf(lcd_putc,"\fContador:%lu",contador);
+         huboCambio=0;
+      }
+   }
+}

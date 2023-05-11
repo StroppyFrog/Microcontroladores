@@ -20,7 +20,11 @@
 #use STANDARD_IO(A)
 #use STANDARD_IO(B)
 #use STANDARD_IO(D)
-#use STANDARD_IO(C)
+
+#define MA1 PIN_C0
+#define MA2 PIN_C1
+#define MA3 PIN_C2
+#define MA4 PIN_C3
 
 const int8 pasos[8] = {
 
