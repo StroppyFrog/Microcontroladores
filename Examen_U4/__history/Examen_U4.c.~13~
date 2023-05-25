@@ -1,0 +1,32 @@
+// Transmisor 
+#include <16F877a.h>
+#device ADC=10
+#use delay(crystal=20Mhz)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+//Directiva para utilizar puerto USART
+#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
+#include <lcd_d.c> //Incluir librería LCD
+#include <kbd4x4_b.c> //Librería teclado 4x4 puerto B
+#include <getNum16.c> //Librería para leer numeros enteros de 16 bits
+#use STANDARD_IO(A)
+
+void main()
+{
+   lcd_init(); //Inicializar pantalla
+   //kbd_init(); //Inicializar teclado
+   setup_uart(9600); //Configurar baudios
+   int16 POT1;
+   int8 byte1, byte2; // Variables para descomponer el int16
+   int16 POT2;
+   int8 byte3, byte4;
+   
+   while(TRUE)
+   {
+      printf(lcd_putc,"\fADC1:\nADC2:");
+      POT1 = get_num_lcd(1,2);
+      byte1 = POT1 & 255; // Primer byte
+      byte2 = (POT1 >> 8) & 255; // Segundo byte
+      putc(byte2); // Enviamos el segundo byte
+      putc(byte1); // Enviamos el primer byte
+   }
+}

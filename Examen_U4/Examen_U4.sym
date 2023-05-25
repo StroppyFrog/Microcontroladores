@@ -1,0 +1,105 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+008     lcdlat
+008     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+021-022 MAIN.POT1
+023-024 MAIN.POT2
+025-026 @PRINTF_LU_731.P1
+025     @PSTRINGCN7_731.P2
+025     lcd_init.i
+026     lcd_init.@SCRATCH1
+026     @PSTRINGCN7_731.@SCRATCH1
+027     @PSTRINGCN7_731.@SCRATCH2
+027     @PRINTF_LU_731.@SCRATCH1
+028     @PSTRINGCN7_731.@SCRATCH3
+028     @PRINTF_LU_731.@SCRATCH2
+029     @PSTRINGCN7_731.@SCRATCH4
+029     @PRINTF_LU_731.@SCRATCH3
+02A     @PRINTF_LU_731.@SCRATCH4
+02B     @PRINTF_LU_731.@SCRATCH5
+02C     @PRINTF_LU_731.@SCRATCH6
+02D     @PRINTF_LU_731.@SCRATCH7
+02E     lcd_putc.c
+02F     lcd_gotoxy.x
+02F     @delay_ms1.P1
+030     lcd_gotoxy.y
+031     lcd_gotoxy.address
+032     lcd_gotoxy.@SCRATCH1
+033     lcd_send_byte.address
+034     lcd_send_byte.n
+035     lcd_read_byte.low
+035     lcd_send_byte.@SCRATCH1
+036     lcd_read_byte.high
+036     lcd_send_nibble.n
+037     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const742.call
+000016  @delay_ms1
+00002A  lcd_send_nibble
+000039  lcd_read_nibble
+00003F  lcd_send_byte
+000040  lcd_read_byte
+00007C  lcd_init
+0000AC  lcd_putc
+0000C3  lcd_gotoxy
+0000E0  @PSTRINGCN7_731
+000137  @PRINTF_LU_731
+00019A  MAIN
+00019A  @cinit1
+0001AC  @cinit2
+
+Project Directory:
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_U4\
+
+Project Files:
+    Examen_U4.c                                             [22-may.-23 22:13  CRC=219D360D]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_d.c [28-feb.-23 21:47  CRC=F0850C2B]
+
+Source signature=6CAE3065
+Program memory checksum=0000
+Hex file CRC=BF3E
+
+Units:
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_U4\Examen_U4 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   Examen_U4.xsym
+    Errors:      Examen_U4.err
+    Ext Symbols: Examen_U4.esym
+    INHX8:       Examen_U4.hex
+    Symbols:     Examen_U4.sym
+    List:        Examen_U4.lst
+    Debug/COFF:  Examen_U4.cof
+    Project:     Examen_U4.ccspjt
+    Call Tree:   Examen_U4.tre
+    Statistics:  Examen_U4.STA

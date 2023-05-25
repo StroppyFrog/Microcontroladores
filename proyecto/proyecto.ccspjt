@@ -23,7 +23,7 @@ t2=43
 t3=43
 
 [ProjectLog]
-Days=5
+Days=7
 D1=22-04-2023
 D1_L=4
 D1_L1=[50926]Stopped Editing.
@@ -67,6 +67,14 @@ D5_L1=[37131]Project Opened.
 D5_L2=[37132]Project Closed.
 D5_L3=[37133]Project Opened.
 D5_L4=[37233]Project Closed.
+D6=11-05-2023
+D6_L=2
+D6_L1=[31321]Project Opened.
+D6_L2=[31459]Project Closed.
+D7=22-05-2023
+D7_L=2
+D7_L1=[72184]Project Opened.
+D7_L2=[73831]Project Closed.
 
 [fileformats]
 forcecoff=0
