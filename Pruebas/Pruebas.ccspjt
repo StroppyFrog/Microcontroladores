@@ -1,0 +1,21 @@
+[PROJECT]
+Target=Pruebas.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=Pruebas.c
+[Pruebas.c]
+Type=4
+[mru-list]
+1=Pruebas.c
+[Units]
+Count=1
+1=Pruebas (main)
+
+[ProjectLog]
+Days=1
+D1=25-05-2023
+D1_L=2
+D1_L1=[62434]Started Editing.
+D1_L2=[62735]Stopped Editing.
