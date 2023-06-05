@@ -1,4 +1,11 @@
-Compiling C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen_UIII\Examen_UIII on 03-may.-23 at 10:50
-      Memory usage:   ROM=8%      RAM=7% - 13%
-      0 Errors,  0 Warnings.
-Build Successful.
+*** Error 18 "Examen_UIII.c" Line 6(10,19): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\Devices\lcd_d.c"
+    Not in "C:\Program Files (x86)\PICC\Drivers\lcd_d.c"
+    Not in local "lcd_d.c"
+    Not in local "C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_UIII\lcd_d.c"
+    Not in last "C:\Program Files (x86)\PICC\Devices\lcd_d.c"
+    Not in project "C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_UIII\lcd_d.c"
+*** Error 12 "Examen_UIII.c" Line 51(12,13): Undefined identifier  -- lcd_init
+*** Error 12 "Examen_UIII.c" Line 60(17,25): Undefined identifier   lcd_putc
+      3 Errors,  0 Warnings.
+Build Failed.

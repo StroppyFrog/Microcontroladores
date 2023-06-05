@@ -14,12 +14,13 @@ Type=4
 buildcount=27
 
 [Opened Files]
-1=Examen_UIII.c
+1=..\Pruebas\Pruebas.c
 t1=1
 Count=1
+2=
 
 [ProjectLog]
-Days=3
+Days=4
 D1=02-05-2023
 D1_L=3
 D1_L1=[39653]Stopped Editing.
@@ -46,6 +47,11 @@ D3=11-05-2023
 D3_L=2
 D3_L1=[30614]Project Opened.
 D3_L2=[30633]Project Closed.
+D4=25-05-2023
+D4_L=3
+D4_L1=[62068]Project Opened.
+D4_L2=[62248]Started Editing.
+D4_L3=[62405]Project Closed.
 
 [fileformats]
 forcecoff=0
