@@ -1,0 +1,68 @@
+
+ROM used:   1459/8192 (18%)
+            1459/8192 (18%) including unused fragments
+
+            1.3 Average locations per line
+            15.9 Average locations per statement
+
+RAM used:   27/368 (7%) at main() level
+            50/368 (14%) worst case
+
+Stack used: 5 worst case (4 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   51    25  27  sensor_temp.c
+  708     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h
+  350    67  73  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_d.c
+----- -----
+ 1109    92 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   1    1             @delay_ms1
+0      8   1    0             @const714
+ Inline         3    587  6.0  lcd_read_byte
+0      6   0    0     59  4.2  lcd_read_nibble
+0     15   1    1    172  3.4  lcd_send_nibble
+0     61   4    3    317  4.3  lcd_send_byte
+0     48   3    2    624  5.8  lcd_init
+0     18   1    4    186  5.5  lcd_gotoxy
+0     36   2    1    272  4.1  lcd_putc
+0     22   2    1    115  2.5  rda_int
+0    191  13    4    532  4.6  MAIN
+0     31   2    2             @ITOF
+0    117   8   13             @MULFF
+0    204  14   14             @DIVFF
+0     31   2    5             @FTOSD
+0     79   5   13             @DIV3232
+0    201  14   13             @PRINTF_L32D_9600_62_63FPFPF
+0      4   0    0             @const762
+0     89   6    5             @PSTRINGCN7_731
+0    197  14   13             @PRINTF_L32D_731FPFPF
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               9
+    Statements              92
+    Comments                201
+    Volume (V)              4487
+    Difficulty (D)          38.1
+    Effort to implement (E) 170831
+    Time to implement (T)   2 hours, 38 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   12
+    Maintainability (MI)    144
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00050    77  0  
+00051-007FF  1378  589  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

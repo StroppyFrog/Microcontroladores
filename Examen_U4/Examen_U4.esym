@@ -1,10 +1,9 @@
-F N "MAIN" 0 11 ""
-D G "__PCM__" 0 34 ""5.112""
-D G "__DEVICE__" 0 34 "877"
-D G "__DATE__" 0 34 ""22-May-23""
-D G "__TIME__" 0 34 ""22:42:08""
-D G "_UNICODE" 0 34 ""?""
-D G "__EVAL" 0 34 ""?"" "Transmisor"
+D G "__PCM__" 0 60 ""5.112""
+D G "__DEVICE__" 0 60 "877"
+D G "__DATE__" 0 60 ""30-May-23""
+D G "__TIME__" 0 60 ""21:30:58""
+D G "_UNICODE" 0 60 ""?""
+D G "__EVAL" 0 60 ""?"" "Transmisor"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 F N "set_tris_a" 1 37 ""
 V L "value" 1 37 "int8" `55 
@@ -1227,7 +1226,11 @@ F G "MAIN" 0 12 "void()" `737
 C L "MAIN" 0 13 2 "FUNCTION"
 C L "MAIN" 0 13 1 "FUNCTION"
 V L "POT1" 0 18 "int16" `740 
-V L "POT2" 0 19 "int16" `741 
+V L "POT2" 0 18 "int16" `741 
+V L "POT3" 0 18 "int16" `742 
+V L "byte1" 0 19 "int8" `743 
+V L "byte2" 0 19 "int8" `744 
+V L "byte3" 0 19 "int8" `745 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

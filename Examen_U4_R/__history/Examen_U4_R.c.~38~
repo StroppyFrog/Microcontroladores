@@ -1,0 +1,43 @@
+// Receptor
+#include <16F877a.h>
+#device ADC=10
+#use delay(crystal=20Mhz)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+// Directiva para usar el puerto USART
+#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
+#include <lcd_d.c> //Incluir librería LCD
+
+int8 byte1,byte2;
+int16 num16, class, POT1, POT2, POT3;
+short entrada = 0;
+
+#INT_RDA 
+void rda_int()
+{
+   class = getc();
+   byte1 = getc();
+   byte2 = getc();
+   
+   num16 = ((int16) byte2 << 8) | byte1;
+   entrada = 1;
+}
+
+void main()
+{
+   lcd_init(); //Inicializar pantalla  
+   setup_uart(9600); //Configurar baudios
+   // Habilitar interrupciones
+   enable_interrupts(INT_RDA);
+   enable_interrupts(GLOBAL);
+   printf(lcd_putc,"\f");
+   while(TRUE)
+   {
+      if(entrada == 1 && class == 1)
+      {
+         entrada = 0; 
+         printf(lcd_putc,"\fA1\n%Lu %Lu", class, num16);
+         lcd_gotoxy(1,2);
+         pot1 = num16;
+      }
+   }
+}

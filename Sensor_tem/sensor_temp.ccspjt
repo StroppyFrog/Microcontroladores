@@ -1,0 +1,46 @@
+[PROJECT]
+Target=sensor_temp.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=sensor_temp.c
+[sensor_temp.c]
+Type=4
+[mru-list]
+1=sensor_temp.c
+
+[defines]
+buildcount=4
+
+[ProjectLog]
+Days=2
+D1=03-06-2023
+D1_L=4
+D1_L1=[54606]Stopped Editing.
+TotalEdit=19
+TotalDebug=0
+D1_E=10
+D1_D=0
+D1_L2=[54622]Project Closed.
+D1_L3=[80700]Project Opened.
+D1_L4=[84811]Project Closed.
+D2=04-06-2023
+D2_L=4
+D2_L1=[66492]Project Opened.
+D2_L2=[66504]Started Editing.
+D2_L3=[67303]Stopped Editing.
+D2_E=9
+D2_D=0
+D2_L4=[67406]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=sensor_temp.c
+t1=5
+Count=1
+[Units]
+Count=1
+1=sensor_temp (main)

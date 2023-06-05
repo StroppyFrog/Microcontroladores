@@ -7,16 +7,18 @@
 #use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
 #include <lcd_d.c> //Incluir librería LCD
 
-int16 NEWPOT1 = 0, OLDPOT1 = 0;
-//int16 POT2;
-//short Ent = 0;
+int8 byte1,byte2;
+int16 num16, class, POT1, POT2, POT3;
+short entrada = 0;
 
-// Interrupción al recibir una trama
 #INT_RDA 
 void rda_int()
 {
-   OLDPOT1 = getc();
-   //POT2 = getc();
+   class = getc();
+   byte1 = getc();
+   byte2 = getc();
+   num16 = ((int16) byte2 << 8) | byte1;
+   entrada = 1;
 }
 
 void main()
@@ -26,13 +28,31 @@ void main()
    // Habilitar interrupciones
    enable_interrupts(INT_RDA);
    enable_interrupts(GLOBAL);
-   printf(lcd_putc,"\fINICIANDO...");
+   printf(lcd_putc,"\f");
    while(TRUE)
    {
-      if(OLDPOT1 != NEWPOT1)
+      if(entrada == 1 && class == 1)
       {
-         OLDPOT1 = NEWPOT1;
-         printf(lcd_putc,"\fADC1: %lu\nADC2:",NEWPOT1);
+         entrada = 0; 
+         lcd_gotoxy(1,1);
+         printf(lcd_putc,"\fA1");
+         lcd_gotoxy(1,2);
+         printf(lcd_putc,"\f%Lu %Lu", class, num16);
+         POT1 = num16;
+      }
+      else if(entrada == 1 && class == 2)
+      {
+         entrada = 0;
+         lcd_gotoxy(1,2);
+         printf(lcd_putc,"\fA2%Lu %Lu", class, num16);
+         POT2 = num16;
+      }
+      else if(entrada == 1 && class == 3)
+      {
+         entrada = 0;
+         lcd_gotoxy(1,2);
+         printf(lcd_putc,"\fA3 %Lu %Lu", class, num16);
+         POT3 = num16;
       }
    }
 }

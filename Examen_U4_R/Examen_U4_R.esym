@@ -1,9 +1,10 @@
-D G "__PCM__" 0 40 ""5.112""
-D G "__DEVICE__" 0 40 "877"
-D G "__DATE__" 0 40 ""22-May-23""
-D G "__TIME__" 0 40 ""23:01:47""
-D G "_UNICODE" 0 40 ""?""
-D G "__EVAL" 0 40 ""?"" "Receptor"
+F N "MAIN" 0 24 ""
+D G "__PCM__" 0 59 ""5.112""
+D G "__DEVICE__" 0 59 "877"
+D G "__DATE__" 0 59 ""30-May-23""
+D G "__TIME__" 0 59 ""21:30:38""
+D G "_UNICODE" 0 59 ""?""
+D G "__EVAL" 0 59 ""?"" "Receptor"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 F N "set_tris_a" 1 37 ""
 V L "value" 1 37 "int8" `55 
@@ -1221,16 +1222,20 @@ V L "y" 2 338 "int8" `735
 F G "lcd_getc" 2 339 "int8(int8 x,int8 y)" `733 
 V L "value" 2 340 "int8" `736 
 C L "lcd_getc" 2 2 1 "FUNCTION"
-V G "NEWPOT1" 0 10 "int16" `737 
-V G "OLDPOT1" 0 10 "int16" `738 
-C L "rda_int" 0 11 3 "FUNCTION"
-F N "rda_int" 0 16 ""
-F G "rda_int" 0 17 "void()" `739 
-C L "rda_int" 0 11 1 "FUNCTION"
-F N "MAIN" 0 22 ""
-F G "MAIN" 0 23 "void()" `740 
-C L "MAIN" 0 11 1 "FUNCTION"
-C L "MAIN" 0 11 2 "FUNCTION"
+V G "byte1" 0 10 "int8" `737 
+V G "byte2" 0 10 "int8" `738 
+V G "num16" 0 11 "int16" `739 
+V G "class" 0 11 "int16" `740 
+V G "POT1" 0 11 "int16" `741 
+V G "POT2" 0 11 "int16" `742 
+V G "POT3" 0 11 "int16" `743 
+V G "entrada" 0 12 "int1" `744 
+F N "rda_int" 0 15 ""
+F G "rda_int" 0 16 "void()" `745 
+F N "MAIN" 0 24 ""
+F G "MAIN" 0 25 "void()" `746 
+C L "MAIN" 0 26 1 "FUNCTION"
+C L "MAIN" 0 26 2 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

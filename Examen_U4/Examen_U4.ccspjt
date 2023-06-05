@@ -11,17 +11,21 @@ Type=4
 1=Examen_U4.c
 
 [defines]
-buildcount=50
+buildcount=79
 
 [Opened Files]
 1=Examen_U4.c
-t1=5
+t1=25
 2=..\Examen_U4_R\Examen_U4_R.c
-t2=5
-Count=2
+t2=24
+Count=4
+3=..\..\..\..\..\Downloads\EXAREC.c
+t3=46
+4=..\..\..\..\..\Downloads\EXAtrns.c
+t4=29
 
 [ProjectLog]
-Days=1
+Days=3
 D1=22-05-2023
 D1_L=11
 D1_L1=[74950]Project Closed.
@@ -34,11 +38,39 @@ D1_L7=[77096]Started Editing.
 D1_L8=[81617]Stopped Editing.
 D1_L9=[81652]Started Editing.
 D1_L10=[81761]Stopped Editing.
-TotalEdit=85
+TotalEdit=119
 TotalDebug=0
 D1_E=85
 D1_D=0
 D1_L11=[81761]Project Closed.
+D2=30-05-2023
+D2_L=20
+D2_L1=[72952]Project Opened.
+D2_L2=[72952]Project Closed.
+D2_L3=[73750]Project Opened.
+D2_L4=[73801]Started Editing.
+D2_L5=[75543]Stopped Editing.
+D2_E=34
+D2_D=0
+D2_L6=[75543]Project Closed.
+D2_L7=[76092]Project Opened.
+D2_L8=[76335]Started Editing.
+D2_L9=[76340]Stopped Editing.
+D2_L10=[76340]Project Closed.
+D2_L11=[76876]Project Opened.
+D2_L12=[76884]Project Closed.
+D2_L13=[76964]Project Opened.
+D2_L14=[76987]Started Editing.
+D2_L15=[77117]Stopped Editing.
+D2_L16=[77117]Project Closed.
+D2_L17=[77293]Project Opened.
+D2_L18=[77303]Project Closed.
+D2_L19=[77457]Project Opened.
+D2_L20=[77537]Project Closed.
+D3=03-06-2023
+D3_L=2
+D3_L1=[53637]Project Opened.
+D3_L2=[53656]Project Closed.
 
 [fileformats]
 forcecoff=0
