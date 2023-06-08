@@ -1,0 +1,57 @@
+ÀÄUnidad4_master
+   ÀÄMAIN  0/233  Ram=11
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄlcd_init  0/48  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/15  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/15  Ram=1
+      ³  ÃÄ@const714  0/8  Ram=0
+      ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
+      ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
+      ³     ÃÄlcd_send_nibble  0/15  Ram=1
+      ³     ÀÄlcd_send_nibble  0/15  Ram=1
+      ÃÄkbd_init  0/3  Ram=0
+      ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³     ÀÄ*
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÃÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³     ÀÄ*
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÀÄ*
+      ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PRINTF_LU_731  0/99  Ram=9
+      ³  ÀÄlcd_putc  0/36  Ram=1
+      ³     ÀÄ*
+      ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÀÄ*
+      ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PRINTF_LU_731  0/99  Ram=9
+      ³  ÀÄ*
+      ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÀÄ*
+      ÃÄlcd_putc  0/36  Ram=1
+      ³  ÀÄ*
+      ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ÀÄ*
+      ÀÄ@PRINTF_LU_731  0/99  Ram=9
+         ÀÄ*

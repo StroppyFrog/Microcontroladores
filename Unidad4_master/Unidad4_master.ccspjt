@@ -1,0 +1,23 @@
+[PROJECT]
+Target=Unidad4_master.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=Unidad4_master.c
+[Unidad4_master.c]
+Type=4
+[mru-list]
+1=Unidad4_master.c
+[Units]
+Count=1
+1=Unidad4_master (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=07-06-2023
+D1_L=1
+D1_L1=[79868]Project Closed.
