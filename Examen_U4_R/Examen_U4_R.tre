@@ -1,19 +1,18 @@
 ÀÄExamen_U4_R
    ÃÄMAIN  0/183  Ram=1
    ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÃÄ@cinit2  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/48  Ram=2
    ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ³  ÃÄlcd_send_nibble  0/15  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/17  Ram=1
    ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ³  ÃÄlcd_send_nibble  0/15  Ram=1
-   ³  ³  ÃÄ@const714  0/8  Ram=0
+   ³  ³  ÃÄlcd_send_nibble  0/17  Ram=1
+   ³  ³  ÃÄ@const634  0/8  Ram=0
    ³  ³  ÀÄlcd_send_byte  0/61  Ram=3
    ³  ³     ÃÄlcd_read_byte  (Inline)  Ram=3
    ³  ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
    ³  ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
-   ³  ³     ÃÄlcd_send_nibble  0/15  Ram=1
-   ³  ³     ÀÄlcd_send_nibble  0/15  Ram=1
+   ³  ³     ÃÄlcd_send_nibble  0/17  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/17  Ram=1
    ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ÃÄlcd_send_byte  0/61  Ram=3
    ³  ³  ³  ÀÄ*
@@ -37,12 +36,12 @@
    ³  ³  ÀÄ*
    ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ÀÄ*
-   ³  ÃÄ@PRINTF_LU_731  0/99  Ram=9
+   ³  ÃÄ@PRINTF_LU_652  0/99  Ram=9
    ³  ³  ÀÄlcd_putc  0/36  Ram=1
    ³  ³     ÀÄ*
    ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ÀÄ*
-   ³  ÃÄ@PRINTF_LU_731  0/99  Ram=9
+   ³  ÃÄ@PRINTF_LU_652  0/99  Ram=9
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
@@ -52,23 +51,23 @@
    ³  ³  ÀÄ*
    ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ÀÄ*
-   ³  ÃÄ@PRINTF_LU_731  0/99  Ram=9
+   ³  ÃÄ@PRINTF_LU_652  0/99  Ram=9
    ³  ³  ÀÄ*
    ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ÀÄ*
-   ³  ÃÄ@PRINTF_LU_731  0/99  Ram=9
+   ³  ÃÄ@PRINTF_LU_652  0/99  Ram=9
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGCN7_731  0/89  Ram=5
+   ³  ÃÄ@PSTRINGCN7_652  0/89  Ram=5
    ³  ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ³  ÀÄ*
    ³  ³  ÀÄlcd_putc  0/36  Ram=1
    ³  ³     ÀÄ*
-   ³  ÃÄ@PRINTF_LU_731  0/99  Ram=9
+   ³  ÃÄ@PRINTF_LU_652  0/99  Ram=9
    ³  ³  ÀÄ*
    ³  ÃÄlcd_putc  0/36  Ram=1
    ³  ³  ÀÄ*
-   ³  ÀÄ@PRINTF_LU_731  0/99  Ram=9
+   ³  ÀÄ@PRINTF_LU_652  0/99  Ram=9
    ³     ÀÄ*
    ÀÄrda_int  0/28  Ram=2

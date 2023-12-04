@@ -1,7 +1,7 @@
 [PROJECT]
 Target=sensor_temp.hex
 Processor_Text=PIC16F877A
-CCSVersion=5.112
+CCSVersion=5.015
 Compiler=PCM
 [Target Data]
 FileList=sensor_temp.c
@@ -46,9 +46,14 @@ D4_L2=[79707]Project Closed.
 forcecoff=0
 
 [Opened Files]
-1=sensor_temp.c
+1=..\Unidad4_master\Unidad4_master.c
 t1=5
 Count=1
+2=..\..\Examen_UIV_Primeras\Examen_UIV.c
+3=sensor_temp.c
+4=
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
 [Units]
 Count=1
 1=sensor_temp (main)

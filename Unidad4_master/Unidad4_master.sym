@@ -7,47 +7,46 @@
 015     CCP_1_LOW
 015     CCP_1
 016     CCP_1_HIGH
-01B     CCP_2_LOW
 01B     CCP_2
+01B     CCP_2_LOW
 01C     CCP_2_HIGH
 020     kbd_getc.kbd_call_count
 021.0   kbd_getc.kbd_down
 022     kbd_getc.last_key
 023     kbd_getc.col
-024-025 @sprintf_string
-026-027 MAIN.sensor1
-026     kbd_getc.kchar
-027     kbd_getc.row
-028-029 MAIN.sensor2
-02A-02B MAIN.sensor3
-02C     MAIN.byte1
-02D     MAIN.byte2
-02E     MAIN.byte3
-02F     lcd_init.i
-02F-030 @PRINTF_LU_731.P1
-02F     MAIN.@SCRATCH1
-030     lcd_init.@SCRATCH1
-030     MAIN.@SCRATCH2
-031     @PRINTF_LU_731.@SCRATCH1
-032     @PRINTF_LU_731.@SCRATCH2
-033     @PRINTF_LU_731.@SCRATCH3
-034     @PRINTF_LU_731.@SCRATCH4
-035     @PRINTF_LU_731.@SCRATCH5
-036     @PRINTF_LU_731.@SCRATCH6
-037     @PRINTF_LU_731.@SCRATCH7
-038     lcd_putc.c
-039     lcd_gotoxy.x
-039     @delay_ms1.P1
-03A     lcd_gotoxy.y
-03B     lcd_gotoxy.address
-03C     lcd_gotoxy.@SCRATCH1
-03D     lcd_send_byte.address
-03E     lcd_send_byte.n
-03F     lcd_read_byte.low
-03F     lcd_send_byte.@SCRATCH1
-040     lcd_send_nibble.n
-040     lcd_read_byte.high
-041     lcd_read_byte.@SCRATCH1
+024     kbd_getc.kchar
+024-025 MAIN.sensor1
+025     kbd_getc.row
+026-027 MAIN.sensor2
+028-029 MAIN.sensor3
+02A     MAIN.byte1
+02B     MAIN.byte2
+02C     MAIN.byte3
+02D     lcd_init.i
+02D-02E @PRINTF_LU_652.P1
+02D     MAIN.@SCRATCH1
+02E     lcd_init.@SCRATCH1
+02E     MAIN.@SCRATCH2
+02F     @PRINTF_LU_652.@SCRATCH1
+030     @PRINTF_LU_652.@SCRATCH2
+031     @PRINTF_LU_652.@SCRATCH3
+032     @PRINTF_LU_652.@SCRATCH4
+033     @PRINTF_LU_652.@SCRATCH5
+034     @PRINTF_LU_652.@SCRATCH6
+035     @PRINTF_LU_652.@SCRATCH7
+036     lcd_putc.c
+037     @delay_ms1.P1
+037     lcd_gotoxy.x
+038     lcd_gotoxy.y
+039     lcd_gotoxy.address
+03A     lcd_gotoxy.@SCRATCH1
+03B     lcd_send_byte.address
+03C     lcd_send_byte.n
+03D     lcd_read_byte.low
+03D     lcd_send_byte.@SCRATCH1
+03E     lcd_send_nibble.n
+03E     lcd_read_byte.high
+03F     lcd_read_byte.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -56,43 +55,41 @@
 088     lcdtris
 09C.6   C1OUT
 09C.7   C2OUT
-10D-10E @READ_PROGRAM_MEMORY8.P1
-10D-10E @WRITE_PROGRAM_MEMORY8.P2
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
 000004  LCD_INIT_STRING.call
 000008  LCD_INIT_STRING.data
-00000C  @const770.call
+00000C  @const691.call
 00000F  @delay_ms1
 000023  lcd_send_nibble
-000032  lcd_read_nibble
-000038  lcd_send_byte
-000039  lcd_read_byte
-000075  lcd_init
-0000A5  kbd_init
-0000A8  lcd_gotoxy
-0000BA  lcd_putc
-0000DE  @PRINTF_LU_731
-000141  MAIN
-000141  @cinit1
+000034  lcd_read_nibble
+00003A  lcd_send_byte
+00003B  lcd_read_byte
+000077  lcd_init
+0000A7  kbd_init
+0000AA  lcd_gotoxy
+0000BC  lcd_putc
+0000E0  @PRINTF_LU_652
+000143  MAIN
+000143  @cinit1
 000155  @cinit2
 
 Project Directory:
-    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Unidad4_master\
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Microcontroladores\Unidad4_master\
 
 Project Files:
-    Unidad4_master.c                                        [07-jun.-23 22:10  CRC=E07497B5]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_d.c [28-feb.-23 21:47  CRC=F0850C2B]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd4x4_b.c [28-feb.-23 21:47  CRC=DEF67D8A]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\getNum16.c [28-feb.-23 21:47  CRC=EEBE17EA]
+    Unidad4_master.c                                        [21-sep.-23 14:04  CRC=E07497B5]
+    ..\..\..\..\..\Escritorio\PICC\Devices\16F877a.h        [12-nov.-13 14:35  CRC=81334808]
+    ..\..\..\..\..\Escritorio\PICC\Drivers\lcd_d.c          [13-sep.-23 13:20  CRC=F0850C2B]
+    ..\..\..\..\..\Escritorio\PICC\Drivers\kbd4x4_b.c       [13-sep.-23 13:25  CRC=DEF67D8A]
+    ..\..\..\..\..\Escritorio\PICC\Drivers\getNum16.c       [15-sep.-23 13:24  CRC=EEBE17EA]
 
-Source signature=F7733340
-Program memory checksum=0000
-Hex file CRC=9A5B
+Source signature=0E9F9946
 
 Units:
-    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Unidad4_master\Unidad4_master (main)
+    Unidad4_master (main)
 
 Compiler Settings:
     Processor:      PIC16F877A
@@ -101,7 +98,6 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    Compile Mode:   CCS5
 
 Output Files:
     XREF file:   Unidad4_master.xsym

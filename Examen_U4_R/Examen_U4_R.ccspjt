@@ -1,7 +1,7 @@
 [PROJECT]
 Target=Examen_U4_R.hex
 Processor_Text=PIC16F877A
-CCSVersion=5.112
+CCSVersion=5.015
 Compiler=PCM
 [Target Data]
 FileList=Examen_U4_R.c
@@ -66,10 +66,12 @@ t1=25
 2=Examen_U4_R.c
 t2=25
 Count=4
-3=..\..\..\..\..\Downloads\EXAREC.c
+3=
 t3=46
 4=..\..\..\..\..\Downloads\EXAtrns.c
 t4=29
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
 [Units]
 Count=1
 1=Examen_U4_R (main)

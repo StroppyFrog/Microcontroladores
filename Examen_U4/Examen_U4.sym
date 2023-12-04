@@ -1,13 +1,13 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004-005 @WRITE_PROGRAM_MEMORY8.P2
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 008     lcd
 008     PSP_DATA
 008     lcdlat
-015     CCP_1
 015     CCP_1_LOW
+015     CCP_1
 016     CCP_1_HIGH
-01B     CCP_2_LOW
 01B     CCP_2
+01B     CCP_2_LOW
 01C     CCP_2_HIGH
 021-022 MAIN.POT1
 023-024 MAIN.POT2
@@ -16,25 +16,25 @@
 028     MAIN.byte2
 029     MAIN.byte3
 02A     lcd_init.i
-02A-02B @PRINTF_LU_731.P1
-02A     @PSTRINGCN7_731.P2
+02A-02B @PRINTF_LU_652.P1
+02A     @PSTRINGCN7_652.P2
 02A     MAIN.@SCRATCH1
 02B     lcd_init.@SCRATCH1
 02B     MAIN.@SCRATCH2
-02B     @PSTRINGCN7_731.@SCRATCH1
-02C     @PSTRINGCN7_731.@SCRATCH2
-02C     @PRINTF_LU_731.@SCRATCH1
-02D     @PSTRINGCN7_731.@SCRATCH3
-02D     @PRINTF_LU_731.@SCRATCH2
-02E     @PSTRINGCN7_731.@SCRATCH4
-02E     @PRINTF_LU_731.@SCRATCH3
-02F     @PRINTF_LU_731.@SCRATCH4
-030     @PRINTF_LU_731.@SCRATCH5
-031     @PRINTF_LU_731.@SCRATCH6
-032     @PRINTF_LU_731.@SCRATCH7
+02B     @PSTRINGCN7_652.@SCRATCH1
+02C     @PSTRINGCN7_652.@SCRATCH2
+02C     @PRINTF_LU_652.@SCRATCH1
+02D     @PSTRINGCN7_652.@SCRATCH3
+02D     @PRINTF_LU_652.@SCRATCH2
+02E     @PSTRINGCN7_652.@SCRATCH4
+02E     @PRINTF_LU_652.@SCRATCH3
+02F     @PRINTF_LU_652.@SCRATCH4
+030     @PRINTF_LU_652.@SCRATCH5
+031     @PRINTF_LU_652.@SCRATCH6
+032     @PRINTF_LU_652.@SCRATCH7
 033     lcd_putc.c
-034     @delay_ms1.P1
 034     lcd_gotoxy.x
+034     @delay_ms1.P1
 035     lcd_gotoxy.y
 036     lcd_gotoxy.address
 037     lcd_gotoxy.@SCRATCH1
@@ -42,8 +42,8 @@
 039     lcd_send_byte.n
 03A     lcd_read_byte.low
 03A     lcd_send_byte.@SCRATCH1
-03B     lcd_read_byte.high
 03B     lcd_send_nibble.n
+03B     lcd_read_byte.high
 03C     lcd_read_byte.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
@@ -59,35 +59,33 @@
 ROM Allocation:
 000004  LCD_INIT_STRING.call
 000008  LCD_INIT_STRING.data
-00000C  @const746.call
+00000C  @const667.call
 000019  @delay_ms1
 00002D  lcd_send_nibble
-00003C  lcd_read_nibble
-000042  lcd_send_byte
-000043  lcd_read_byte
-00007F  lcd_init
-0000AF  lcd_putc
-0000C6  lcd_gotoxy
-0000E3  @PSTRINGCN7_731
-00013C  @PRINTF_LU_731
-00019F  MAIN
-00019F  @cinit1
-0001B1  @cinit2
+00003E  lcd_read_nibble
+000044  lcd_send_byte
+000045  lcd_read_byte
+000081  lcd_init
+0000B1  lcd_putc
+0000C8  lcd_gotoxy
+0000E5  @PSTRINGCN7_652
+00013E  @PRINTF_LU_652
+0001A1  MAIN
+0001A1  @cinit1
+0001B3  @cinit2
 
 Project Directory:
-    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_U4\
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Microcontroladores\Examen_U4\
 
 Project Files:
-    Examen_U4.c                                             [30-may.-23 21:30  CRC=2FD88DD2]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_d.c [28-feb.-23 21:47  CRC=F0850C2B]
+    Examen_U4.c                                             [21-sep.-23 14:04  CRC=2FD88DD2]
+    ..\..\..\..\..\Escritorio\PICC\Devices\16F877a.h        [12-nov.-13 14:35  CRC=81334808]
+    ..\..\..\..\..\Escritorio\PICC\Drivers\lcd_d.c          [13-sep.-23 13:20  CRC=F0850C2B]
 
-Source signature=7AE9882A
-Program memory checksum=0000
-Hex file CRC=C795
+Source signature=9215EE30
 
 Units:
-    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_U4\Examen_U4 (main)
+    Examen_U4 (main)
 
 Compiler Settings:
     Processor:      PIC16F877A
@@ -96,7 +94,6 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    Compile Mode:   CCS5
 
 Output Files:
     XREF file:   Examen_U4.xsym

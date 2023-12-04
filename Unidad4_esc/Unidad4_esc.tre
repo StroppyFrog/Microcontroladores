@@ -1,19 +1,18 @@
 ÀÄUnidad4_esc
    ÃÄMAIN  0/231  Ram=4
    ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÃÄ@cinit2  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/48  Ram=2
    ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ³  ÃÄlcd_send_nibble  0/15  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/17  Ram=1
    ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ³  ÃÄlcd_send_nibble  0/15  Ram=1
-   ³  ³  ÃÄ@const714  0/8  Ram=0
+   ³  ³  ÃÄlcd_send_nibble  0/17  Ram=1
+   ³  ³  ÃÄ@const634  0/8  Ram=0
    ³  ³  ÀÄlcd_send_byte  0/61  Ram=3
    ³  ³     ÃÄlcd_read_byte  (Inline)  Ram=3
    ³  ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
    ³  ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
-   ³  ³     ÃÄlcd_send_nibble  0/15  Ram=1
-   ³  ³     ÀÄlcd_send_nibble  0/15  Ram=1
+   ³  ³     ÃÄlcd_send_nibble  0/17  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/17  Ram=1
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄlcd_send_byte  0/61  Ram=3
    ³  ³     ÀÄ*
@@ -32,7 +31,7 @@
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
    ³  ÃÄ@MULFF  0/117  Ram=13
-   ³  ÃÄ@PRINTF_L32D_731FPFPF  0/224  Ram=13
+   ³  ÃÄ@PRINTF_L32D_652FPFPF  0/224  Ram=13
    ³  ³  ÃÄ@MULFF  0/117  Ram=13
    ³  ³  ÃÄ@FTOSD  (Inline)  Ram=5
    ³  ³  ÃÄ@DIV3232  0/79  Ram=13
@@ -56,7 +55,7 @@
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
    ³  ÃÄ@MULFF  0/117  Ram=13
-   ³  ÃÄ@PRINTF_L32D_731FPFPF  0/224  Ram=13
+   ³  ÃÄ@PRINTF_L32D_652FPFPF  0/224  Ram=13
    ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
@@ -67,7 +66,7 @@
    ³  ÃÄlcd_gotoxy  0/18  Ram=4
    ³  ³  ÀÄ*
    ³  ÃÄ@MULFF  0/117  Ram=13
-   ³  ÀÄ@PRINTF_L32D_731FPFPF  0/224  Ram=13
+   ³  ÀÄ@PRINTF_L32D_652FPFPF  0/224  Ram=13
    ³     ÀÄ*
    ÀÄrda_int  0/70  Ram=3
       ÀÄ@ITOF  (Inline)  Ram=2

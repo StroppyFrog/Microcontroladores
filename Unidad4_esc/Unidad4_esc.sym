@@ -1,10 +1,10 @@
-004-005 @WRITE_PROGRAM_MEMORY8.P1
-004-005 @READ_PROGRAM_MEMORY8.P2
-008     lcdlat
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
 008     lcd
+008     lcdlat
 008     PSP_DATA
-015     CCP_1_LOW
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
@@ -27,34 +27,34 @@
 031     MAIN.@SCRATCH2
 032     MAIN.@SCRATCH3
 033     MAIN.@SCRATCH4
-034-037 @PRINTF_L32D_731FPFPF.P1
-038     @PRINTF_L32D_731FPFPF.P1
-039     @PRINTF_L32D_731FPFPF.@SCRATCH1
-03A     @PRINTF_L32D_731FPFPF.@SCRATCH2
-03B     @PRINTF_L32D_731FPFPF.@SCRATCH3
-03C     @PRINTF_L32D_731FPFPF.@SCRATCH4
-03D     @PRINTF_L32D_731FPFPF.@SCRATCH5
-03E     @PRINTF_L32D_731FPFPF.@SCRATCH6
-03F     @PRINTF_L32D_731FPFPF.@SCRATCH7
-040     @PRINTF_L32D_731FPFPF.@SCRATCH8
+034-037 @PRINTF_L32D_652FPFPF.P1
+038     @PRINTF_L32D_652FPFPF.P1
+039     @PRINTF_L32D_652FPFPF.@SCRATCH1
+03A     @PRINTF_L32D_652FPFPF.@SCRATCH2
+03B     @PRINTF_L32D_652FPFPF.@SCRATCH3
+03C     @PRINTF_L32D_652FPFPF.@SCRATCH4
+03D     @PRINTF_L32D_652FPFPF.@SCRATCH5
+03E     @PRINTF_L32D_652FPFPF.@SCRATCH6
+03F     @PRINTF_L32D_652FPFPF.@SCRATCH7
+040     @PRINTF_L32D_652FPFPF.@SCRATCH8
 041-044 @DIV3232.P1
-041-044 @FTOSD.P2
+041-044 @MULFF.P2
 041     lcd_putc.c
-041-044 @MULFF.P1
+041-044 @FTOSD.P1
 042     @delay_ms1.P1
 042     lcd_gotoxy.x
 043     lcd_gotoxy.y
 044     lcd_gotoxy.address
-045-048 @DIV3232.P1
-045-048 @MULFF.P2
+045-048 @MULFF.P1
+045-048 @DIV3232.P2
 045     lcd_gotoxy.@SCRATCH1
 045     @FTOSD.@SCRATCH1
 046     lcd_send_byte.address
 047     lcd_send_byte.n
 048     lcd_read_byte.low
 048     lcd_send_byte.@SCRATCH1
-049     lcd_send_nibble.n
 049     lcd_read_byte.high
+049     lcd_send_nibble.n
 049     @MULFF.@SCRATCH1
 049     @DIV3232.@SCRATCH1
 04A     lcd_read_byte.@SCRATCH1
@@ -80,8 +80,8 @@
 09C.6   C1OUT
 09C.7   C2OUT
 0FF     @INTERRUPT_AREA
-10D-10E @READ_PROGRAM_MEMORY8.P1
-10D-10E @WRITE_PROGRAM_MEMORY8.P2
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -112,38 +112,6 @@ E7F     @INTERRUPT_AREA
 EFF     @INTERRUPT_AREA
 F7F     @INTERRUPT_AREA
 FFF     @INTERRUPT_AREA
-107F     @INTERRUPT_AREA
-10FF     @INTERRUPT_AREA
-117F     @INTERRUPT_AREA
-11FF     @INTERRUPT_AREA
-127F     @INTERRUPT_AREA
-12FF     @INTERRUPT_AREA
-137F     @INTERRUPT_AREA
-13FF     @INTERRUPT_AREA
-147F     @INTERRUPT_AREA
-14FF     @INTERRUPT_AREA
-157F     @INTERRUPT_AREA
-15FF     @INTERRUPT_AREA
-167F     @INTERRUPT_AREA
-16FF     @INTERRUPT_AREA
-177F     @INTERRUPT_AREA
-17FF     @INTERRUPT_AREA
-187F     @INTERRUPT_AREA
-18FF     @INTERRUPT_AREA
-197F     @INTERRUPT_AREA
-19FF     @INTERRUPT_AREA
-1A7F     @INTERRUPT_AREA
-1AFF     @INTERRUPT_AREA
-1B7F     @INTERRUPT_AREA
-1BFF     @INTERRUPT_AREA
-1C7F     @INTERRUPT_AREA
-1CFF     @INTERRUPT_AREA
-1D7F     @INTERRUPT_AREA
-1DFF     @INTERRUPT_AREA
-1E7F     @INTERRUPT_AREA
-1EFF     @INTERRUPT_AREA
-1F7F     @INTERRUPT_AREA
-1FFF     @INTERRUPT_AREA
 
 ROM Allocation:
 000031  LCD_INIT_STRING.call
@@ -152,34 +120,32 @@ ROM Allocation:
 000055  @ITOF
 00007F  @delay_ms1
 000093  lcd_send_nibble
-0000A2  lcd_read_nibble
-0000A8  lcd_send_byte
-0000A9  lcd_read_byte
-0000E5  lcd_init
-000115  lcd_gotoxy
-000127  lcd_putc
-00014B  @MULFF
-0001C0  @DIV3232
-00020F  @PRINTF_L32D_731FPFPF
-000236  @FTOSD
-0002EF  MAIN
-0002EF  @cinit1
-000305  @cinit2
+0000A4  lcd_read_nibble
+0000AA  lcd_send_byte
+0000AB  lcd_read_byte
+0000E7  lcd_init
+000117  lcd_gotoxy
+000129  lcd_putc
+00014D  @MULFF
+0001C2  @DIV3232
+000211  @PRINTF_L32D_652FPFPF
+000238  @FTOSD
+0002F1  MAIN
+0002F1  @cinit1
+000307  @cinit2
 
 Project Directory:
-    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Unidad4_esc\
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Microcontroladores\Unidad4_esc\
 
 Project Files:
-    Unidad4_esc.c                                           [07-jun.-23 22:11  CRC=32D68437]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_d.c [28-feb.-23 21:47  CRC=F0850C2B]
+    Unidad4_esc.c                                           [21-sep.-23 14:04  CRC=32D68437]
+    ..\..\..\..\..\Escritorio\PICC\Devices\16F877a.h        [12-nov.-13 14:35  CRC=81334808]
+    ..\..\..\..\..\Escritorio\PICC\Drivers\lcd_d.c          [13-sep.-23 13:20  CRC=F0850C2B]
 
-Source signature=7DE77E8F
-Program memory checksum=0000
-Hex file CRC=6AEA
+Source signature=9513E495
 
 Units:
-    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Unidad4_esc\Unidad4_esc (main)
+    Unidad4_esc (main)
 
 Compiler Settings:
     Processor:      PIC16F877A
@@ -188,7 +154,6 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    Compile Mode:   CCS5
 
 Output Files:
     XREF file:   Unidad4_esc.xsym
