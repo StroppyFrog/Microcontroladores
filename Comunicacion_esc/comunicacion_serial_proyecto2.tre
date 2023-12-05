@@ -1,0 +1,49 @@
+ÀÄcomunicacion_serial_proyecto2
+   ÃÄMAIN  0/72  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄlcd_init  0/70  Ram=6
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/48  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/48  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÀÄlcd_send_byte  0/94  Ram=3
+   ³  ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+   ³  ³     ³  ÃÄlcd_read_nibble  0/49  Ram=2
+   ³  ³     ³  ÀÄlcd_read_nibble  0/49  Ram=2
+   ³  ³     ÃÄlcd_send_nibble  0/48  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/48  Ram=1
+   ³  ÃÄkbd_init  0/3  Ram=0
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄparo  0/9  Ram=0
+   ³  ÃÄgirar_izq  0/36  Ram=2
+   ³  ³  ÃÄlcd_putc  0/44  Ram=1
+   ³  ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+   ³  ³  ³  ³  ÀÄlcd_send_byte  0/94  Ram=3
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄlcd_send_byte  0/94  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_send_byte  0/94  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄlcd_send_byte  0/94  Ram=3
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄ@PRINTF_LU_645  0/99  Ram=9
+   ³  ³  ³  ÀÄlcd_putc  0/44  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄdelay_paro  0/59  Ram=2
+   ³  ³  ³  ÃÄ@MUL1616  (Inline)  Ram=5
+   ³  ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ³  ÀÄparo  0/9  Ram=0
+   ³  ³  ÀÄparo  0/9  Ram=0
+   ³  ÀÄgirar_der  0/36  Ram=2
+   ³     ÃÄlcd_putc  0/44  Ram=1
+   ³     ³  ÀÄ*
+   ³     ÃÄ@PRINTF_LU_645  0/99  Ram=9
+   ³     ³  ÀÄ*
+   ³     ÃÄdelay_paro  0/59  Ram=2
+   ³     ³  ÀÄ*
+   ³     ÀÄparo  0/9  Ram=0
+   ÀÄrda_isr  0/22  Ram=0

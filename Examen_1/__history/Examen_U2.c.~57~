@@ -1,0 +1,103 @@
+#include <16F877a.h>
+#device ADC = 10
+#use delay(crystal = 20000000)
+#FUSES NOWDT, NOBROWNOUT, NOLVP, HS
+
+#include <lcd_c.c>
+#include <kbd4x4_d.c>
+#include <getNum16.c>
+
+#use STANDARD_IO(B)
+#use STANDARD_IO(C)
+#use STANDARD_IO(D)
+
+#define M_FRESA PIN_B0
+#define M_LIGHT PIN_B1
+#define SENSOR_FRESA PIN_B4
+#define SENSOR_LIGHT PIN_B5
+#define PARO PIN_B7
+
+int8 Motor;
+int16 caja_final;
+
+void parar(){
+   output_low(M_FRESA);
+   output_low(M_LIGHT);
+}
+
+void paro_emergencia(){
+   parar();
+   printf(lcd_putc,"\fPARO DE EMERGEN");
+   while(input(PARO) == 1){}
+   printf(lcd_putc,"\fPRESS ANY KEY");
+   char tecla = read_key();
+}
+
+void girarFresa(){
+   int16 caja_actual = 0;
+   while(caja_actual != caja_final){
+      output_high(M_FRESA);
+      printf(lcd_putc,"\fLINEA FRESA\n%2Lu/%2Lu cajas...",caja_actual,caja_final);
+      if(input(SENSOR_FRESA) == 1){
+         while(input(SENSOR_FRESA) == 1){}
+         caja_actual += 1;
+      }
+      else if(input(PARO) == 1){
+         paro_emergencia();
+      }
+      if(caja_actual == caja_final)break;
+   }
+}
+
+void girarLight(){
+   int16 caja_actual = 0;
+   while(caja_actual != caja_final){
+      output_high(M_LIGHT);
+      printf(lcd_putc,"\fLINEA LIGHT\n%2Lu/%2Lu cajas...",caja_actual,caja_final);
+      if(input(SENSOR_LIGHT) == 1){
+         while(input(SENSOR_LIGHT) == 1){}
+         caja_actual += 1;
+      }
+      else if(input(PARO) == 1){
+         paro_emergencia();
+      }
+      if(caja_actual == caja_final)break;
+   }
+}
+
+void main(){
+   lcd_init();
+   kbd_init();
+   parar();
+   input(PARO);
+   while (TRUE){
+      printf(lcd_putc,"\f1 - FRESA\n3 - LIGHT ");
+      Motor = get_num_lcd(14,2);
+      if(Motor == 1 || Motor == 3){
+         printf(lcd_putc,"\f# cajas: ");
+         caja_final = get_num_lcd(1,2);
+         if(1 <= caja_final && caja_final <= 50){
+            if(Motor == 1){
+              girarFresa();
+              output_low(M_FRESA);
+              printf(lcd_putc,"\f LISTO");
+              delay_ms(3000);
+            }
+            else if(Motor == 3){
+               girarLight();
+               output_low(M_LIGHT);
+               printf(lcd_putc,"\f LISTO");
+              delay_ms(3000);
+            }
+         }
+         else{
+            printf(lcd_putc,"\f** ERROR ** \nNumero no valido");
+         delay_ms(2000);
+         }
+      }
+      else{
+         printf(lcd_putc,"\f** ERROR ** \nNumero no valido");
+         delay_ms(2000);
+      }
+   }
+}

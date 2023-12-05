@@ -1,0 +1,24 @@
+[PROJECT]
+Target=control rpm_proyecto.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=control rpm_proyecto.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[control rpm_proyecto.c]
+Type=4
+[mru-list]
+1=control rpm_proyecto.c
+[Opened Files]
+1=..\Microcontroladores\Unidad4_master\Unidad4_master.c
+2=..\Examen_UIV_Primeras\Examen_UIV.c
+3=..\Microcontroladores\Sensor_tem\sensor_temp.c
+4=..\Control_rpm\Control_RPM.c
+5=control rpm_proyecto.c
+6=..\Control_rpm_4\Control_rpm_4.c
+7=
+[Units]
+Count=1
+1=control rpm_proyecto (main)

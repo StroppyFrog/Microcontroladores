@@ -1,0 +1,20 @@
+[PROJECT]
+Target=Motor_bipolar_a_pasos_Proyecto.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Motor_bipolar_a_pasos_Proyecto.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Motor_bipolar_a_pasos_Proyecto.c]
+Type=4
+[mru-list]
+1=Motor_bipolar_a_pasos_Proyecto.c
+[Opened Files]
+1=Motor_bipolar_a_pasos_Proyecto.c
+2=..\Motor_Unipolar\Motor_unipolar_a_pasos_Proyecto.c
+3=
+[Units]
+Count=1
+1=Motor_bipolar_a_pasos_Proyecto (main)

@@ -1,0 +1,24 @@
+ÀÄExamen_UIV
+   ÀÄMAIN  0/156  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_init  0/107  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/17  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/17  Ram=1
+      ³  ÃÄ@const634  0/8  Ram=0
+      ³  ÀÄlcd_send_byte  (Inline)  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
+      ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
+      ³     ÃÄlcd_send_nibble  0/17  Ram=1
+      ³     ÀÄlcd_send_nibble  0/17  Ram=1
+      ÃÄkbd_init  0/3  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@PRINTF_LU_9600_62_63  0/89  Ram=9
+      ÃÄ@PSTRINGCN7_9600_62_63  0/89  Ram=5
+      ÃÄ@PRINTF_LU_9600_62_63  0/89  Ram=9
+      ÃÄ@PSTRINGCN7_9600_62_63  0/89  Ram=5
+      ÀÄ@PRINTF_LU_9600_62_63  0/89  Ram=9

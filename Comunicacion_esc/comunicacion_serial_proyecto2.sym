@@ -1,0 +1,164 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     kbd
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     kbd_getc.kbd_call_count
+02C.0   kbd_getc.kbd_down
+02C.1   cambio
+02D     kbd_getc.last_key
+02E     kbd_getc.col
+02F     char_in
+030-031 tiempo
+032     lcd_init.i
+032     girar_izq.i
+032     girar_der.i
+032     kbd_getc.kchar
+032     MAIN.@SCRATCH1
+033-034 delay_paro.segundos
+033-036 lcd_init.LCD_INIT_STRING
+033     kbd_getc.row
+033-034 @PRINTF_LU_645.P1
+033     girar_izq.@SCRATCH1
+033     girar_der.@SCRATCH1
+035-036 delay_paro.i
+035     @PRINTF_LU_645.@SCRATCH1
+036     @PRINTF_LU_645.@SCRATCH2
+037-038 @MUL1616.P1
+037     lcd_init.@SCRATCH1
+037     @PRINTF_LU_645.@SCRATCH3
+038     @PRINTF_LU_645.@SCRATCH4
+039-03A @MUL1616.P1
+039     @PRINTF_LU_645.@SCRATCH5
+03A     @PRINTF_LU_645.@SCRATCH6
+03B     @MUL1616.@SCRATCH1
+03B     @PRINTF_LU_645.@SCRATCH7
+03C     lcd_putc.c
+03D     lcd_gotoxy.x
+03D     @delay_ms1.P1
+03E     lcd_gotoxy.y
+03F     lcd_gotoxy.address
+040     lcd_gotoxy.@SCRATCH1
+041     lcd_send_byte.address
+042     lcd_send_byte.n
+043     lcd_read_byte.low
+043     lcd_send_byte.@SCRATCH1
+044     lcd_read_byte.high
+044     lcd_send_nibble.n
+045     lcd_read_nibble.n
+045     lcd_read_byte.@SCRATCH1
+046     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000051  @const690.call
+000054  rda_isr
+00006A  @delay_ms1
+00007E  lcd_send_nibble
+0000AE  lcd_read_nibble
+0000DF  lcd_send_byte
+0000E7  lcd_read_byte
+00013D  lcd_init
+000183  kbd_init
+000186  paro
+00018F  lcd_gotoxy
+0001A1  lcd_putc
+0001CD  @PRINTF_LU_645
+000230  delay_paro
+000239  @MUL1616
+00026B  girar_izq
+00028F  girar_der
+0002B3  MAIN
+0002B3  @cinit1
+0002C6  @cinit2
+
+Project Directory:
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Comunicacion_esc\
+
+Project Files:
+    comunicacion_serial_proyecto2.c                         [22-nov.-23 12:38  CRC=D83B3499]
+    ..\..\..\..\Escritorio\PICC\Devices\16F877a.h           [12-nov.-13 14:35  CRC=81334808]
+    ..\..\..\..\Escritorio\PICC\Drivers\lcd.c               [19-sep.-13 15:38  CRC=D1A6378A]
+    ..\..\..\..\Escritorio\PICC\Drivers\kbd4x4_b.c          [13-sep.-23 13:25  CRC=DEF67D8A]
+    ..\..\..\..\Escritorio\PICC\Drivers\getNum16.c          [15-sep.-23 13:24  CRC=EEBE17EA]
+
+Source signature=E7876189
+
+Units:
+    comunicacion_serial_proyecto2 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   comunicacion_serial_proyecto2.xsym
+    Errors:      comunicacion_serial_proyecto2.err
+    Ext Symbols: comunicacion_serial_proyecto2.esym
+    INHX8:       comunicacion_serial_proyecto2.hex
+    Symbols:     comunicacion_serial_proyecto2.sym
+    List:        comunicacion_serial_proyecto2.lst
+    Debug/COFF:  comunicacion_serial_proyecto2.cof
+    Project:     comunicacion_serial_proyecto2.ccspjt
+    Call Tree:   comunicacion_serial_proyecto2.tre
+    Statistics:  comunicacion_serial_proyecto2.STA

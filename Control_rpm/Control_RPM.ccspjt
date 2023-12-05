@@ -1,0 +1,23 @@
+[PROJECT]
+Target=Control_RPM.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Control_RPM.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Control_RPM.c]
+Type=4
+[mru-list]
+1=Control_RPM.c
+[Opened Files]
+1=..\Microcontroladores\Unidad4_master\Unidad4_master.c
+2=..\Examen_UIV_Primeras\Examen_UIV.c
+3=..\Microcontroladores\Sensor_tem\sensor_temp.c
+4=Control_RPM.c
+5=..\..\..\..\..\Downloads\Micro primi 2.0\Micro primi 2.0\RPM PWM\Bien ya.c
+6=
+[Units]
+Count=1
+1=Control_RPM (main)

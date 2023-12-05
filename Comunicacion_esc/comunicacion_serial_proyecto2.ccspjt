@@ -1,0 +1,21 @@
+[PROJECT]
+Target=comunicacion_serial_proyecto2.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=comunicacion_serial_proyecto2.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[comunicacion_serial_proyecto2.c]
+Type=4
+[mru-list]
+1=comunicacion_serial_proyecto2.c
+[Opened Files]
+1=..\Comunicacion_master\comunicacion_serial_proyecto.c
+2=comunicacion_serial_proyecto2.c
+3=..\Control_rpm\Control_RPM.c
+4=
+[Units]
+Count=1
+1=comunicacion_serial_proyecto2 (main)

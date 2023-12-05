@@ -1,0 +1,157 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     kbd
+008     PSP_DATA
+008     lcd
+008     lcdlat
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024-025 @sprintf_string
+026     @TRIS_C
+027-028 MAIN.option
+029-02A MAIN.time
+02B.0   MAIN.condicion
+02C-02D MAIN.i
+02E     lcd_init.i
+02E-02F @MUL1616.P1
+02E     get_num_lcd.x
+02E     MAIN.@SCRATCH1
+02F     get_num_lcd.y
+02F     lcd_init.@SCRATCH1
+02F     MAIN.@SCRATCH2
+030-031 @MUL1616.P1
+030-031 get_num_lcd.numero
+030     MAIN.@SCRATCH3
+032-036 get_num_lcd.cadena
+032     @MUL1616.@SCRATCH1
+037     get_num_lcd.index
+038     get_num_lcd.tecla
+039     get_num_lcd.i
+03A     read_key.c
+03A     get_num_lcd.@SCRATCH1
+03A     @PSTRINGC7_728.@SCRATCH1
+03B     kbd_getc.kchar
+03B     get_num_lcd.@SCRATCH2
+03B     @PSTRINGC7_728.@SCRATCH2
+03C     pow.base
+03C     kbd_getc.row
+03C     get_num_lcd.@SCRATCH3
+03C     @PSTRINGC7_728.@SCRATCH3
+03D     pow.power
+03D     lcd_putc.c
+03D     kbd_getc.@SCRATCH1
+03D     @PSTRINGC7_728.@SCRATCH4
+03E     @delay_ms1.P1
+03E-041 pow.result
+03E     lcd_gotoxy.x
+03F     lcd_gotoxy.y
+040     lcd_gotoxy.address
+041     lcd_gotoxy.@SCRATCH1
+042     pow.i
+042     lcd_send_byte.address
+043-046 @MUL3232.P1
+043     lcd_send_byte.n
+044     lcd_read_byte.low
+044     lcd_send_byte.@SCRATCH1
+045     lcd_send_nibble.n
+045     lcd_read_byte.high
+046     lcd_read_byte.@SCRATCH1
+047-04A @MUL3232.P1
+04B     @MUL3232.@SCRATCH1
+04C     @MUL3232.@SCRATCH2
+04D     @MUL3232.@SCRATCH3
+04E     @MUL3232.@SCRATCH4
+04F     @MUL3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  KEYS.call
+000010  KEYS.data
+000020  @const767.call
+000023  @const782.call
+000033  @const783.call
+000043  @const790.call
+00004D  @const791.call
+000057  @const796.call
+000060  @const797.call
+000069  @const798.call
+000071  @const799.call
+00007A  @const801.call
+000082  @const802.call
+00008A  @delay_ms1
+00009E  lcd_send_nibble
+0000AD  lcd_read_nibble
+0000B3  lcd_send_byte
+0000B4  lcd_read_byte
+0000F0  lcd_init
+000120  kbd_init
+000123  lcd_gotoxy
+000135  lcd_putc
+000159  @PSTRINGC7_728
+0001AF  kbd_getc
+000218  @goto57249
+000220  @MUL3232
+00024A  get_num_lcd
+000257  read_key
+0002D0  pow
+000320  @MUL1616
+000335  MAIN
+000335  @cinit1
+000343  @cinit2
+
+Project Directory:
+    C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Practica2F\
+
+Project Files:
+    Practica2F.c                                            [01-mar.-23 10:57  CRC=5FD7BB4A]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [21-oct.-22 11:02  CRC=6A06E202]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_d.c [21-feb.-23 10:20  CRC=F0850C2B]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd4x4_b.c [22-feb.-23 10:49  CRC=DEF67D8A]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\getNum16.c [22-feb.-23 10:51  CRC=EEBE17EA]
+
+Source signature=76D656D5
+Program memory checksum=0000
+Hex file CRC=2066
+
+Units:
+    C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Practica2F\Practica2F (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   Practica2F.xsym
+    Errors:      Practica2F.err
+    Ext Symbols: Practica2F.esym
+    INHX8:       Practica2F.hex
+    Symbols:     Practica2F.sym
+    List:        Practica2F.lst
+    Debug/COFF:  Practica2F.cof
+    Project:     Practica2F.ccspjt
+    Call Tree:   Practica2F.tre
+    Statistics:  Practica2F.STA

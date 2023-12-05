@@ -1,0 +1,60 @@
+#include <16F877a.h>
+#device ADC=10
+#use delay(crystal=20Mhz)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+
+//Directiva para utilizar puerto USART
+#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
+
+//#include <lcd_d.c> //Incluir librería LCD
+//#include <kbd4x4_b.c> //Librería teclado 4x4 puerto B
+//#include <getNum16.c> //Librería para leer numeros enteros de 16 bits
+   int16 numero_recibido;
+   int8 byte1, byte2, byte3; 
+   int16 POT_1, POT_2, POT_3;
+#INT_RDA
+void rda_int()
+{
+   set_adc_channel(0);
+   POT_1 = read_adc();
+   
+      byte1 = POT_1 & 255; 
+      byte2 = (POT_1 >> 8) & 255; 
+      byte3 = 1;
+      putc(byte3);
+      putc(byte2); 
+      putc(byte1); 
+      printf("%lu",POT_1);
+      
+      set_adc_channel(1);
+      POT_2 = read_adc();
+      
+      byte1 = POT_2 & 255; 
+      byte2 = (POT_2 >> 8) & 255; 
+      byte3 = 2;
+      putc(byte3);
+      putc(byte2); 
+      putc(byte1); 
+         printf("%lu",POT_2);
+      
+      set_adc_channel(3);
+      POT_3 = read_adc();
+     
+      byte1 = POT_3 & 255; 
+      byte2 = (POT_3 >> 8) & 255; 
+      byte3 = 3;
+      putc(byte3);
+      putc(byte2); 
+      putc(byte1); 
+         printf("%lu",POT_3);
+}
+void main()
+{
+   setup_uart(9600); 
+   setup_adc(ADC_CLOCK_INTERNAL);
+   setup_adc_ports(AN0_AN1_AN3); 
+
+   while(TRUE)
+   {
+   }
+   }

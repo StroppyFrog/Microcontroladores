@@ -1,0 +1,33 @@
+ÀÄTarea_clase
+   ÃÄMAIN  0/49  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄlcd_init  0/78  Ram=2
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/17  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/17  Ram=1
+   ³  ³  ÃÄ@const631  0/8  Ram=0
+   ³  ³  ÀÄlcd_send_byte  0/69  Ram=3
+   ³  ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+   ³  ³     ³  ÃÄlcd_read_nibble  (Inline)  Ram=0
+   ³  ³     ³  ÀÄlcd_read_nibble  (Inline)  Ram=0
+   ³  ³     ÃÄlcd_send_nibble  0/17  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/17  Ram=1
+   ³  ÃÄkbd_init  0/3  Ram=0
+   ³  ÀÄ@PSTRINGC7_649  0/86  Ram=4
+   ³     ÃÄlcd_putc  0/52  Ram=1
+   ³     ³  ÃÄlcd_send_byte  0/69  Ram=3
+   ³     ³  ³  ÀÄ*
+   ³     ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³     ³  ÃÄlcd_gotoxy  (Inline)  Ram=4
+   ³     ³  ³  ÀÄlcd_send_byte  0/69  Ram=3
+   ³     ³  ³     ÀÄ*
+   ³     ³  ÃÄlcd_send_byte  0/69  Ram=3
+   ³     ³  ³  ÀÄ*
+   ³     ³  ÀÄlcd_send_byte  0/69  Ram=3
+   ³     ³     ÀÄ*
+   ³     ÀÄlcd_putc  0/52  Ram=1
+   ³        ÀÄ*
+   ÀÄdesborde_timer_1  0/11  Ram=0
+      ÀÄ@PSTRINGC7_649  0/86  Ram=4
+         ÀÄ*

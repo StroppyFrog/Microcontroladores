@@ -1,0 +1,20 @@
+[PROJECT]
+Target=lcd proyecto.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=lcd proyecto.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[lcd proyecto.c]
+Type=4
+[mru-list]
+1=lcd proyecto.c
+[Opened Files]
+1=lcd proyecto.c
+2=..\Motor_Unipolar\Motor_unipolar_a_pasos_Proyecto.c
+3=
+[Units]
+Count=1
+1=lcd proyecto (main)

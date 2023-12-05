@@ -1,0 +1,23 @@
+[PROJECT]
+Target=Examen_UIV_PreSegundas.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Examen_UIV_PreSegundas.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Examen_UIV_PreSegundas.c]
+Type=4
+[mru-list]
+1=Examen_UIV_PreSegundas.c
+[Opened Files]
+1=..\Examen_UIV_Primeras\Examen_UIV.c
+2=Examen_UIV_PreSegundas.c
+3=..\..\..\..\..\Downloads\Examen_U4_1\Examen U4.c
+4=..\Comunicacion_master\comunicacion_serial_proyecto.c
+5=..\Comunicacion_esc\comunicacion_serial_proyecto2.c
+6=
+[Units]
+Count=1
+1=Examen_UIV_PreSegundas (main)

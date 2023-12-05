@@ -1,0 +1,52 @@
+
+ROM used:   408/8192 (5%)
+            408/8192 (5%) including unused fragments
+
+            0.6 Average locations per line
+            13.2 Average locations per statement
+
+RAM used:   6/368 (2%) at main() level
+            11/368 (3%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   62    31 100  Examen_UIV_PreSegundas.c
+  671     0   0  ..\..\..\..\Escritorio\PICC\Devices\16F877a.h
+----- -----
+  733    31 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   5    1             @delay_ms1
+0    184  45    1   703  5.2  MAIN
+0     11   3    0             @const628
+0     90  22    4             @PSTRINGC7_9600_62_63
+0      8   2    0             @const635
+0     91  22    5             @PSTRINGCN7_9600_62_63
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              31
+    Comments                119
+    Volume (V)              718
+    Difficulty (D)          4.6
+    Effort to implement (E) 3327
+    Time to implement (T)   3 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   5
+    Maintainability (MI)    34
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   404  1640  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

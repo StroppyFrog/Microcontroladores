@@ -1,0 +1,202 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     kbd
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     @TRIS_C
+025-028 MAIN.grados
+029     lcd_init.i
+029     @PSTRINGCN7_645.P1
+029     get_num_lcd.x
+029-02C @FLT.P1
+029-02C @PRINTF_L32D_645FPFPF.P2
+029     MAIN.@SCRATCH1
+02A     get_num_lcd.y
+02A-02D lcd_init.LCD_INIT_STRING
+02A     mover_servo.grados
+02A     @PSTRINGCN7_645.@SCRATCH1
+02B-02C mover_servo.t_alto
+02B-02C get_num_lcd.numero
+02B     @PSTRINGCN7_645.@SCRATCH2
+02C     @PSTRINGCN7_645.@SCRATCH3
+02D-031 get_num_lcd.cadena
+02D-02E mover_servo.t_bajo
+02D-030 @FLT.P1
+02D     @PRINTF_L32D_645FPFPF.P2
+02D     @PSTRINGCN7_645.@SCRATCH4
+02E     lcd_init.@SCRATCH1
+02E     @PRINTF_L32D_645FPFPF.@SCRATCH1
+02F     mover_servo.i
+02F     @PRINTF_L32D_645FPFPF.@SCRATCH2
+030-033 @ADDFF.P1
+030-031 @ITOF.P2
+030-033 @SFTOI.P3
+030     mover_servo.@SCRATCH1
+030     @PRINTF_L32D_645FPFPF.@SCRATCH3
+031     @delay_us1.P1
+031     mover_servo.@SCRATCH2
+031     @PRINTF_L32D_645FPFPF.@SCRATCH4
+031     @FLT.@SCRATCH1
+032     get_num_lcd.index
+032     mover_servo.@SCRATCH3
+032     @PRINTF_L32D_645FPFPF.@SCRATCH5
+032     @FLT.@SCRATCH2
+033     get_num_lcd.tecla
+033     mover_servo.@SCRATCH4
+033     @PRINTF_L32D_645FPFPF.@SCRATCH6
+034-037 @ADDFF.P1
+034     get_num_lcd.i
+034     @PRINTF_L32D_645FPFPF.@SCRATCH7
+035     read_key.c
+035     get_num_lcd.@SCRATCH1
+035     @PSTRINGC7_645.@SCRATCH1
+035     @PRINTF_L32D_645FPFPF.@SCRATCH8
+036     kbd_getc.kchar
+036-039 @FTOSD.P1
+036-039 @DIV3232.P2
+036-039 @MULFF.P3
+036     get_num_lcd.@SCRATCH2
+036     @PSTRINGC7_645.@SCRATCH2
+037     pow.base
+037     kbd_getc.row
+037     get_num_lcd.@SCRATCH3
+037     @PSTRINGC7_645.@SCRATCH3
+038     pow.power
+038     lcd_putc.c
+038     kbd_getc.@SCRATCH1
+038     @PSTRINGC7_645.@SCRATCH4
+038     @ADDFF.@SCRATCH1
+039-03C pow.result
+039     lcd_gotoxy.x
+039     @delay_ms1.P1
+039     @ADDFF.@SCRATCH2
+03A-03D @DIV3232.P1
+03A-03D @MULFF.P2
+03A     lcd_gotoxy.y
+03A     @ADDFF.@SCRATCH3
+03A     @FTOSD.@SCRATCH1
+03B     lcd_gotoxy.address
+03B     @ADDFF.@SCRATCH4
+03C     lcd_gotoxy.@SCRATCH1
+03C     @ADDFF.@SCRATCH5
+03D     pow.i
+03D     lcd_send_byte.address
+03D     @ADDFF.@SCRATCH6
+03E     lcd_send_byte.n
+03E-041 @MUL3232.P1
+03E     @MULFF.@SCRATCH1
+03E     @ADDFF.@SCRATCH7
+03E     @DIV3232.@SCRATCH1
+03F     lcd_read_byte.low
+03F     lcd_send_byte.@SCRATCH1
+03F     @MULFF.@SCRATCH2
+03F     @ADDFF.@SCRATCH8
+03F     @DIV3232.@SCRATCH2
+040     lcd_send_nibble.n
+040     lcd_read_byte.high
+040     @MULFF.@SCRATCH3
+040     @DIV3232.@SCRATCH3
+041     lcd_read_nibble.n
+041     lcd_read_byte.@SCRATCH1
+041     @MULFF.@SCRATCH4
+041     @DIV3232.@SCRATCH4
+042-045 @MUL3232.P1
+042     lcd_read_nibble.@SCRATCH1
+042     @MULFF.@SCRATCH5
+042     @DIV3232.@SCRATCH5
+046     @MUL3232.@SCRATCH1
+047     @MUL3232.@SCRATCH2
+048     @MUL3232.@SCRATCH3
+049     @MUL3232.@SCRATCH4
+04A     @MUL3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000018  @const690.call
+00001B  @const720.call
+000022  @const731.call
+000026  @const735.call
+00002D  @delay_ms1
+000041  lcd_send_nibble
+000071  lcd_read_nibble
+0000A2  lcd_send_byte
+0000AA  lcd_read_byte
+000100  lcd_init
+000146  kbd_init
+000149  @SFTOI
+000168  @ITOF
+000185  @MULFF
+0001FA  @delay_us1
+000209  mover_servo
+000245  @ADDFF
+0003C0  lcd_gotoxy
+0003D2  lcd_putc
+0003FE  @PSTRINGCN7_645
+000455  @DIV3232
+0004A4  @PRINTF_L32D_645FPFPF
+0004CB  @FTOSD
+000584  @PSTRINGC7_645
+0005DA  kbd_getc
+000643  @goto10703
+00064B  @MUL3232
+000675  get_num_lcd
+000682  read_key
+0006FB  pow
+00074D  @FLT
+000800  MAIN
+000800  @cinit1
+00080C  @cinit2
+
+Project Directory:
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Servo_2\
+
+Project Files:
+    servo_proyecto 2.c                                      [16-oct.-23 11:37  CRC=1071CF1F]
+    ..\..\..\..\Escritorio\PICC\Devices\16F877a.h           [12-nov.-13 14:35  CRC=81334808]
+    ..\..\..\..\Escritorio\PICC\Drivers\lcd.c               [19-sep.-13 15:38  CRC=D1A6378A]
+    ..\..\..\..\Escritorio\PICC\Drivers\kbd4x4_b.c          [13-sep.-23 13:25  CRC=DEF67D8A]
+    ..\..\..\..\Escritorio\PICC\Drivers\getNum16.c          [15-sep.-23 13:24  CRC=EEBE17EA]
+
+Source signature=1FBDFC0F
+
+Units:
+    servo_proyecto 2 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   servo_proyecto 2.xsym
+    Errors:      servo_proyecto 2.err
+    Ext Symbols: servo_proyecto 2.esym
+    INHX8:       servo_proyecto 2.hex
+    Symbols:     servo_proyecto 2.sym
+    List:        servo_proyecto 2.lst
+    Debug/COFF:  servo_proyecto 2.cof
+    Project:     servo_proyecto 2.ccspjt
+    Call Tree:   servo_proyecto 2.tre
+    Statistics:  servo_proyecto 2.STA

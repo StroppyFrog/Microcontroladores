@@ -1,0 +1,21 @@
+[PROJECT]
+Target=Examen_UIV.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Examen_UIV.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Examen_UIV.c]
+Type=4
+[mru-list]
+1=Examen_UIV.c
+[Opened Files]
+1=..\Microcontroladores\Unidad4_master\Unidad4_master.c
+2=Examen_UIV.c
+3=..\Microcontroladores\Sensor_tem\sensor_temp.c
+4=
+[Units]
+Count=1
+1=Examen_UIV (main)

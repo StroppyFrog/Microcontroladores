@@ -1,0 +1,125 @@
+ÀÄExamen_U2
+<<<<<<< Updated upstream
+   ÀÄMAIN  0/64  Ram=2
+=======
+   ÀÄMAIN  0/85  Ram=2
+>>>>>>> Stashed changes
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄlcd_init  0/48  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/15  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/15  Ram=1
+      ³  ÃÄ@const711  0/8  Ram=0
+      ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
+      ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
+      ³     ÃÄlcd_send_nibble  0/15  Ram=1
+      ³     ÀÄlcd_send_nibble  0/15  Ram=1
+      ÃÄkbd_init  0/3  Ram=0
+<<<<<<< Updated upstream
+      ÃÄparo  0/11  Ram=0
+      ÃÄ@PSTRINGCN7_728  0/89  Ram=5
+=======
+      ÃÄparo  0/9  Ram=0
+      ÃÄ@PSTRINGC7_728  0/86  Ram=4
+>>>>>>> Stashed changes
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÃÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³  ³     ÀÄ*
+      ³  ÀÄlcd_putc  0/36  Ram=1
+      ³     ÀÄ*
+<<<<<<< Updated upstream
+      ÃÄ@PRINTF_LU_728  0/101  Ram=9
+      ³  ÀÄlcd_putc  0/36  Ram=1
+      ³     ÀÄ*
+      ÀÄget_num_lcd  0/298  Ram=15
+         ÃÄlcd_gotoxy  0/18  Ram=4
+         ³  ÀÄ*
+         ÃÄread_key  (Inline)  Ram=1
+         ³  ÀÄkbd_getc  0/105  Ram=3
+         ³     ÃÄ@goto4278  0/8  Ram=0
+         ³     ÀÄ@const736  0/20  Ram=0
+         ÃÄlcd_putc  0/36  Ram=1
+         ³  ÀÄ*
+         ÃÄlcd_gotoxy  0/18  Ram=4
+         ³  ÀÄ*
+         ÃÄlcd_putc  0/36  Ram=1
+         ³  ÀÄ*
+         ÃÄlcd_gotoxy  0/18  Ram=4
+         ³  ÀÄ*
+         ÃÄlcd_gotoxy  0/18  Ram=4
+         ³  ÀÄ*
+         ÃÄ@PSTRINGC7_728  (Inline)  Ram=4
+         ³  ÃÄlcd_putc  0/36  Ram=1
+         ³  ³  ÀÄ*
+         ³  ÀÄlcd_putc  0/36  Ram=1
+         ³     ÀÄ*
+         ÃÄlcd_gotoxy  0/18  Ram=4
+         ³  ÀÄ*
+         ÃÄpow  (Inline)  Ram=7
+         ³  ÀÄ@MUL3232  0/42  Ram=13
+         ÀÄ@MUL3232  0/42  Ram=13
+=======
+      ÃÄget_num_lcd  0/209  Ram=15
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄread_key  0/9  Ram=1
+      ³  ³  ÀÄkbd_getc  0/105  Ram=3
+      ³  ³     ÃÄ@goto48764  0/8  Ram=0
+      ³  ³     ÀÄ@const736  0/20  Ram=0
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_728  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄpow  (Inline)  Ram=7
+      ³  ³  ÀÄ@MUL3232  0/42  Ram=13
+      ³  ÀÄ@MUL3232  0/42  Ram=13
+      ÃÄCantidad_F  0/37  Ram=1
+      ³  ÃÄ@PSTRINGCN7_728  0/87  Ram=5
+      ³  ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄlcd_putc  0/36  Ram=1
+      ³  ³     ÀÄ*
+      ³  ÀÄ@PRINTF_LU_728  0/99  Ram=9
+      ³     ÀÄlcd_putc  0/36  Ram=1
+      ³        ÀÄ*
+      ÃÄCantidad_L  0/37  Ram=1
+      ³  ÃÄ@PSTRINGCN7_728  0/87  Ram=5
+      ³  ³  ÀÄ*
+      ³  ÀÄ@PRINTF_LU_728  0/99  Ram=9
+      ³     ÀÄ*
+      ÃÄ@PSTRINGC7_728  0/86  Ram=4
+      ³  ÀÄ*
+      ÀÄdelay_paro  0/84  Ram=4
+         ÃÄ@MUL1616  (Inline)  Ram=5
+         ÃÄ@delay_ms1  0/20  Ram=1
+         ÀÄparo_emergencia  (Inline)  Ram=2
+            ÃÄparo  0/9  Ram=0
+            ÃÄ@PSTRINGC7_728  0/86  Ram=4
+            ³  ÀÄ*
+            ÃÄ@PSTRINGC7_728  0/86  Ram=4
+            ³  ÀÄ*
+            ÀÄread_key  0/9  Ram=1
+               ÀÄ*
+>>>>>>> Stashed changes

@@ -1,0 +1,19 @@
+[PROJECT]
+Target=Tarea_clase.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Tarea_clase.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Tarea_clase.c]
+Type=4
+[mru-list]
+1=Tarea_clase.c
+[Opened Files]
+1=Tarea_clase.c
+2=
+[Units]
+Count=1
+1=Tarea_clase (main)

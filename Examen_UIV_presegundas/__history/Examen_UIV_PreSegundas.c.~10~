@@ -1,0 +1,58 @@
+#include <16F877a.h>
+#device ADC=10
+#use delay(crystal=20Mhz)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+
+#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
+
+#define MA1 PIN_B0
+#define MA2 PIN_B1
+#define MA3 PIN_B2
+#define MA4 PIN_B3
+
+#USE STANDARD_IO(A)
+
+void main(){
+
+   setup_adc(ADC_CLOCK_INTERNAL);
+   setup_adc_ports(AN0_AN1_AN3);
+   
+   int16 lectura;
+   printf("\fPresiona W,A,S o D\r");
+   delay_ms(1000);
+   
+   while(1)
+   {
+      char op=getc();
+      
+      switch(op){
+      case 'w':
+         printf("\fY+");
+         output_high(PIN_B0);
+         delay_ms(300);
+         output_low(PIN_B0);
+         break;
+      case 'a':
+         printf("\fX-");
+         output_high(PIN_B2);
+         delay_ms(300);
+         output_low(PIN_B2);
+         break;
+      case 's':
+         printf("\fY-");
+         output_high(PIN_B1);
+         delay_ms(300);
+         output_low(PIN_B1);
+         break;
+      case 'd':
+         printf("\fX+");
+         output_high(PIN_B3);
+         delay_ms(300);
+         output_low(PIN_B3);
+         break;
+      default:
+         printf("\r%c no valido\r",op);
+         break;
+   }
+   }
+}

@@ -1,0 +1,3588 @@
+CCS PCM C Compiler, Version 5.015, 5967               21-nov.-23 13:38
+
+               Filename:   C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\RPM_nuevo\RPM_Nuevo.lst
+
+               ROM used:   2602 words (32%)
+                           Largest free fragment is 2048
+               RAM used:   42 (11%) at main() level
+                           93 (25%) worst case
+               Stack used: 8 locations (4 in main + 4 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  08
+0001:  MOVWF  0A
+0002:  GOTO   000
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BSF    03.6
+0016:  MOVF   0D,W
+0017:  BCF    03.6
+0018:  MOVWF  27
+0019:  BSF    03.6
+001A:  MOVF   0F,W
+001B:  BCF    03.6
+001C:  MOVWF  28
+001D:  BSF    03.6
+001E:  MOVF   0C,W
+001F:  BCF    03.6
+0020:  MOVWF  29
+0021:  BSF    03.6
+0022:  MOVF   0E,W
+0023:  BCF    03.6
+0024:  MOVWF  2A
+0025:  BCF    03.7
+0026:  BCF    03.5
+0027:  BTFSS  0B.4
+0028:  GOTO   02B
+0029:  BTFSC  0B.1
+002A:  GOTO   050
+002B:  BTFSS  0B.5
+002C:  GOTO   02F
+002D:  BTFSC  0B.2
+002E:  GOTO   053
+002F:  MOVF   22,W
+0030:  MOVWF  04
+0031:  MOVF   23,W
+0032:  MOVWF  77
+0033:  MOVF   24,W
+0034:  MOVWF  78
+0035:  MOVF   25,W
+0036:  MOVWF  79
+0037:  MOVF   26,W
+0038:  MOVWF  7A
+0039:  MOVF   27,W
+003A:  BSF    03.6
+003B:  MOVWF  0D
+003C:  BCF    03.6
+003D:  MOVF   28,W
+003E:  BSF    03.6
+003F:  MOVWF  0F
+0040:  BCF    03.6
+0041:  MOVF   29,W
+0042:  BSF    03.6
+0043:  MOVWF  0C
+0044:  BCF    03.6
+0045:  MOVF   2A,W
+0046:  BSF    03.6
+0047:  MOVWF  0E
+0048:  BCF    03.6
+0049:  MOVF   20,W
+004A:  MOVWF  0A
+004B:  SWAPF  21,W
+004C:  MOVWF  03
+004D:  SWAPF  7F,F
+004E:  SWAPF  7F,W
+004F:  RETFIE
+0050:  BCF    0A.3
+0051:  BCF    0A.4
+0052:  GOTO   4AA
+0053:  BCF    0A.3
+0054:  BCF    0A.4
+0055:  GOTO   36A
+.................... #include <16F877A.h> 
+.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877A 
+0056:  BCF    0A.0
+0057:  BCF    0A.1
+0058:  BCF    0A.2
+0059:  ADDWF  02,F
+005A:  RETLW  28
+005B:  RETLW  0C
+005C:  RETLW  01
+005D:  RETLW  06
+005E:  BCF    0A.0
+005F:  BCF    0A.1
+0060:  BCF    0A.2
+0061:  ADDWF  02,F
+0062:  RETLW  37
+0063:  RETLW  38
+0064:  RETLW  39
+0065:  RETLW  2F
+0066:  RETLW  34
+0067:  RETLW  35
+0068:  RETLW  36
+0069:  RETLW  2A
+006A:  RETLW  31
+006B:  RETLW  32
+006C:  RETLW  33
+006D:  RETLW  2D
+006E:  RETLW  43
+006F:  RETLW  30
+0070:  RETLW  3D
+0071:  RETLW  2B
+0072:  DATA 20,10
+0073:  DATA 20,10
+0074:  DATA 20,00
+0075:  MOVLW  10
+0076:  MOVWF  69
+0077:  CLRF   77
+0078:  CLRF   7A
+0079:  RRF    66,F
+007A:  RRF    65,F
+007B:  BTFSS  03.0
+007C:  GOTO   083
+007D:  MOVF   67,W
+007E:  ADDWF  77,F
+007F:  BTFSC  03.0
+0080:  INCF   7A,F
+0081:  MOVF   68,W
+0082:  ADDWF  7A,F
+0083:  RRF    7A,F
+0084:  RRF    77,F
+0085:  RRF    79,F
+0086:  RRF    78,F
+0087:  DECFSZ 69,F
+0088:  GOTO   079
+0089:  RETURN
+008A:  CLRF   78
+008B:  CLRF   79
+008C:  CLRF   77
+008D:  CLRF   7A
+008E:  MOVF   6A,W
+008F:  BTFSS  03.2
+0090:  GOTO   094
+0091:  MOVF   69,W
+0092:  BTFSC  03.2
+0093:  GOTO   0AE
+0094:  MOVLW  10
+0095:  MOVWF  6B
+0096:  BCF    03.0
+0097:  RLF    67,F
+0098:  RLF    68,F
+0099:  RLF    77,F
+009A:  RLF    7A,F
+009B:  MOVF   6A,W
+009C:  SUBWF  7A,W
+009D:  BTFSS  03.2
+009E:  GOTO   0A1
+009F:  MOVF   69,W
+00A0:  SUBWF  77,W
+00A1:  BTFSS  03.0
+00A2:  GOTO   0AA
+00A3:  MOVF   69,W
+00A4:  SUBWF  77,F
+00A5:  BTFSS  03.0
+00A6:  DECF   7A,F
+00A7:  MOVF   6A,W
+00A8:  SUBWF  7A,F
+00A9:  BSF    03.0
+00AA:  RLF    78,F
+00AB:  RLF    79,F
+00AC:  DECFSZ 6B,F
+00AD:  GOTO   096
+00AE:  RETURN
+*
+02A1:  MOVF   0B,W
+02A2:  MOVWF  66
+02A3:  BCF    0B.7
+02A4:  BSF    03.5
+02A5:  BSF    03.6
+02A6:  BSF    0C.7
+02A7:  BSF    0C.0
+02A8:  NOP
+02A9:  NOP
+02AA:  BCF    03.5
+02AB:  BCF    03.6
+02AC:  BTFSC  66.7
+02AD:  BSF    0B.7
+02AE:  BTFSC  03.0
+02AF:  GOTO   2D8
+02B0:  BSF    03.6
+02B1:  MOVF   0C,W
+02B2:  ANDLW  7F
+02B3:  BCF    03.6
+02B4:  MOVWF  66
+02B5:  BSF    03.6
+02B6:  MOVF   0D,W
+02B7:  BCF    03.6
+02B8:  MOVWF  67
+02B9:  BSF    03.6
+02BA:  MOVF   0F,W
+02BB:  BCF    03.6
+02BC:  MOVWF  68
+02BD:  MOVF   66,W
+02BE:  MOVWF  6E
+02BF:  CALL   13F
+02C0:  MOVF   67,W
+02C1:  BSF    03.6
+02C2:  MOVWF  0D
+02C3:  BCF    03.6
+02C4:  MOVF   68,W
+02C5:  BSF    03.6
+02C6:  MOVWF  0F
+02C7:  BCF    03.6
+02C8:  MOVF   0B,W
+02C9:  MOVWF  69
+02CA:  BCF    0B.7
+02CB:  BSF    03.5
+02CC:  BSF    03.6
+02CD:  BSF    0C.7
+02CE:  BSF    0C.0
+02CF:  NOP
+02D0:  NOP
+02D1:  BCF    03.5
+02D2:  BCF    03.6
+02D3:  BTFSC  69.7
+02D4:  BSF    0B.7
+02D5:  DECFSZ 65,F
+02D6:  GOTO   2D8
+02D7:  GOTO   2F7
+02D8:  BSF    03.6
+02D9:  RLF    0C,W
+02DA:  RLF    0E,W
+02DB:  ANDLW  7F
+02DC:  BCF    03.6
+02DD:  MOVWF  66
+02DE:  BSF    03.6
+02DF:  MOVF   0D,W
+02E0:  BCF    03.6
+02E1:  MOVWF  67
+02E2:  BSF    03.6
+02E3:  MOVF   0F,W
+02E4:  BCF    03.6
+02E5:  MOVWF  68
+02E6:  MOVF   66,W
+02E7:  MOVWF  6E
+02E8:  CALL   13F
+02E9:  MOVF   67,W
+02EA:  BSF    03.6
+02EB:  MOVWF  0D
+02EC:  BCF    03.6
+02ED:  MOVF   68,W
+02EE:  BSF    03.6
+02EF:  MOVWF  0F
+02F0:  INCF   0D,F
+02F1:  BTFSC  03.2
+02F2:  INCF   0F,F
+02F3:  BCF    03.0
+02F4:  BCF    03.6
+02F5:  DECFSZ 65,F
+02F6:  GOTO   2A1
+02F7:  RETURN
+02F8:  CLRF   6D
+02F9:  MOVF   04,W
+02FA:  MOVWF  6C
+02FB:  BCF    6D.0
+02FC:  BTFSC  03.7
+02FD:  BSF    6D.0
+02FE:  SWAPF  66,W
+02FF:  IORLW  F0
+0300:  MOVWF  68
+0301:  ADDWF  68,F
+0302:  ADDLW  E2
+0303:  MOVWF  69
+0304:  ADDLW  32
+0305:  MOVWF  6B
+0306:  MOVF   66,W
+0307:  ANDLW  0F
+0308:  ADDWF  69,F
+0309:  ADDWF  69,F
+030A:  ADDWF  6B,F
+030B:  ADDLW  E9
+030C:  MOVWF  6A
+030D:  ADDWF  6A,F
+030E:  ADDWF  6A,F
+030F:  SWAPF  65,W
+0310:  ANDLW  0F
+0311:  ADDWF  6A,F
+0312:  ADDWF  6B,F
+0313:  RLF    6A,F
+0314:  RLF    6B,F
+0315:  COMF   6B,F
+0316:  RLF    6B,F
+0317:  MOVF   65,W
+0318:  ANDLW  0F
+0319:  ADDWF  6B,F
+031A:  RLF    68,F
+031B:  MOVLW  07
+031C:  MOVWF  67
+031D:  MOVLW  0A
+031E:  ADDWF  6B,F
+031F:  DECF   6A,F
+0320:  BTFSS  03.0
+0321:  GOTO   31E
+0322:  ADDWF  6A,F
+0323:  DECF   69,F
+0324:  BTFSS  03.0
+0325:  GOTO   322
+0326:  ADDWF  69,F
+0327:  DECF   68,F
+0328:  BTFSS  03.0
+0329:  GOTO   326
+032A:  ADDWF  68,F
+032B:  DECF   67,F
+032C:  BTFSS  03.0
+032D:  GOTO   32A
+032E:  MOVLW  67
+032F:  MOVWF  04
+0330:  BCF    03.7
+0331:  MOVLW  07
+0332:  ANDWF  6C,W
+0333:  BCF    6C.6
+0334:  ADDWF  04,F
+0335:  MOVLW  6B
+0336:  SUBWF  04,W
+0337:  BTFSC  03.2
+0338:  BSF    6C.6
+0339:  MOVF   00,W
+033A:  MOVWF  77
+033B:  BTFSS  03.2
+033C:  GOTO   345
+033D:  BTFSC  6C.6
+033E:  GOTO   345
+033F:  BTFSC  6C.4
+0340:  GOTO   357
+0341:  BTFSC  6C.3
+0342:  GOTO   345
+0343:  MOVLW  20
+0344:  GOTO   348
+0345:  BSF    6C.3
+0346:  BCF    6C.4
+0347:  MOVLW  30
+0348:  ADDWF  77,F
+0349:  CLRF   66
+034A:  MOVF   04,W
+034B:  MOVWF  65
+034C:  BCF    66.0
+034D:  BTFSC  03.7
+034E:  BSF    66.0
+034F:  MOVF   77,W
+0350:  MOVWF  6E
+0351:  CALL   13F
+0352:  MOVF   65,W
+0353:  MOVWF  04
+0354:  BCF    03.7
+0355:  BTFSC  66.0
+0356:  BSF    03.7
+0357:  INCF   04,F
+0358:  BTFSS  6C.6
+0359:  GOTO   335
+035A:  RETURN
+*
+0388:  MOVLW  20
+0389:  MOVWF  71
+038A:  CLRF   6D
+038B:  CLRF   6E
+038C:  CLRF   6F
+038D:  CLRF   70
+038E:  MOVF   68,W
+038F:  MOVWF  7A
+0390:  MOVF   67,W
+0391:  MOVWF  79
+0392:  MOVF   66,W
+0393:  MOVWF  78
+0394:  MOVF   65,W
+0395:  MOVWF  77
+0396:  BCF    03.0
+0397:  BTFSS  77.0
+0398:  GOTO   3A7
+0399:  MOVF   69,W
+039A:  ADDWF  6D,F
+039B:  MOVF   6A,W
+039C:  BTFSC  03.0
+039D:  INCFSZ 6A,W
+039E:  ADDWF  6E,F
+039F:  MOVF   6B,W
+03A0:  BTFSC  03.0
+03A1:  INCFSZ 6B,W
+03A2:  ADDWF  6F,F
+03A3:  MOVF   6C,W
+03A4:  BTFSC  03.0
+03A5:  INCFSZ 6C,W
+03A6:  ADDWF  70,F
+03A7:  RRF    70,F
+03A8:  RRF    6F,F
+03A9:  RRF    6E,F
+03AA:  RRF    6D,F
+03AB:  RRF    7A,F
+03AC:  RRF    79,F
+03AD:  RRF    78,F
+03AE:  RRF    77,F
+03AF:  DECFSZ 71,F
+03B0:  GOTO   396
+*
+03C7:  BTFSC  03.1
+03C8:  GOTO   3CC
+03C9:  MOVLW  71
+03CA:  MOVWF  04
+03CB:  BCF    03.7
+03CC:  CLRF   77
+03CD:  CLRF   78
+03CE:  CLRF   79
+03CF:  CLRF   7A
+03D0:  CLRF   71
+03D1:  CLRF   72
+03D2:  CLRF   73
+03D3:  CLRF   74
+03D4:  MOVF   70,W
+03D5:  IORWF  6F,W
+03D6:  IORWF  6E,W
+03D7:  IORWF  6D,W
+03D8:  BTFSC  03.2
+03D9:  GOTO   40A
+03DA:  MOVLW  20
+03DB:  MOVWF  75
+03DC:  BCF    03.0
+03DD:  RLF    69,F
+03DE:  RLF    6A,F
+03DF:  RLF    6B,F
+03E0:  RLF    6C,F
+03E1:  RLF    71,F
+03E2:  RLF    72,F
+03E3:  RLF    73,F
+03E4:  RLF    74,F
+03E5:  MOVF   70,W
+03E6:  SUBWF  74,W
+03E7:  BTFSS  03.2
+03E8:  GOTO   3F3
+03E9:  MOVF   6F,W
+03EA:  SUBWF  73,W
+03EB:  BTFSS  03.2
+03EC:  GOTO   3F3
+03ED:  MOVF   6E,W
+03EE:  SUBWF  72,W
+03EF:  BTFSS  03.2
+03F0:  GOTO   3F3
+03F1:  MOVF   6D,W
+03F2:  SUBWF  71,W
+03F3:  BTFSS  03.0
+03F4:  GOTO   404
+03F5:  MOVF   6D,W
+03F6:  SUBWF  71,F
+03F7:  MOVF   6E,W
+03F8:  BTFSS  03.0
+03F9:  INCFSZ 6E,W
+03FA:  SUBWF  72,F
+03FB:  MOVF   6F,W
+03FC:  BTFSS  03.0
+03FD:  INCFSZ 6F,W
+03FE:  SUBWF  73,F
+03FF:  MOVF   70,W
+0400:  BTFSS  03.0
+0401:  INCFSZ 70,W
+0402:  SUBWF  74,F
+0403:  BSF    03.0
+0404:  RLF    77,F
+0405:  RLF    78,F
+0406:  RLF    79,F
+0407:  RLF    7A,F
+0408:  DECFSZ 75,F
+0409:  GOTO   3DC
+040A:  MOVF   71,W
+040B:  MOVWF  00
+040C:  INCF   04,F
+040D:  MOVF   72,W
+040E:  MOVWF  00
+040F:  INCF   04,F
+0410:  MOVF   73,W
+0411:  MOVWF  00
+0412:  INCF   04,F
+0413:  MOVF   74,W
+0414:  MOVWF  00
+*
+04A1:  DATA 52,28
+04A2:  DATA CD,20
+04A3:  DATA A0,12
+04A4:  DATA B0,1A
+04A5:  DATA CC,3A
+04A6:  DATA 20,28
+04A7:  DATA BA,12
+04A8:  DATA EC,3A
+04A9:  DATA 00,00
+*
+04B6:  DATA 49,37
+04B7:  DATA 67,39
+04B8:  DATA E5,39
+04B9:  DATA 61,10
+04BA:  DATA 52,28
+04BB:  DATA 4D,1D
+04BC:  DATA 00,01
+04BD:  DATA 0C,2B
+04BE:  DATA 61,36
+04BF:  DATA 6F,39
+04C0:  DATA A0,24
+04C1:  DATA 6E,3B
+04C2:  DATA 61,36
+04C3:  DATA 69,32
+04C4:  DATA 6F,00
+04C5:  DATA 49,37
+04C6:  DATA 67,39
+04C7:  DATA E5,39
+04C8:  DATA 61,10
+04C9:  DATA 52,28
+04CA:  DATA 4D,10
+04CB:  DATA 20,10
+04CC:  DATA 20,10
+04CD:  DATA 00,01
+04CE:  DATA 0C,2B
+04CF:  DATA 61,36
+04D0:  DATA 6F,39
+04D1:  DATA A0,24
+04D2:  DATA 6E,3B
+04D3:  DATA 61,36
+04D4:  DATA 69,32
+04D5:  DATA 6F,00
+04D6:  DATA 52,28
+04D7:  DATA 4D,10
+04D8:  DATA 25,26
+04D9:  DATA 75,10
+04DA:  DATA A0,20
+04DB:  DATA 25,26
+04DC:  DATA 75,10
+04DD:  DATA 20,10
+04DE:  DATA 20,10
+04DF:  DATA 20,00
+*
+05A7:  MOVF   0B,W
+05A8:  MOVWF  4F
+05A9:  BCF    0B.7
+05AA:  BSF    03.5
+05AB:  BSF    03.6
+05AC:  BSF    0C.7
+05AD:  BSF    0C.0
+05AE:  NOP
+05AF:  NOP
+05B0:  BCF    03.5
+05B1:  BCF    03.6
+05B2:  BTFSC  4F.7
+05B3:  BSF    0B.7
+05B4:  BSF    03.6
+05B5:  MOVF   0C,W
+05B6:  ANDLW  7F
+05B7:  BTFSC  03.2
+05B8:  GOTO   607
+05B9:  BCF    03.6
+05BA:  MOVWF  4F
+05BB:  BSF    03.6
+05BC:  MOVF   0D,W
+05BD:  BCF    03.6
+05BE:  MOVWF  50
+05BF:  BSF    03.6
+05C0:  MOVF   0F,W
+05C1:  BCF    03.6
+05C2:  MOVWF  51
+05C3:  CLRF   2B
+05C4:  BTFSC  0B.7
+05C5:  BSF    2B.7
+05C6:  BCF    0B.7
+05C7:  MOVF   4F,W
+05C8:  MOVWF  6E
+05C9:  CALL   13F
+05CA:  BTFSC  2B.7
+05CB:  BSF    0B.7
+05CC:  MOVF   50,W
+05CD:  BSF    03.6
+05CE:  MOVWF  0D
+05CF:  BCF    03.6
+05D0:  MOVF   51,W
+05D1:  BSF    03.6
+05D2:  MOVWF  0F
+05D3:  BCF    03.6
+05D4:  MOVF   0B,W
+05D5:  MOVWF  52
+05D6:  BCF    0B.7
+05D7:  BSF    03.5
+05D8:  BSF    03.6
+05D9:  BSF    0C.7
+05DA:  BSF    0C.0
+05DB:  NOP
+05DC:  NOP
+05DD:  BCF    03.5
+05DE:  BCF    03.6
+05DF:  BTFSC  52.7
+05E0:  BSF    0B.7
+05E1:  BSF    03.6
+05E2:  RLF    0C,W
+05E3:  RLF    0E,W
+05E4:  ANDLW  7F
+05E5:  BTFSC  03.2
+05E6:  GOTO   607
+05E7:  BCF    03.6
+05E8:  MOVWF  4F
+05E9:  BSF    03.6
+05EA:  MOVF   0D,W
+05EB:  BCF    03.6
+05EC:  MOVWF  50
+05ED:  BSF    03.6
+05EE:  MOVF   0F,W
+05EF:  BCF    03.6
+05F0:  MOVWF  51
+05F1:  CLRF   2B
+05F2:  BTFSC  0B.7
+05F3:  BSF    2B.7
+05F4:  BCF    0B.7
+05F5:  MOVF   4F,W
+05F6:  MOVWF  6E
+05F7:  CALL   13F
+05F8:  BTFSC  2B.7
+05F9:  BSF    0B.7
+05FA:  MOVF   50,W
+05FB:  BSF    03.6
+05FC:  MOVWF  0D
+05FD:  BCF    03.6
+05FE:  MOVF   51,W
+05FF:  BSF    03.6
+0600:  MOVWF  0F
+0601:  INCF   0D,F
+0602:  BTFSC  03.2
+0603:  INCF   0F,F
+0604:  BCF    03.6
+0605:  GOTO   5A7
+0606:  BSF    03.6
+0607:  BCF    03.6
+0608:  RETURN
+*
+0672:  BCF    0A.0
+0673:  BSF    0A.1
+0674:  BSF    0A.2
+0675:  ADDWF  02,F
+0676:  GOTO   615
+0677:  GOTO   61B
+0678:  GOTO   621
+0679:  GOTO   627
+*
+0743:  MOVLW  20
+0744:  MOVWF  71
+0745:  CLRF   6D
+0746:  CLRF   6E
+0747:  CLRF   6F
+0748:  CLRF   70
+0749:  MOVF   68,W
+074A:  MOVWF  7A
+074B:  MOVF   67,W
+074C:  MOVWF  79
+074D:  MOVF   66,W
+074E:  MOVWF  78
+074F:  MOVF   65,W
+0750:  MOVWF  77
+0751:  BCF    03.0
+0752:  BTFSS  77.0
+0753:  GOTO   762
+0754:  MOVF   69,W
+0755:  ADDWF  6D,F
+0756:  MOVF   6A,W
+0757:  BTFSC  03.0
+0758:  INCFSZ 6A,W
+0759:  ADDWF  6E,F
+075A:  MOVF   6B,W
+075B:  BTFSC  03.0
+075C:  INCFSZ 6B,W
+075D:  ADDWF  6F,F
+075E:  MOVF   6C,W
+075F:  BTFSC  03.0
+0760:  INCFSZ 6C,W
+0761:  ADDWF  70,F
+0762:  RRF    70,F
+0763:  RRF    6F,F
+0764:  RRF    6E,F
+0765:  RRF    6D,F
+0766:  RRF    7A,F
+0767:  RRF    79,F
+0768:  RRF    78,F
+0769:  RRF    77,F
+076A:  DECFSZ 71,F
+076B:  GOTO   751
+*
+0791:  MOVLW  20
+0792:  MOVWF  71
+0793:  CLRF   6D
+0794:  CLRF   6E
+0795:  CLRF   6F
+0796:  CLRF   70
+0797:  MOVF   68,W
+0798:  MOVWF  7A
+0799:  MOVF   67,W
+079A:  MOVWF  79
+079B:  MOVF   66,W
+079C:  MOVWF  78
+079D:  MOVF   65,W
+079E:  MOVWF  77
+079F:  BCF    03.0
+07A0:  BTFSS  77.0
+07A1:  GOTO   7B0
+07A2:  MOVF   69,W
+07A3:  ADDWF  6D,F
+07A4:  MOVF   6A,W
+07A5:  BTFSC  03.0
+07A6:  INCFSZ 6A,W
+07A7:  ADDWF  6E,F
+07A8:  MOVF   6B,W
+07A9:  BTFSC  03.0
+07AA:  INCFSZ 6B,W
+07AB:  ADDWF  6F,F
+07AC:  MOVF   6C,W
+07AD:  BTFSC  03.0
+07AE:  INCFSZ 6C,W
+07AF:  ADDWF  70,F
+07B0:  RRF    70,F
+07B1:  RRF    6F,F
+07B2:  RRF    6E,F
+07B3:  RRF    6D,F
+07B4:  RRF    7A,F
+07B5:  RRF    79,F
+07B6:  RRF    78,F
+07B7:  RRF    77,F
+07B8:  DECFSZ 71,F
+07B9:  GOTO   79F
+....................  
+.................... #list 
+....................  
+.................... #FUSES NOWDT, NOBROWNOUT, NOLVP, NOPROTECT, HS, NOPUT 
+.................... #use delay(clock= 20 MHz)         
+*
+012B:  MOVLW  6F
+012C:  MOVWF  04
+012D:  BCF    03.7
+012E:  MOVF   00,W
+012F:  BTFSC  03.2
+0130:  GOTO   13E
+0131:  MOVLW  06
+0132:  MOVWF  78
+0133:  CLRF   77
+0134:  DECFSZ 77,F
+0135:  GOTO   134
+0136:  DECFSZ 78,F
+0137:  GOTO   133
+0138:  MOVLW  7B
+0139:  MOVWF  77
+013A:  DECFSZ 77,F
+013B:  GOTO   13A
+013C:  DECFSZ 00,F
+013D:  GOTO   131
+013E:  RETURN
+*
+035B:  MOVLW  03
+035C:  SUBWF  66,F
+035D:  BTFSS  03.0
+035E:  GOTO   369
+035F:  MOVLW  66
+0360:  MOVWF  04
+0361:  BCF    03.7
+0362:  MOVF   00,W
+0363:  BTFSC  03.2
+0364:  GOTO   369
+0365:  GOTO   367
+0366:  GOTO   367
+0367:  DECFSZ 00,F
+0368:  GOTO   366
+0369:  RETURN
+....................  
+.................... #include <lcd_c.c> 
+.................... /////////////////////////////////////////////////////////////////////////////// 
+.................... ////                             LCD.C                                     //// 
+.................... ////                 Driver for common LCD modules                         //// 
+.................... ////                                                                       //// 
+.................... ////  lcd_init()   Must be called before any other function.               //// 
+.................... ////                                                                       //// 
+.................... ////  lcd_putc(c)  Will display c on the next position of the LCD.         //// 
+.................... ////                     The following have special meaning:               //// 
+.................... ////                      \f  Clear display                                //// 
+.................... ////                      \n  Go to start of second line                   //// 
+.................... ////                      \b  Move back one position                       //// 
+.................... ////                                                                       //// 
+.................... ////  lcd_gotoxy(x,y) Set write position on LCD (upper left is 1,1)        //// 
+.................... ////                                                                       //// 
+.................... ////  lcd_getc(x,y)   Returns character at position x,y on LCD             //// 
+.................... ////                                                                       //// 
+.................... ////  CONFIGURATION                                                        //// 
+.................... ////  The LCD can be configured in one of two ways: a.) port access or     //// 
+.................... ////  b.) pin access.  Port access requires the entire 7 bit interface     //// 
+.................... ////  connected to one GPIO port, and the data bits (D4:D7 of the LCD)     //// 
+.................... ////  connected to sequential pins on the GPIO.  Pin access                //// 
+.................... ////  has no requirements, all 7 bits of the control interface can         //// 
+.................... ////  can be connected to any GPIO using several ports.                    //// 
+.................... ////                                                                       //// 
+.................... ////  To use port access, #define LCD_DATA_PORT to the SFR location of     //// 
+.................... ////  of the GPIO port that holds the interface, -AND- edit LCD_PIN_MAP    //// 
+.................... ////  of this file to configure the pin order.  If you are using a         //// 
+.................... ////  baseline PIC (PCB), then LCD_OUTPUT_MAP and LCD_INPUT_MAP also must  //// 
+.................... ////  be defined.                                                          //// 
+.................... ////                                                                       //// 
+.................... ////  Example of port access:                                              //// 
+.................... ////     #define LCD_DATA_PORT getenv("SFR:PORTD")                         //// 
+.................... ////                                                                       //// 
+.................... ////  To use pin access, the following pins must be defined:               //// 
+.................... ////     LCD_ENABLE_PIN                                                    //// 
+.................... ////     LCD_RS_PIN                                                        //// 
+.................... ////     LCD_RW_PIN                                                        //// 
+.................... ////     LCD_DATA4                                                         //// 
+.................... ////     LCD_DATA5                                                         //// 
+.................... ////     LCD_DATA6                                                         //// 
+.................... ////     LCD_DATA7                                                         //// 
+.................... ////                                                                       //// 
+.................... ////  Example of pin access:                                               //// 
+.................... ////     #define LCD_ENABLE_PIN  PIN_E0                                    //// 
+.................... ////     #define LCD_RS_PIN      PIN_E1                                    //// 
+.................... ////     #define LCD_RW_PIN      PIN_E2                                    //// 
+.................... ////     #define LCD_DATA4       PIN_D4                                    //// 
+.................... ////     #define LCD_DATA5       PIN_D5                                    //// 
+.................... ////     #define LCD_DATA6       PIN_D6                                    //// 
+.................... ////     #define LCD_DATA7       PIN_D7                                    //// 
+.................... ////                                                                       //// 
+.................... /////////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996,2009 Custom Computer Services           //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+....................  
+.................... #define LCD_DATA_PORT      0x07     //portc    LA PUSE YO  
+....................  
+.................... typedef struct   
+.................... {                            // This structure is overlayed 
+....................    BOOLEAN enable;           // on to an I/O port to gain 
+....................    BOOLEAN rs;               // access to the LCD pins. 
+....................    BOOLEAN rw;               // The bits are allocated from 
+....................    BOOLEAN unused;           // low order up.  ENABLE will 
+....................    int     data : 4;         // be LSB pin of that port. 
+....................   #if defined(__PCD__)       // The port used will be LCD_DATA_PORT. 
+....................    int    reserved: 8; 
+....................   #endif 
+.................... } LCD_PIN_MAP; 
+....................  
+.................... #define use_portb_lcd TRUE 
+....................  
+.................... #if defined(__PCB__) 
+....................    // these definitions only need to be modified for baseline PICs. 
+....................    // all other PICs use LCD_PIN_MAP or individual LCD_xxx pin definitions. 
+.................... /*                                    EN, RS,   RW,   UNUSED,  DATA  */ 
+....................  const LCD_PIN_MAP LCD_OUTPUT_MAP =  {0,  0,    0,    0,       0}; 
+....................  const LCD_PIN_MAP LCD_INPUT_MAP =   {0,  0,    0,    0,       0xF}; 
+.................... #endif 
+....................  
+....................  
+....................  
+.................... ////////////////////// END CONFIGURATION /////////////////////////////////// 
+....................  
+.................... #ifndef LCD_ENABLE_PIN 
+....................    #define lcd_output_enable(x) lcdlat.enable=x 
+....................    #define lcd_enable_tris()   lcdtris.enable=0 
+.................... #else 
+....................    #define lcd_output_enable(x) output_bit(LCD_ENABLE_PIN, x) 
+....................    #define lcd_enable_tris()  output_drive(LCD_ENABLE_PIN) 
+.................... #endif 
+....................  
+.................... #ifndef LCD_RS_PIN 
+....................    #define lcd_output_rs(x) lcdlat.rs=x 
+....................    #define lcd_rs_tris()   lcdtris.rs=0 
+.................... #else 
+....................    #define lcd_output_rs(x) output_bit(LCD_RS_PIN, x) 
+....................    #define lcd_rs_tris()  output_drive(LCD_RS_PIN) 
+.................... #endif 
+....................  
+.................... #ifndef LCD_RW_PIN 
+....................    #define lcd_output_rw(x) lcdlat.rw=x 
+....................    #define lcd_rw_tris()   lcdtris.rw=0 
+.................... #else 
+....................    #define lcd_output_rw(x) output_bit(LCD_RW_PIN, x) 
+....................    #define lcd_rw_tris()  output_drive(LCD_RW_PIN) 
+.................... #endif 
+....................  
+.................... #ifndef LCD_DATA_PORT 
+....................    #if defined(__PCB__) 
+....................       #define LCD_DATA_PORT      0x06     //portb 
+....................       #define set_tris_lcd(x)   set_tris_b(x) 
+....................    #elif defined(__PCM__) 
+....................       #define LCD_DATA_PORT      getenv("SFR:PORTD")     //portd 
+....................    #elif defined(__PCH__) 
+....................       #define LCD_DATA_PORT      getenv("SFR:PORTD")    //portd 
+....................    #elif defined(__PCD__) 
+....................       #define LCD_DATA_PORT      getenv("SFR:PORTD")    //portd 
+....................    #endif    
+.................... #endif 
+....................  
+.................... #if defined(__PCB__) 
+....................    LCD_PIN_MAP lcd, lcdlat; 
+....................    #byte lcd = LCD_DATA_PORT 
+....................    #byte lcdlat = LCD_DATA_PORT 
+.................... #elif defined(__PCM__) 
+....................    LCD_PIN_MAP lcd, lcdlat, lcdtris; 
+....................    #byte lcd = LCD_DATA_PORT 
+....................    #byte lcdlat = LCD_DATA_PORT 
+....................    #byte lcdtris = LCD_DATA_PORT+0x80 
+.................... #elif defined(__PCH__) 
+....................    LCD_PIN_MAP lcd, lcdlat, lcdtris; 
+....................    #byte lcd = LCD_DATA_PORT 
+....................    #byte lcdlat = LCD_DATA_PORT+9 
+....................    #byte lcdtris = LCD_DATA_PORT+0x12 
+.................... #elif defined(__PCD__) 
+....................    LCD_PIN_MAP lcd, lcdlat, lcdtris; 
+....................    #word lcd = LCD_DATA_PORT 
+....................    #word lcdlat = LCD_DATA_PORT+2 
+....................    #word lcdtris = LCD_DATA_PORT-0x02 
+.................... #endif 
+....................  
+.................... #ifndef LCD_TYPE 
+....................    #define LCD_TYPE 2           // 0=5x7, 1=5x10, 2=2 lines 
+.................... #endif 
+....................  
+.................... #ifndef LCD_LINE_TWO 
+....................    #define LCD_LINE_TWO 0x40    // LCD RAM address for the second line 
+.................... #endif 
+....................  
+.................... BYTE const LCD_INIT_STRING[4] = {0x20 | (lcd_type << 2), 0xc, 1, 6}; 
+....................                              // These bytes need to be sent to the LCD 
+....................                              // to start it up. 
+....................  
+.................... // original version of this library incorrectly labeled LCD_DATA0 as LCD_DATA4, 
+.................... // LCD_DATA1 as LCD_DATA5, and so on.  this block of code makes the driver 
+.................... // compatible with any code written for the original library 
+.................... #if (defined(LCD_DATA0) && defined(LCD_DATA1) && defined(LCD_DATA2) && defined(LCD_DATA3) && !defined(LCD_DATA4) && !defined(LCD_DATA5) && !defined(LCD_DATA6) && !defined(LCD_DATA7)) 
+....................    #define  LCD_DATA4    LCD_DATA0 
+....................    #define  LCD_DATA5    LCD_DATA1 
+....................    #define  LCD_DATA6    LCD_DATA2 
+....................    #define  LCD_DATA7    LCD_DATA3 
+.................... #endif 
+....................  
+.................... BYTE lcd_read_nibble(void); 
+....................  
+.................... BYTE lcd_read_byte(void) 
+.................... { 
+....................    BYTE low,high; 
+....................  
+....................  #if defined(__PCB__) 
+....................    set_tris_lcd(LCD_INPUT_MAP); 
+....................  #else 
+....................   #if (defined(LCD_DATA4) && defined(LCD_DATA5) && defined(LCD_DATA6) && defined(LCD_DATA7)) 
+....................    output_float(LCD_DATA4); 
+....................    output_float(LCD_DATA5); 
+....................    output_float(LCD_DATA6); 
+....................    output_float(LCD_DATA7); 
+....................   #else 
+....................    lcdtris.data = 0xF; 
+*
+00C0:  MOVLW  0F
+00C1:  BSF    03.5
+00C2:  ANDWF  07,W
+00C3:  IORLW  F0
+00C4:  MOVWF  07
+*
+014E:  MOVLW  0F
+014F:  BSF    03.5
+0150:  ANDWF  07,W
+0151:  IORLW  F0
+0152:  MOVWF  07
+*
+01C6:  MOVLW  0F
+01C7:  BSF    03.5
+01C8:  ANDWF  07,W
+01C9:  IORLW  F0
+01CA:  MOVWF  07
+*
+0236:  MOVLW  0F
+0237:  BSF    03.5
+0238:  ANDWF  07,W
+0239:  IORLW  F0
+023A:  MOVWF  07
+*
+0535:  MOVLW  0F
+0536:  BSF    03.5
+0537:  ANDWF  07,W
+0538:  IORLW  F0
+0539:  MOVWF  07
+....................   #endif 
+....................  #endif 
+....................          
+....................    lcd_output_rw(1); 
+*
+00C5:  BCF    03.5
+00C6:  BSF    07.2
+*
+0153:  BCF    03.5
+0154:  BSF    07.2
+*
+01CB:  BCF    03.5
+01CC:  BSF    07.2
+*
+023B:  BCF    03.5
+023C:  BSF    07.2
+*
+053A:  BCF    03.5
+053B:  BSF    07.2
+....................    delay_cycles(1); 
+*
+00C7:  NOP
+*
+0155:  NOP
+*
+01CD:  NOP
+*
+023D:  NOP
+*
+053C:  NOP
+....................    lcd_output_enable(1); 
+*
+00C8:  BSF    07.0
+*
+0156:  BSF    07.0
+*
+01CE:  BSF    07.0
+*
+023E:  BSF    07.0
+*
+053D:  BSF    07.0
+....................    delay_cycles(1); 
+*
+00C9:  NOP
+*
+0157:  NOP
+*
+01CF:  NOP
+*
+023F:  NOP
+*
+053E:  NOP
+....................    high = lcd_read_nibble(); 
+*
+00CF:  MOVF   78,W
+00D0:  MOVWF  76
+*
+015D:  MOVF   78,W
+015E:  MOVWF  76
+*
+01D5:  MOVF   78,W
+01D6:  MOVWF  76
+*
+0245:  MOVF   78,W
+0246:  MOVWF  76
+*
+0544:  MOVF   78,W
+0545:  MOVWF  76
+....................        
+....................    lcd_output_enable(0); 
+*
+00D1:  BCF    07.0
+*
+015F:  BCF    07.0
+*
+01D7:  BCF    07.0
+*
+0247:  BCF    07.0
+*
+0546:  BCF    07.0
+....................    delay_cycles(1); 
+*
+00D2:  NOP
+*
+0160:  NOP
+*
+01D8:  NOP
+*
+0248:  NOP
+*
+0547:  NOP
+....................    lcd_output_enable(1); 
+*
+00D3:  BSF    07.0
+*
+0161:  BSF    07.0
+*
+01D9:  BSF    07.0
+*
+0249:  BSF    07.0
+*
+0548:  BSF    07.0
+....................    delay_us(1); 
+*
+00D4:  GOTO   0D5
+00D5:  GOTO   0D6
+00D6:  NOP
+*
+0162:  GOTO   163
+0163:  GOTO   164
+0164:  NOP
+*
+01DA:  GOTO   1DB
+01DB:  GOTO   1DC
+01DC:  NOP
+*
+024A:  GOTO   24B
+024B:  GOTO   24C
+024C:  NOP
+*
+0549:  GOTO   54A
+054A:  GOTO   54B
+054B:  NOP
+....................    low = lcd_read_nibble(); 
+*
+00DC:  MOVF   78,W
+00DD:  MOVWF  75
+*
+016A:  MOVF   78,W
+016B:  MOVWF  75
+*
+01E2:  MOVF   78,W
+01E3:  MOVWF  75
+*
+0252:  MOVF   78,W
+0253:  MOVWF  75
+*
+0551:  MOVF   78,W
+0552:  MOVWF  75
+....................        
+....................    lcd_output_enable(0); 
+*
+00DE:  BCF    07.0
+*
+016C:  BCF    07.0
+*
+01E4:  BCF    07.0
+*
+0254:  BCF    07.0
+*
+0553:  BCF    07.0
+....................  
+....................  #if defined(__PCB__) 
+....................    set_tris_lcd(LCD_INPUT_MAP); 
+....................  #else 
+....................   #if (defined(LCD_DATA4) && defined(LCD_DATA5) && defined(LCD_DATA6) && defined(LCD_DATA7)) 
+....................    output_drive(LCD_DATA4); 
+....................    output_drive(LCD_DATA5); 
+....................    output_drive(LCD_DATA6); 
+....................    output_drive(LCD_DATA7); 
+....................   #else 
+....................    lcdtris.data = 0x0; 
+*
+00DF:  MOVLW  0F
+00E0:  BSF    03.5
+00E1:  ANDWF  07,W
+00E2:  MOVWF  07
+*
+016D:  MOVLW  0F
+016E:  BSF    03.5
+016F:  ANDWF  07,W
+0170:  MOVWF  07
+*
+01E5:  MOVLW  0F
+01E6:  BSF    03.5
+01E7:  ANDWF  07,W
+01E8:  MOVWF  07
+*
+0255:  MOVLW  0F
+0256:  BSF    03.5
+0257:  ANDWF  07,W
+0258:  MOVWF  07
+*
+0554:  MOVLW  0F
+0555:  BSF    03.5
+0556:  ANDWF  07,W
+0557:  MOVWF  07
+....................   #endif 
+....................  #endif 
+....................  
+....................    return( (high<<4) | low); 
+*
+00E3:  SWAPF  76,W
+00E4:  MOVWF  77
+00E5:  MOVLW  F0
+00E6:  ANDWF  77,F
+00E7:  MOVF   77,W
+00E8:  IORWF  75,W
+00E9:  MOVWF  78
+*
+0171:  SWAPF  76,W
+0172:  MOVWF  77
+0173:  MOVLW  F0
+0174:  ANDWF  77,F
+0175:  MOVF   77,W
+0176:  IORWF  75,W
+0177:  MOVWF  78
+*
+01E9:  SWAPF  76,W
+01EA:  MOVWF  77
+01EB:  MOVLW  F0
+01EC:  ANDWF  77,F
+01ED:  MOVF   77,W
+01EE:  IORWF  75,W
+01EF:  MOVWF  78
+*
+0259:  SWAPF  76,W
+025A:  MOVWF  77
+025B:  MOVLW  F0
+025C:  ANDWF  77,F
+025D:  MOVF   77,W
+025E:  IORWF  75,W
+025F:  MOVWF  78
+*
+0558:  SWAPF  76,W
+0559:  MOVWF  77
+055A:  MOVLW  F0
+055B:  ANDWF  77,F
+055C:  MOVF   77,W
+055D:  IORWF  75,W
+055E:  MOVWF  78
+.................... } 
+....................  
+.................... BYTE lcd_read_nibble(void) 
+.................... { 
+....................   #if (defined(LCD_DATA4) && defined(LCD_DATA5) && defined(LCD_DATA6) && defined(LCD_DATA7)) 
+....................    BYTE n = 0x00; 
+....................  
+....................    /* Read the data port */ 
+....................    n |= input(LCD_DATA4); 
+....................    n |= input(LCD_DATA5) << 1; 
+....................    n |= input(LCD_DATA6) << 2; 
+....................    n |= input(LCD_DATA7) << 3; 
+....................     
+....................    return(n); 
+....................   #else 
+....................    return(lcd.data); 
+*
+00CA:  MOVF   07,W
+00CB:  MOVWF  77
+00CC:  SWAPF  07,W
+00CD:  ANDLW  0F
+00CE:  MOVWF  78
+*
+00D7:  MOVF   07,W
+00D8:  MOVWF  77
+00D9:  SWAPF  07,W
+00DA:  ANDLW  0F
+00DB:  MOVWF  78
+*
+0158:  MOVF   07,W
+0159:  MOVWF  77
+015A:  SWAPF  07,W
+015B:  ANDLW  0F
+015C:  MOVWF  78
+*
+0165:  MOVF   07,W
+0166:  MOVWF  77
+0167:  SWAPF  07,W
+0168:  ANDLW  0F
+0169:  MOVWF  78
+*
+01D0:  MOVF   07,W
+01D1:  MOVWF  77
+01D2:  SWAPF  07,W
+01D3:  ANDLW  0F
+01D4:  MOVWF  78
+*
+01DD:  MOVF   07,W
+01DE:  MOVWF  77
+01DF:  SWAPF  07,W
+01E0:  ANDLW  0F
+01E1:  MOVWF  78
+*
+0240:  MOVF   07,W
+0241:  MOVWF  77
+0242:  SWAPF  07,W
+0243:  ANDLW  0F
+0244:  MOVWF  78
+*
+024D:  MOVF   07,W
+024E:  MOVWF  77
+024F:  SWAPF  07,W
+0250:  ANDLW  0F
+0251:  MOVWF  78
+*
+053F:  MOVF   07,W
+0540:  MOVWF  77
+0541:  SWAPF  07,W
+0542:  ANDLW  0F
+0543:  MOVWF  78
+*
+054C:  MOVF   07,W
+054D:  MOVWF  77
+054E:  SWAPF  07,W
+054F:  ANDLW  0F
+0550:  MOVWF  78
+....................   #endif 
+.................... } 
+....................  
+.................... void lcd_send_nibble(BYTE n) 
+.................... { 
+....................   #if (defined(LCD_DATA4) && defined(LCD_DATA5) && defined(LCD_DATA6) && defined(LCD_DATA7)) 
+....................    /* Write to the data port */ 
+....................    output_bit(LCD_DATA4, BIT_TEST(n, 0)); 
+....................    output_bit(LCD_DATA5, BIT_TEST(n, 1)); 
+....................    output_bit(LCD_DATA6, BIT_TEST(n, 2)); 
+....................    output_bit(LCD_DATA7, BIT_TEST(n, 3)); 
+....................   #else       
+....................    lcdlat.data = n; 
+*
+0105:  SWAPF  76,W
+0106:  ANDLW  F0
+0107:  MOVWF  77
+0108:  MOVLW  0F
+0109:  ANDWF  07,W
+010A:  IORWF  77,W
+010B:  MOVWF  07
+*
+011A:  SWAPF  76,W
+011B:  ANDLW  F0
+011C:  MOVWF  77
+011D:  MOVLW  0F
+011E:  ANDWF  07,W
+011F:  IORWF  77,W
+0120:  MOVWF  07
+*
+0193:  SWAPF  76,W
+0194:  ANDLW  F0
+0195:  MOVWF  77
+0196:  MOVLW  0F
+0197:  ANDWF  07,W
+0198:  IORWF  77,W
+0199:  MOVWF  07
+*
+01A8:  SWAPF  76,W
+01A9:  ANDLW  F0
+01AA:  MOVWF  77
+01AB:  MOVLW  0F
+01AC:  ANDWF  07,W
+01AD:  IORWF  77,W
+01AE:  MOVWF  07
+*
+020B:  SWAPF  76,W
+020C:  ANDLW  F0
+020D:  MOVWF  77
+020E:  MOVLW  0F
+020F:  ANDWF  07,W
+0210:  IORWF  77,W
+0211:  MOVWF  07
+*
+0220:  SWAPF  76,W
+0221:  ANDLW  F0
+0222:  MOVWF  77
+0223:  MOVLW  0F
+0224:  ANDWF  07,W
+0225:  IORWF  77,W
+0226:  MOVWF  07
+*
+027B:  SWAPF  76,W
+027C:  ANDLW  F0
+027D:  MOVWF  77
+027E:  MOVLW  0F
+027F:  ANDWF  07,W
+0280:  IORWF  77,W
+0281:  MOVWF  07
+*
+0290:  SWAPF  76,W
+0291:  ANDLW  F0
+0292:  MOVWF  77
+0293:  MOVLW  0F
+0294:  ANDWF  07,W
+0295:  IORWF  77,W
+0296:  MOVWF  07
+*
+04FC:  SWAPF  76,W
+04FD:  ANDLW  F0
+04FE:  MOVWF  77
+04FF:  MOVLW  0F
+0500:  ANDWF  07,W
+0501:  IORWF  77,W
+0502:  MOVWF  07
+*
+0519:  SWAPF  76,W
+051A:  ANDLW  F0
+051B:  MOVWF  77
+051C:  MOVLW  0F
+051D:  ANDWF  07,W
+051E:  IORWF  77,W
+051F:  MOVWF  07
+*
+057A:  SWAPF  76,W
+057B:  ANDLW  F0
+057C:  MOVWF  77
+057D:  MOVLW  0F
+057E:  ANDWF  07,W
+057F:  IORWF  77,W
+0580:  MOVWF  07
+*
+058F:  SWAPF  76,W
+0590:  ANDLW  F0
+0591:  MOVWF  77
+0592:  MOVLW  0F
+0593:  ANDWF  07,W
+0594:  IORWF  77,W
+0595:  MOVWF  07
+....................   #endif 
+....................        
+....................    delay_cycles(1); 
+*
+010C:  NOP
+*
+0121:  NOP
+*
+019A:  NOP
+*
+01AF:  NOP
+*
+0212:  NOP
+*
+0227:  NOP
+*
+0282:  NOP
+*
+0297:  NOP
+*
+0503:  NOP
+*
+0520:  NOP
+*
+0581:  NOP
+*
+0596:  NOP
+....................    lcd_output_enable(1); 
+*
+010D:  BSF    07.0
+*
+0122:  BSF    07.0
+*
+019B:  BSF    07.0
+*
+01B0:  BSF    07.0
+*
+0213:  BSF    07.0
+*
+0228:  BSF    07.0
+*
+0283:  BSF    07.0
+*
+0298:  BSF    07.0
+*
+0504:  BSF    07.0
+*
+0521:  BSF    07.0
+*
+0582:  BSF    07.0
+*
+0597:  BSF    07.0
+....................    delay_us(2); 
+*
+010E:  MOVLW  02
+010F:  MOVWF  77
+0110:  DECFSZ 77,F
+0111:  GOTO   110
+0112:  GOTO   113
+0113:  NOP
+*
+0123:  MOVLW  02
+0124:  MOVWF  77
+0125:  DECFSZ 77,F
+0126:  GOTO   125
+0127:  GOTO   128
+0128:  NOP
+*
+019C:  MOVLW  02
+019D:  MOVWF  77
+019E:  DECFSZ 77,F
+019F:  GOTO   19E
+01A0:  GOTO   1A1
+01A1:  NOP
+*
+01B1:  MOVLW  02
+01B2:  MOVWF  77
+01B3:  DECFSZ 77,F
+01B4:  GOTO   1B3
+01B5:  GOTO   1B6
+01B6:  NOP
+*
+0214:  MOVLW  02
+0215:  MOVWF  77
+0216:  DECFSZ 77,F
+0217:  GOTO   216
+0218:  GOTO   219
+0219:  NOP
+*
+0229:  MOVLW  02
+022A:  MOVWF  77
+022B:  DECFSZ 77,F
+022C:  GOTO   22B
+022D:  GOTO   22E
+022E:  NOP
+*
+0284:  MOVLW  02
+0285:  MOVWF  77
+0286:  DECFSZ 77,F
+0287:  GOTO   286
+0288:  GOTO   289
+0289:  NOP
+*
+0299:  MOVLW  02
+029A:  MOVWF  77
+029B:  DECFSZ 77,F
+029C:  GOTO   29B
+029D:  GOTO   29E
+029E:  NOP
+*
+0505:  MOVLW  02
+0506:  MOVWF  77
+0507:  DECFSZ 77,F
+0508:  GOTO   507
+0509:  GOTO   50A
+050A:  NOP
+*
+0522:  MOVLW  02
+0523:  MOVWF  77
+0524:  DECFSZ 77,F
+0525:  GOTO   524
+0526:  GOTO   527
+0527:  NOP
+*
+0583:  MOVLW  02
+0584:  MOVWF  77
+0585:  DECFSZ 77,F
+0586:  GOTO   585
+0587:  GOTO   588
+0588:  NOP
+*
+0598:  MOVLW  02
+0599:  MOVWF  77
+059A:  DECFSZ 77,F
+059B:  GOTO   59A
+059C:  GOTO   59D
+059D:  NOP
+....................    lcd_output_enable(0); 
+*
+0114:  BCF    07.0
+*
+0129:  BCF    07.0
+*
+01A2:  BCF    07.0
+*
+01B7:  BCF    07.0
+*
+021A:  BCF    07.0
+*
+022F:  BCF    07.0
+*
+028A:  BCF    07.0
+*
+029F:  BCF    07.0
+*
+050B:  BCF    07.0
+050C:  CLRF   2B
+050D:  BTFSC  0B.7
+050E:  BSF    2B.7
+050F:  BCF    0B.7
+*
+0528:  BCF    07.0
+*
+0589:  BCF    07.0
+*
+059E:  BCF    07.0
+.................... } 
+....................  
+.................... void lcd_send_byte(BYTE address, BYTE n) 
+.................... { 
+....................    lcd_output_rs(0); 
+*
+00BF:  BCF    07.1
+*
+014D:  BCF    07.1
+*
+01C5:  BCF    07.1
+*
+0235:  BCF    07.1
+*
+0534:  BCF    07.1
+....................    while ( bit_test(lcd_read_byte(),7) ) ; 
+*
+00EA:  MOVF   78,W
+00EB:  MOVWF  75
+00EC:  BTFSS  75.7
+00ED:  GOTO   0F0
+00EE:  BCF    03.5
+00EF:  GOTO   0C0
+*
+0178:  MOVF   78,W
+0179:  MOVWF  75
+017A:  BTFSS  75.7
+017B:  GOTO   17E
+017C:  BCF    03.5
+017D:  GOTO   14E
+*
+01F0:  MOVF   78,W
+01F1:  MOVWF  75
+01F2:  BTFSS  75.7
+01F3:  GOTO   1F6
+01F4:  BCF    03.5
+01F5:  GOTO   1C6
+*
+0260:  MOVF   78,W
+0261:  MOVWF  75
+0262:  BTFSS  75.7
+0263:  GOTO   266
+0264:  BCF    03.5
+0265:  GOTO   236
+*
+055F:  MOVF   78,W
+0560:  MOVWF  75
+0561:  BTFSS  75.7
+0562:  GOTO   565
+0563:  BCF    03.5
+0564:  GOTO   535
+....................    lcd_output_rs(address); 
+*
+00F0:  BTFSC  73.0
+00F1:  GOTO   0F5
+00F2:  BCF    03.5
+00F3:  BCF    07.1
+00F4:  BSF    03.5
+00F5:  BTFSS  73.0
+00F6:  GOTO   0FA
+00F7:  BCF    03.5
+00F8:  BSF    07.1
+00F9:  BSF    03.5
+*
+017E:  BTFSC  73.0
+017F:  GOTO   183
+0180:  BCF    03.5
+0181:  BCF    07.1
+0182:  BSF    03.5
+0183:  BTFSS  73.0
+0184:  GOTO   188
+0185:  BCF    03.5
+0186:  BSF    07.1
+0187:  BSF    03.5
+*
+01F6:  BTFSC  73.0
+01F7:  GOTO   1FB
+01F8:  BCF    03.5
+01F9:  BCF    07.1
+01FA:  BSF    03.5
+01FB:  BTFSS  73.0
+01FC:  GOTO   200
+01FD:  BCF    03.5
+01FE:  BSF    07.1
+01FF:  BSF    03.5
+*
+0266:  BTFSC  73.0
+0267:  GOTO   26B
+0268:  BCF    03.5
+0269:  BCF    07.1
+026A:  BSF    03.5
+026B:  BTFSS  73.0
+026C:  GOTO   270
+026D:  BCF    03.5
+026E:  BSF    07.1
+026F:  BSF    03.5
+*
+0565:  BTFSC  73.0
+0566:  GOTO   56A
+0567:  BCF    03.5
+0568:  BCF    07.1
+0569:  BSF    03.5
+056A:  BTFSS  73.0
+056B:  GOTO   56F
+056C:  BCF    03.5
+056D:  BSF    07.1
+056E:  BSF    03.5
+....................    delay_cycles(1); 
+*
+00FA:  NOP
+*
+0188:  NOP
+*
+0200:  NOP
+*
+0270:  NOP
+*
+056F:  NOP
+....................    lcd_output_rw(0); 
+*
+00FB:  BCF    03.5
+00FC:  BCF    07.2
+*
+0189:  BCF    03.5
+018A:  BCF    07.2
+*
+0201:  BCF    03.5
+0202:  BCF    07.2
+*
+0271:  BCF    03.5
+0272:  BCF    07.2
+*
+0570:  BCF    03.5
+0571:  BCF    07.2
+....................    delay_cycles(1); 
+*
+00FD:  NOP
+*
+018B:  NOP
+*
+0203:  NOP
+*
+0273:  NOP
+*
+0572:  NOP
+....................    lcd_output_enable(0); 
+*
+00FE:  BCF    07.0
+*
+018C:  BCF    07.0
+*
+0204:  BCF    07.0
+*
+0274:  BCF    07.0
+*
+0573:  BCF    07.0
+....................    lcd_send_nibble(n >> 4); 
+*
+00FF:  SWAPF  74,W
+0100:  MOVWF  75
+0101:  MOVLW  0F
+0102:  ANDWF  75,F
+0103:  MOVF   75,W
+0104:  MOVWF  76
+*
+018D:  SWAPF  74,W
+018E:  MOVWF  75
+018F:  MOVLW  0F
+0190:  ANDWF  75,F
+0191:  MOVF   75,W
+0192:  MOVWF  76
+*
+0205:  SWAPF  74,W
+0206:  MOVWF  75
+0207:  MOVLW  0F
+0208:  ANDWF  75,F
+0209:  MOVF   75,W
+020A:  MOVWF  76
+*
+0275:  SWAPF  74,W
+0276:  MOVWF  75
+0277:  MOVLW  0F
+0278:  ANDWF  75,F
+0279:  MOVF   75,W
+027A:  MOVWF  76
+*
+0574:  SWAPF  74,W
+0575:  MOVWF  75
+0576:  MOVLW  0F
+0577:  ANDWF  75,F
+0578:  MOVF   75,W
+0579:  MOVWF  76
+....................    lcd_send_nibble(n & 0xf); 
+*
+0115:  MOVF   74,W
+0116:  ANDLW  0F
+0117:  MOVWF  75
+0118:  MOVF   75,W
+0119:  MOVWF  76
+*
+01A3:  MOVF   74,W
+01A4:  ANDLW  0F
+01A5:  MOVWF  75
+01A6:  MOVF   75,W
+01A7:  MOVWF  76
+*
+021B:  MOVF   74,W
+021C:  ANDLW  0F
+021D:  MOVWF  75
+021E:  MOVF   75,W
+021F:  MOVWF  76
+*
+028B:  MOVF   74,W
+028C:  ANDLW  0F
+028D:  MOVWF  75
+028E:  MOVF   75,W
+028F:  MOVWF  76
+*
+058A:  MOVF   74,W
+058B:  ANDLW  0F
+058C:  MOVWF  75
+058D:  MOVF   75,W
+058E:  MOVWF  76
+.................... } 
+....................  
+.................... void lcd_init(void)  
+.................... { 
+....................    BYTE i; 
+....................  
+....................  #if defined(__PCB__) 
+....................    set_tris_lcd(LCD_OUTPUT_MAP); 
+....................  #else 
+....................   #if (defined(LCD_DATA4) && defined(LCD_DATA5) && defined(LCD_DATA6) && defined(LCD_DATA7)) 
+....................    output_drive(LCD_DATA4); 
+....................    output_drive(LCD_DATA5); 
+....................    output_drive(LCD_DATA6); 
+....................    output_drive(LCD_DATA7); 
+....................   #else 
+....................    lcdtris.data = 0x0; 
+*
+04E0:  MOVLW  0F
+04E1:  BSF    03.5
+04E2:  ANDWF  07,W
+04E3:  MOVWF  07
+....................   #endif 
+....................    lcd_enable_tris(); 
+04E4:  BCF    07.0
+....................    lcd_rs_tris(); 
+04E5:  BCF    07.1
+....................    lcd_rw_tris(); 
+04E6:  BCF    07.2
+....................  #endif 
+....................  
+....................    lcd_output_rs(0); 
+04E7:  BCF    03.5
+04E8:  BCF    07.1
+....................    lcd_output_rw(0); 
+04E9:  BCF    07.2
+....................    lcd_output_enable(0); 
+04EA:  BCF    07.0
+04EB:  CLRF   2B
+04EC:  BTFSC  0B.7
+04ED:  BSF    2B.7
+04EE:  BCF    0B.7
+....................      
+....................    delay_ms(15); 
+04EF:  MOVLW  0F
+04F0:  MOVWF  6F
+04F1:  CALL   12B
+04F2:  BTFSC  2B.7
+04F3:  BSF    0B.7
+....................    for(i=1;i<=3;++i) 
+04F4:  MOVLW  01
+04F5:  MOVWF  43
+04F6:  MOVF   43,W
+04F7:  SUBLW  03
+04F8:  BTFSS  03.0
+04F9:  GOTO   517
+....................    { 
+....................        lcd_send_nibble(3); 
+04FA:  MOVLW  03
+04FB:  MOVWF  76
+....................        delay_ms(5); 
+*
+0510:  MOVLW  05
+0511:  MOVWF  6F
+0512:  CALL   12B
+0513:  BTFSC  2B.7
+0514:  BSF    0B.7
+0515:  INCF   43,F
+0516:  GOTO   4F6
+....................    } 
+....................      
+....................    lcd_send_nibble(2); 
+0517:  MOVLW  02
+0518:  MOVWF  76
+....................    for(i=0;i<=3;++i) 
+*
+0529:  CLRF   43
+052A:  MOVF   43,W
+052B:  SUBLW  03
+052C:  BTFSS  03.0
+052D:  GOTO   5A1
+....................       lcd_send_byte(0,LCD_INIT_STRING[i]); 
+052E:  MOVF   43,W
+052F:  CALL   056
+0530:  MOVWF  44
+0531:  CLRF   73
+0532:  MOVF   44,W
+0533:  MOVWF  74
+*
+059F:  INCF   43,F
+05A0:  GOTO   52A
+05A1:  BSF    0A.3
+05A2:  BCF    0A.4
+05A3:  GOTO   025 (RETURN)
+.................... } 
+....................  
+.................... void lcd_gotoxy(BYTE x, BYTE y) 
+.................... { 
+....................    BYTE address; 
+....................  
+....................    if(y!=1) 
+*
+00AF:  DECFSZ 70,W
+00B0:  GOTO   0B2
+00B1:  GOTO   0B5
+....................       address=LCD_LINE_TWO; 
+00B2:  MOVLW  40
+00B3:  MOVWF  71
+00B4:  GOTO   0B6
+....................    else 
+....................       address=0; 
+00B5:  CLRF   71
+....................       
+....................    address+=x-1; 
+00B6:  MOVLW  01
+00B7:  SUBWF  6F,W
+00B8:  ADDWF  71,F
+....................    lcd_send_byte(0,0x80|address); 
+00B9:  MOVF   71,W
+00BA:  IORLW  80
+00BB:  MOVWF  72
+00BC:  CLRF   73
+00BD:  MOVF   72,W
+00BE:  MOVWF  74
+*
+012A:  RETURN
+.................... } 
+....................  
+.................... void lcd_putc(char c) 
+.................... { 
+....................    switch (c) 
+*
+013F:  MOVF   6E,W
+0140:  XORLW  0C
+0141:  BTFSC  03.2
+0142:  GOTO   14A
+0143:  XORLW  06
+0144:  BTFSC  03.2
+0145:  GOTO   1BC
+0146:  XORLW  02
+0147:  BTFSC  03.2
+0148:  GOTO   1C2
+0149:  GOTO   231
+....................    { 
+....................       case '\f'   :  lcd_send_byte(0,1); 
+014A:  CLRF   73
+014B:  MOVLW  01
+014C:  MOVWF  74
+....................                      delay_ms(2); 
+*
+01B8:  MOVLW  02
+01B9:  MOVWF  6F
+01BA:  CALL   12B
+....................                      break; 
+01BB:  GOTO   2A0
+....................                       
+....................       case '\n'   : lcd_gotoxy(1,2);        break; 
+01BC:  MOVLW  01
+01BD:  MOVWF  6F
+01BE:  MOVLW  02
+01BF:  MOVWF  70
+01C0:  CALL   0AF
+01C1:  GOTO   2A0
+....................       
+....................       case '\b'   : lcd_send_byte(0,0x10);  break; 
+01C2:  CLRF   73
+01C3:  MOVLW  10
+01C4:  MOVWF  74
+*
+0230:  GOTO   2A0
+....................       
+....................       default     : lcd_send_byte(1,c);     break; 
+0231:  MOVLW  01
+0232:  MOVWF  73
+0233:  MOVF   6E,W
+0234:  MOVWF  74
+....................    } 
+*
+02A0:  RETURN
+.................... } 
+....................   
+.................... char lcd_getc(BYTE x, BYTE y) 
+.................... { 
+....................    char value; 
+....................  
+....................    lcd_gotoxy(x,y); 
+....................    while ( bit_test(lcd_read_byte(),7) ); // wait until busy flag is low 
+....................    lcd_output_rs(1); 
+....................    value = lcd_read_byte(); 
+....................    lcd_output_rs(0); 
+....................     
+....................    return(value); 
+.................... } 
+....................  
+.................... #INCLUDE <kbd4x4_d.c> 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////                             KBD4x4_1.C                                //// 
+.................... ////                  Generic keypad scan driver                       //// 
+.................... ////                                                                   //// 
+.................... ////  kbd_init()   Must be called before any other function.           //// 
+.................... ////                                                                   //// 
+.................... ////  c = kbd_getc(c)  Will return a key value if pressed or /0 if not //// 
+.................... ////                   This function should be called frequently so as //// 
+.................... ////                   not to miss a key press.                        //// 
+.................... ////                                                                   //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996,2003 Custom Computer Services           //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+....................  
+.................... ////////////////// The following defines the keypad layout on port D 
+....................  
+.................... // Un-comment the following define to use port B 
+.................... //#define use_portb_kbd TRUE 
+....................  
+.................... // Make sure the port used has pull-up resistors (or the LCD) on 
+.................... // the column pins 
+....................  
+....................  
+.................... #if defined(__PCH__) 
+.................... #if defined use_portb_kbd 
+....................    #byte kbd = 0xF81                   // This puts the entire structure 
+.................... #else 
+....................    #byte kbd = 0xF83                   // This puts the entire structure 
+.................... #endif 
+.................... #else 
+.................... #if defined use_portb_kbd 
+....................    #byte kbd = 6                  // on to port B (at address 6) 
+.................... #else 
+....................    #byte kbd = 8                 // on to port D (at address 8) 
+.................... #endif 
+.................... #endif 
+....................  
+.................... #if defined use_portb_kbd 
+....................    #define set_tris_kbd(x) set_tris_b(x) 
+.................... #else 
+....................    #define set_tris_kbd(x) set_tris_d(x) 
+.................... #endif 
+....................  
+....................  
+....................  
+.................... //Keypad connection:   (for example column 0 is B2) 
+.................... //                Bx: 
+....................  
+.................... #ifdef blue_keypad  ///////////////////////////////////// For the blue keypad 
+.................... #define COL0 (1 << 2) 
+.................... #define COL1 (1 << 3) 
+.................... #define COL2 (1 << 6) 
+....................  
+.................... #define ROW0 (1 << 4) 
+.................... #define ROW1 (1 << 7) 
+.................... #define ROW2 (1 << 1) 
+.................... #define ROW3 (1 << 5) 
+....................  
+.................... #else ////////////////////////////////////////////////// For the black keypad 
+.................... #define COL0 (1 << 4) 
+.................... #define COL1 (1 << 5) 
+.................... #define COL2 (1 << 6) 
+.................... #define COL3 (1 << 7) 
+....................  
+.................... #define ROW0 (1 << 0) 
+.................... #define ROW1 (1 << 1) 
+.................... #define ROW2 (1 << 2) 
+.................... #define ROW3 (1 << 3) 
+....................  
+.................... #endif 
+....................  
+.................... #define ALL_ROWS (ROW0|ROW1|ROW2|ROW3) 
+.................... #define ALL_PINS (ALL_ROWS|COL0|COL1|COL2|COL3) 
+....................  
+.................... // Keypad layout: 
+.................... char const KEYS[4][4] = {{'7','8','9','/'}, 
+....................                          {'4','5','6','*'}, 
+....................                          {'1','2','3','-'}, 
+....................                          {'C','0','=','+'}}; 
+....................  
+.................... #define KBD_DEBOUNCE_FACTOR 33    // Set this number to apx n/333 where 
+....................                                   // n is the number of times you expect 
+....................                                   // to call kbd_getc each second 
+....................  
+....................  
+.................... void kbd_init() { 
+*
+05A4:  BSF    0A.3
+05A5:  BCF    0A.4
+05A6:  GOTO   028 (RETURN)
+.................... } 
+....................  
+.................... char kbd_getc( ) { 
+....................    static BYTE kbd_call_count; 
+*
+081E:  BCF    03.5
+081F:  CLRF   2C
+....................    static int1 kbd_down; 
+0820:  BCF    2D.0
+....................    static char last_key; 
+0821:  CLRF   2E
+....................    static BYTE col; 
+0822:  CLRF   2F
+....................  
+....................    BYTE kchar; 
+....................    BYTE row; 
+....................  
+....................    kchar='\0'; 
+*
+0609:  CLRF   50
+....................    if(++kbd_call_count>KBD_DEBOUNCE_FACTOR) { 
+060A:  INCF   2C,F
+060B:  MOVF   2C,W
+060C:  SUBLW  21
+060D:  BTFSC  03.0
+060E:  GOTO   669
+....................        switch (col) { 
+060F:  MOVF   2F,W
+0610:  ADDLW  FC
+0611:  BTFSC  03.0
+0612:  GOTO   62C
+0613:  ADDLW  04
+0614:  GOTO   672
+....................          case 0   : set_tris_kbd(ALL_PINS&~COL0); 
+0615:  MOVLW  EF
+0616:  BSF    03.5
+0617:  MOVWF  08
+....................                     kbd=~COL0&ALL_PINS; 
+0618:  BCF    03.5
+0619:  MOVWF  08
+....................                     break; 
+061A:  GOTO   62C
+....................          case 1   : set_tris_kbd(ALL_PINS&~COL1); 
+061B:  MOVLW  DF
+061C:  BSF    03.5
+061D:  MOVWF  08
+....................                     kbd=~COL1&ALL_PINS; 
+061E:  BCF    03.5
+061F:  MOVWF  08
+....................                     break; 
+0620:  GOTO   62C
+....................          case 2   : set_tris_kbd(ALL_PINS&~COL2); 
+0621:  MOVLW  BF
+0622:  BSF    03.5
+0623:  MOVWF  08
+....................                     kbd=~COL2&ALL_PINS; 
+0624:  BCF    03.5
+0625:  MOVWF  08
+....................                     break; 
+0626:  GOTO   62C
+....................          case 3   : set_tris_kbd(ALL_PINS&~COL3); 
+0627:  MOVLW  7F
+0628:  BSF    03.5
+0629:  MOVWF  08
+....................                     kbd=~COL3&ALL_PINS; 
+062A:  BCF    03.5
+062B:  MOVWF  08
+....................                     break; 
+....................        } 
+....................  
+....................        if(kbd_down) { 
+062C:  BTFSS  2D.0
+062D:  GOTO   638
+....................          if((kbd & (ALL_ROWS))==(ALL_ROWS)) { 
+062E:  MOVF   08,W
+062F:  ANDLW  0F
+0630:  SUBLW  0F
+0631:  BTFSS  03.2
+0632:  GOTO   637
+....................            kbd_down=FALSE; 
+0633:  BCF    2D.0
+....................            kchar=last_key; 
+0634:  MOVF   2E,W
+0635:  MOVWF  50
+....................            last_key='\0'; 
+0636:  CLRF   2E
+....................          } 
+....................        } else { 
+0637:  GOTO   668
+....................           if((kbd & (ALL_ROWS))!=(ALL_ROWS)) { 
+0638:  MOVF   08,W
+0639:  ANDLW  0F
+063A:  SUBLW  0F
+063B:  BTFSC  03.2
+063C:  GOTO   663
+....................              if((kbd & ROW0)==0) 
+063D:  MOVF   08,W
+063E:  ANDLW  01
+063F:  BTFSS  03.2
+0640:  GOTO   643
+....................                row=0; 
+0641:  CLRF   51
+0642:  GOTO   657
+....................              else if((kbd & ROW1)==0) 
+0643:  MOVF   08,W
+0644:  ANDLW  02
+0645:  BTFSS  03.2
+0646:  GOTO   64A
+....................                row=1; 
+0647:  MOVLW  01
+0648:  MOVWF  51
+0649:  GOTO   657
+....................              else if((kbd & ROW2)==0) 
+064A:  MOVF   08,W
+064B:  ANDLW  04
+064C:  BTFSS  03.2
+064D:  GOTO   651
+....................                row=2; 
+064E:  MOVLW  02
+064F:  MOVWF  51
+0650:  GOTO   657
+....................              else if((kbd & ROW3)==0) 
+0651:  MOVF   08,W
+0652:  ANDLW  08
+0653:  BTFSS  03.2
+0654:  GOTO   657
+....................                row=3; 
+0655:  MOVLW  03
+0656:  MOVWF  51
+....................              last_key =KEYS[row][col]; 
+0657:  RLF    51,W
+0658:  MOVWF  77
+0659:  RLF    77,F
+065A:  MOVLW  FC
+065B:  ANDWF  77,F
+065C:  MOVF   77,W
+065D:  ADDWF  2F,W
+065E:  CALL   05E
+065F:  MOVWF  78
+0660:  MOVWF  2E
+....................              kbd_down = TRUE; 
+0661:  BSF    2D.0
+....................           } else { 
+0662:  GOTO   668
+....................              ++col; 
+0663:  INCF   2F,F
+....................              if(col==4) 
+0664:  MOVF   2F,W
+0665:  SUBLW  04
+0666:  BTFSC  03.2
+....................                col=0; 
+0667:  CLRF   2F
+....................           } 
+....................        } 
+....................       kbd_call_count=0; 
+0668:  CLRF   2C
+....................    } 
+....................   set_tris_kbd(ALL_PINS); 
+0669:  MOVLW  FF
+066A:  BSF    03.5
+066B:  MOVWF  08
+....................   return(kchar); 
+066C:  BCF    03.5
+066D:  MOVF   50,W
+066E:  MOVWF  78
+066F:  BCF    0A.3
+0670:  BCF    0A.4
+0671:  GOTO   68E (RETURN)
+.................... } 
+....................  
+.................... #include <getNum16.c> 
+.................... /* 
+....................    ** Se requiere haber inicializado el lcd y el teclado **  
+....................     
+....................    Usar como "int16 numero = get_num();" no puede borrar numeros 
+....................     
+....................    Al usar como "int16 numero = get_num_lcd(cursor_x,cursor_y)" 
+....................    se pueden borrar caracteres con '-' y con 'C' 
+....................        
+....................    Por Angel Primitivo Vejar Cortés 2022 | angel-primi@hotmail.com 
+.................... */ 
+....................  
+.................... unsigned int32 pow(int8 base, int8 power){ 
+*
+072C:  CLRF   56
+072D:  CLRF   55
+072E:  CLRF   54
+072F:  MOVLW  01
+0730:  MOVWF  53
+....................    int32 result = 1; 
+....................    for(int8 i = 0; i < power; i++){ 
+0731:  CLRF   57
+0732:  MOVF   52,W
+0733:  SUBWF  57,W
+0734:  BTFSC  03.0
+0735:  GOTO   776
+....................       result *= base; 
+0736:  MOVF   56,W
+0737:  MOVWF  68
+0738:  MOVF   55,W
+0739:  MOVWF  67
+073A:  MOVF   54,W
+073B:  MOVWF  66
+073C:  MOVF   53,W
+073D:  MOVWF  65
+073E:  CLRF   6C
+073F:  CLRF   6B
+0740:  CLRF   6A
+0741:  MOVF   51,W
+0742:  MOVWF  69
+*
+076C:  MOVF   7A,W
+076D:  MOVWF  56
+076E:  MOVF   79,W
+076F:  MOVWF  55
+0770:  MOVF   78,W
+0771:  MOVWF  54
+0772:  MOVF   77,W
+0773:  MOVWF  53
+0774:  INCF   57,F
+0775:  GOTO   732
+....................    } 
+....................    return result; 
+0776:  MOVF   53,W
+0777:  MOVWF  77
+0778:  MOVF   54,W
+0779:  MOVWF  78
+077A:  MOVF   55,W
+077B:  MOVWF  79
+077C:  MOVF   56,W
+077D:  MOVWF  7A
+.................... } 
+....................  
+.................... char read_key(){ 
+....................    char c; 
+....................    do{ 
+....................       c=kbd_getc(); 
+*
+068D:  GOTO   609
+068E:  MOVF   78,W
+068F:  MOVWF  4F
+....................    } 
+....................    while(c=='\0');  
+0690:  MOVF   4F,F
+0691:  BTFSC  03.2
+0692:  GOTO   68D
+....................    return(c); 
+0693:  MOVF   4F,W
+0694:  MOVWF  78
+.................... } 
+....................  
+.................... int16 get_num_lcd(int8 x, int8 y){ 
+*
+067A:  CLRF   2B
+067B:  BTFSC  0B.7
+067C:  BSF    2B.7
+067D:  BCF    0B.7
+....................    lcd_gotoxy(x,y); 
+067E:  MOVF   43,W
+067F:  MOVWF  6F
+0680:  MOVF   44,W
+0681:  MOVWF  70
+0682:  CALL   0AF
+0683:  BTFSC  2B.7
+0684:  BSF    0B.7
+....................    int16 numero = 0; 
+....................    char cadena[5] = {0,0,0,0,0}; 
+*
+0687:  CLRF   47
+0688:  CLRF   48
+0689:  CLRF   49
+068A:  CLRF   4A
+068B:  CLRF   4B
+....................    int8 index = 0; 
+....................    char tecla; 
+*
+0685:  CLRF   46
+0686:  CLRF   45
+*
+068C:  CLRF   4C
+....................    do { 
+....................       tecla = read_key(); 
+*
+0695:  MOVF   78,W
+0696:  MOVWF  4D
+....................       if((tecla >= 48) && (tecla <= 57))  
+0697:  MOVF   4D,W
+0698:  SUBLW  2F
+0699:  BTFSC  03.0
+069A:  GOTO   6AF
+069B:  MOVF   4D,W
+069C:  SUBLW  39
+069D:  BTFSS  03.0
+069E:  GOTO   6AF
+....................       { 
+....................          cadena[index] = tecla; 
+069F:  MOVLW  47
+06A0:  ADDWF  4C,W
+06A1:  MOVWF  04
+06A2:  BCF    03.7
+06A3:  MOVF   4D,W
+06A4:  MOVWF  00
+....................          index++; 
+06A5:  INCF   4C,F
+06A6:  CLRF   2B
+06A7:  BTFSC  0B.7
+06A8:  BSF    2B.7
+06A9:  BCF    0B.7
+....................          printf(lcd_putc,"%c",tecla); 
+06AA:  MOVF   4D,W
+06AB:  MOVWF  6E
+06AC:  CALL   13F
+06AD:  BTFSC  2B.7
+06AE:  BSF    0B.7
+....................       } 
+....................        
+....................       if(tecla == '-' && index > 0){ 
+06AF:  MOVF   4D,W
+06B0:  SUBLW  2D
+06B1:  BTFSS  03.2
+06B2:  GOTO   6E1
+06B3:  MOVF   4C,F
+06B4:  BTFSC  03.2
+06B5:  GOTO   6E1
+....................          index--; 
+06B6:  DECF   4C,F
+....................          cadena[index] = 0; 
+06B7:  MOVLW  47
+06B8:  ADDWF  4C,W
+06B9:  MOVWF  04
+06BA:  BCF    03.7
+06BB:  CLRF   00
+....................          lcd_gotoxy(x + index,y); 
+06BC:  MOVF   4C,W
+06BD:  ADDWF  43,W
+06BE:  MOVWF  4F
+06BF:  CLRF   2B
+06C0:  BTFSC  0B.7
+06C1:  BSF    2B.7
+06C2:  BCF    0B.7
+06C3:  MOVF   4F,W
+06C4:  MOVWF  6F
+06C5:  MOVF   44,W
+06C6:  MOVWF  70
+06C7:  CALL   0AF
+06C8:  BTFSC  2B.7
+06C9:  BSF    0B.7
+06CA:  CLRF   2B
+06CB:  BTFSC  0B.7
+06CC:  BSF    2B.7
+06CD:  BCF    0B.7
+....................          printf(lcd_putc," "); 
+06CE:  MOVLW  20
+06CF:  MOVWF  6E
+06D0:  CALL   13F
+06D1:  BTFSC  2B.7
+06D2:  BSF    0B.7
+....................          lcd_gotoxy(x + index,y); 
+06D3:  MOVF   4C,W
+06D4:  ADDWF  43,W
+06D5:  MOVWF  4F
+06D6:  CLRF   2B
+06D7:  BTFSC  0B.7
+06D8:  BSF    2B.7
+06D9:  BCF    0B.7
+06DA:  MOVF   4F,W
+06DB:  MOVWF  6F
+06DC:  MOVF   44,W
+06DD:  MOVWF  70
+06DE:  CALL   0AF
+06DF:  BTFSC  2B.7
+06E0:  BSF    0B.7
+....................       } 
+....................        
+....................       if(tecla == 'C' && index > 0){ 
+06E1:  MOVF   4D,W
+06E2:  SUBLW  43
+06E3:  BTFSS  03.2
+06E4:  GOTO   70B
+06E5:  MOVF   4C,F
+06E6:  BTFSC  03.2
+06E7:  GOTO   70B
+....................          index=0; 
+06E8:  CLRF   4C
+....................          cadena[0] = 0; 
+06E9:  CLRF   47
+....................          cadena[1] = 0; 
+06EA:  CLRF   48
+....................          cadena[2] = 0; 
+06EB:  CLRF   49
+....................          cadena[3] = 0; 
+06EC:  CLRF   4A
+....................          cadena[4] = 0; 
+06ED:  CLRF   4B
+06EE:  CLRF   2B
+06EF:  BTFSC  0B.7
+06F0:  BSF    2B.7
+06F1:  BCF    0B.7
+....................          lcd_gotoxy(x,y); 
+06F2:  MOVF   43,W
+06F3:  MOVWF  6F
+06F4:  MOVF   44,W
+06F5:  MOVWF  70
+06F6:  CALL   0AF
+06F7:  BTFSC  2B.7
+06F8:  BSF    0B.7
+....................          printf(lcd_putc,"     "); 
+06F9:  MOVLW  72
+06FA:  BSF    03.6
+06FB:  MOVWF  0D
+06FC:  MOVLW  00
+06FD:  MOVWF  0F
+06FE:  BCF    03.6
+06FF:  CALL   5A7
+0700:  CLRF   2B
+0701:  BTFSC  0B.7
+0702:  BSF    2B.7
+0703:  BCF    0B.7
+....................          lcd_gotoxy(x,y); 
+0704:  MOVF   43,W
+0705:  MOVWF  6F
+0706:  MOVF   44,W
+0707:  MOVWF  70
+0708:  CALL   0AF
+0709:  BTFSC  2B.7
+070A:  BSF    0B.7
+....................       } 
+....................        
+....................       if(tecla == '=' && index > 0){ 
+070B:  MOVF   4D,W
+070C:  SUBLW  3D
+070D:  BTFSS  03.2
+070E:  GOTO   712
+070F:  MOVF   4C,F
+0710:  BTFSS  03.2
+....................          break;      
+0711:  GOTO   716
+....................       } 
+....................    }while(index < 5); 
+0712:  MOVF   4C,W
+0713:  SUBLW  04
+0714:  BTFSC  03.0
+0715:  GOTO   68D
+....................     
+....................    for(int8 i = 0; i < index; i++){ 
+0716:  CLRF   4E
+0717:  MOVF   4C,W
+0718:  SUBWF  4E,W
+0719:  BTFSC  03.0
+071A:  GOTO   7C7
+....................       numero += (cadena[i] - 48) * (pow(10,index - 1 - i)); 
+071B:  MOVLW  47
+071C:  ADDWF  4E,W
+071D:  MOVWF  04
+071E:  BCF    03.7
+071F:  MOVLW  30
+0720:  SUBWF  00,W
+0721:  MOVWF  4F
+0722:  MOVLW  01
+0723:  SUBWF  4C,W
+0724:  MOVWF  78
+0725:  MOVF   4E,W
+0726:  SUBWF  78,W
+0727:  MOVWF  50
+0728:  MOVLW  0A
+0729:  MOVWF  51
+072A:  MOVF   50,W
+072B:  MOVWF  52
+*
+077E:  CLRF   51
+077F:  MOVF   04,W
+0780:  MOVWF  50
+0781:  BCF    51.0
+0782:  BTFSC  03.7
+0783:  BSF    51.0
+0784:  CLRF   68
+0785:  CLRF   67
+0786:  CLRF   66
+0787:  MOVF   4F,W
+0788:  MOVWF  65
+0789:  MOVF   7A,W
+078A:  MOVWF  6C
+078B:  MOVF   79,W
+078C:  MOVWF  6B
+078D:  MOVF   78,W
+078E:  MOVWF  6A
+078F:  MOVF   77,W
+0790:  MOVWF  69
+*
+07BA:  MOVF   50,W
+07BB:  MOVWF  04
+07BC:  BCF    03.7
+07BD:  BTFSC  51.0
+07BE:  BSF    03.7
+07BF:  MOVF   77,W
+07C0:  ADDWF  45,F
+07C1:  MOVF   78,W
+07C2:  BTFSC  03.0
+07C3:  INCFSZ 78,W
+07C4:  ADDWF  46,F
+07C5:  INCF   4E,F
+07C6:  GOTO   717
+....................    }   
+....................    return numero; 
+07C7:  MOVF   45,W
+07C8:  MOVWF  78
+07C9:  MOVF   46,W
+07CA:  MOVWF  79
+07CB:  RETURN
+.................... } 
+....................  
+.................... int16 get_num() { 
+....................    int16 numero = 0; 
+....................    char cadena[5] = {0,0,0,0,0}; 
+....................    int8 index = 0; 
+....................    char tecla; 
+....................    do { 
+....................       tecla = read_key(); 
+....................       if((tecla >= 48) && (tecla <= 57))  
+....................       { 
+....................          cadena[index] = tecla; 
+....................          index++; 
+....................          printf(lcd_putc,"%c",tecla); 
+....................       } 
+....................        
+....................       if(tecla == '=' && index > 0){ 
+....................          break;      
+....................       } 
+....................    }while(index < 5); 
+....................     
+....................    for(int8 i = 0; i < index; i++){ 
+....................       numero += (cadena[i] - 48) * (pow(10,index - 1 - i)); 
+....................    }   
+....................    return numero; 
+.................... } 
+....................  
+....................  
+.................... long  RPM = 0, ancho = 0, RPMA = 0, t = 0; 
+.................... int x = 0;  
+.................... short a = 0, c = 0; 
+.................... int32 pulsos = 0,  PPRPM = 0; 
+.................... int16 porcentaje; 
+....................  
+.................... #Int_Timer0 
+.................... void Interrupcion_Timer0() 
+.................... { 
+....................     t++; 
+*
+036A:  INCF   36,F
+036B:  BTFSC  03.2
+036C:  INCF   37,F
+....................     if(t == 500) 
+036D:  MOVF   36,W
+036E:  SUBLW  F4
+036F:  BTFSS  03.2
+0370:  GOTO   47C
+0371:  DECFSZ 37,W
+0372:  GOTO   47C
+....................     { 
+....................         
+....................        if( RPM> 0 && c == 0) 
+0373:  MOVF   30,F
+0374:  BTFSS  03.2
+0375:  GOTO   379
+0376:  MOVF   31,F
+0377:  BTFSC  03.2
+0378:  GOTO   458
+0379:  BTFSC  2D.2
+037A:  GOTO   458
+....................        { 
+....................           
+....................           RPMA = (PULSOS*240)/24; 
+037B:  MOVF   3C,W
+037C:  MOVWF  68
+037D:  MOVF   3B,W
+037E:  MOVWF  67
+037F:  MOVF   3A,W
+0380:  MOVWF  66
+0381:  MOVF   39,W
+0382:  MOVWF  65
+0383:  CLRF   6C
+0384:  CLRF   6B
+0385:  CLRF   6A
+0386:  MOVLW  F0
+0387:  MOVWF  69
+*
+03B1:  MOVF   7A,W
+03B2:  MOVWF  68
+03B3:  MOVF   79,W
+03B4:  MOVWF  67
+03B5:  MOVF   78,W
+03B6:  MOVWF  66
+03B7:  MOVF   77,W
+03B8:  MOVWF  65
+03B9:  BCF    03.1
+03BA:  MOVF   68,W
+03BB:  MOVWF  6C
+03BC:  MOVF   67,W
+03BD:  MOVWF  6B
+03BE:  MOVF   66,W
+03BF:  MOVWF  6A
+03C0:  MOVF   65,W
+03C1:  MOVWF  69
+03C2:  CLRF   70
+03C3:  CLRF   6F
+03C4:  CLRF   6E
+03C5:  MOVLW  18
+03C6:  MOVWF  6D
+*
+0415:  MOVF   78,W
+0416:  MOVWF  35
+0417:  MOVF   77,W
+0418:  MOVWF  34
+....................           porcentaje = (RPM * 100)/RPMA; 
+0419:  MOVF   31,W
+041A:  MOVWF  66
+041B:  MOVF   30,W
+041C:  MOVWF  65
+041D:  CLRF   68
+041E:  MOVLW  64
+041F:  MOVWF  67
+0420:  CALL   075
+0421:  MOVF   79,W
+0422:  MOVWF  66
+0423:  MOVF   78,W
+0424:  MOVWF  65
+0425:  MOVF   79,W
+0426:  MOVWF  68
+0427:  MOVF   78,W
+0428:  MOVWF  67
+0429:  MOVF   35,W
+042A:  MOVWF  6A
+042B:  MOVF   34,W
+042C:  MOVWF  69
+042D:  CALL   08A
+042E:  MOVF   79,W
+042F:  MOVWF  42
+0430:  MOVF   78,W
+0431:  MOVWF  41
+....................           lcd_gotoxy(1,2); 
+0432:  MOVLW  01
+0433:  MOVWF  6F
+0434:  MOVLW  02
+0435:  MOVWF  70
+0436:  CALL   0AF
+....................           printf(lcd_putc,"\RPMA %05Lu P:%lu",RPMA,porcentaje); 
+0437:  MOVLW  A1
+0438:  BSF    03.6
+0439:  MOVWF  0D
+043A:  MOVLW  04
+043B:  MOVWF  0F
+043C:  BCF    03.0
+043D:  MOVLW  05
+043E:  BCF    03.6
+043F:  MOVWF  65
+0440:  CALL   2A1
+0441:  MOVLW  08
+0442:  MOVWF  04
+0443:  MOVF   35,W
+0444:  MOVWF  66
+0445:  MOVF   34,W
+0446:  MOVWF  65
+0447:  CALL   2F8
+0448:  MOVLW  20
+0449:  MOVWF  6E
+044A:  CALL   13F
+044B:  MOVLW  50
+044C:  MOVWF  6E
+044D:  CALL   13F
+044E:  MOVLW  3A
+044F:  MOVWF  6E
+0450:  CALL   13F
+0451:  MOVLW  10
+0452:  MOVWF  04
+0453:  MOVF   42,W
+0454:  MOVWF  66
+0455:  MOVF   41,W
+0456:  MOVWF  65
+0457:  CALL   2F8
+....................        } 
+....................  
+....................        
+....................       if(RPM < RPMA) 
+0458:  MOVF   31,W
+0459:  SUBWF  35,W
+045A:  BTFSS  03.0
+045B:  GOTO   468
+045C:  BTFSS  03.2
+045D:  GOTO   462
+045E:  MOVF   34,W
+045F:  SUBWF  30,W
+0460:  BTFSC  03.0
+0461:  GOTO   468
+....................          ancho -= x; 
+0462:  MOVF   38,W
+0463:  SUBWF  32,F
+0464:  MOVLW  00
+0465:  BTFSS  03.0
+0466:  MOVLW  01
+0467:  SUBWF  33,F
+....................       if(RPM > RPMA) 
+0468:  MOVF   35,W
+0469:  SUBWF  31,W
+046A:  BTFSS  03.0
+046B:  GOTO   476
+046C:  BTFSS  03.2
+046D:  GOTO   472
+046E:  MOVF   30,W
+046F:  SUBWF  34,W
+0470:  BTFSC  03.0
+0471:  GOTO   476
+....................          ancho += x; 
+0472:  MOVF   38,W
+0473:  ADDWF  32,F
+0474:  BTFSC  03.0
+0475:  INCF   33,F
+....................           
+....................       PULSOS = 0; 
+0476:  CLRF   3C
+0477:  CLRF   3B
+0478:  CLRF   3A
+0479:  CLRF   39
+....................       t = 0; 
+047A:  CLRF   37
+047B:  CLRF   36
+....................     } 
+....................      
+....................     if(RPM > 0 )/*&& RPM >= 2500 && RPM <= 6200*/ 
+047C:  MOVF   30,F
+047D:  BTFSS  03.2
+047E:  GOTO   482
+047F:  MOVF   31,F
+0480:  BTFSC  03.2
+0481:  GOTO   49B
+....................        { 
+....................             output_high(pin_b3); 
+0482:  BSF    03.5
+0483:  BCF    06.3
+0484:  BCF    03.5
+0485:  BSF    06.3
+....................             output_low(pin_b1); 
+0486:  BSF    03.5
+0487:  BCF    06.1
+0488:  BCF    03.5
+0489:  BCF    06.1
+....................             delay_us(ancho); 
+048A:  MOVF   33,W
+048B:  MOVWF  65
+048C:  INCF   65,F
+048D:  DECF   65,F
+048E:  BTFSC  03.2
+048F:  GOTO   494
+0490:  MOVLW  FF
+0491:  MOVWF  66
+0492:  CALL   35B
+0493:  GOTO   48D
+0494:  MOVF   32,W
+0495:  MOVWF  66
+0496:  CALL   35B
+....................             output_low(pin_b3); 
+0497:  BSF    03.5
+0498:  BCF    06.3
+0499:  BCF    03.5
+049A:  BCF    06.3
+....................        } 
+....................    set_timer0(26); 
+049B:  MOVLW  1A
+049C:  MOVWF  01
+....................   
+.................... } 
+049D:  BCF    0B.2
+049E:  BCF    0A.3
+049F:  BCF    0A.4
+04A0:  GOTO   02F
+.................... #Int_Ext 
+.................... void Interrupcion() 
+.................... { 
+....................       pulsos++; 
+*
+04AA:  MOVLW  01
+04AB:  ADDWF  39,F
+04AC:  BTFSC  03.0
+04AD:  INCF   3A,F
+04AE:  BTFSC  03.2
+04AF:  INCF   3B,F
+04B0:  BTFSC  03.2
+04B1:  INCF   3C,F
+04B2:  BCF    0B.1
+04B3:  BCF    0A.3
+04B4:  BCF    0A.4
+04B5:  GOTO   02F
+.................... } 
+....................  
+.................... void main() 
+*
+0800:  MOVF   03,W
+0801:  ANDLW  1F
+0802:  MOVWF  03
+0803:  CLRF   31
+0804:  CLRF   30
+0805:  CLRF   33
+0806:  CLRF   32
+0807:  CLRF   35
+0808:  CLRF   34
+0809:  CLRF   37
+080A:  CLRF   36
+080B:  CLRF   38
+080C:  BCF    2D.1
+080D:  BCF    2D.2
+080E:  CLRF   3C
+080F:  CLRF   3B
+0810:  CLRF   3A
+0811:  CLRF   39
+0812:  CLRF   40
+0813:  CLRF   3F
+0814:  CLRF   3E
+0815:  CLRF   3D
+0816:  BSF    03.5
+0817:  BSF    1F.0
+0818:  BSF    1F.1
+0819:  BSF    1F.2
+081A:  BCF    1F.3
+081B:  MOVLW  07
+081C:  MOVWF  1C
+081D:  BCF    03.7
+.................... { 
+....................    lcd_init(); 
+*
+0823:  BCF    0A.3
+0824:  GOTO   4E0
+0825:  BSF    0A.3
+....................    kbd_init(); 
+0826:  BCF    0A.3
+0827:  GOTO   5A4
+0828:  BSF    0A.3
+....................    port_b_pullups(true); 
+0829:  BSF    03.5
+082A:  BCF    01.7
+....................    enable_interrupts(int_ext); 
+082B:  BCF    03.5
+082C:  BSF    0B.4
+....................    ext_int_edge(H_TO_L); 
+082D:  BSF    03.5
+082E:  BCF    01.6
+....................     
+....................    setup_timer_0(RTCC_INTERNAL | RTCC_DIV_2); 
+082F:  MOVF   01,W
+0830:  ANDLW  C0
+0831:  MOVWF  01
+....................    enable_interrupts(INT_TIMER0); 
+0832:  BCF    03.5
+0833:  BSF    0B.5
+....................    set_timer0(6); 
+0834:  MOVLW  06
+0835:  MOVWF  01
+....................     
+....................     enable_interrupts(global);  
+0836:  MOVLW  C0
+0837:  IORWF  0B,F
+....................      
+....................     output_low(pin_b3); 
+0838:  BSF    03.5
+0839:  BCF    06.3
+083A:  BCF    03.5
+083B:  BCF    06.3
+....................     output_low(pin_b1); 
+083C:  BSF    03.5
+083D:  BCF    06.1
+083E:  BCF    03.5
+083F:  BCF    06.1
+....................     do 
+....................     { 
+....................        c = 1; 
+0840:  BSF    2D.2
+0841:  CLRF   2B
+0842:  BTFSC  0B.7
+0843:  BSF    2B.7
+0844:  BCF    0B.7
+....................        lcd_gotoxy(1,1); 
+0845:  MOVLW  01
+0846:  MOVWF  6F
+0847:  MOVWF  70
+0848:  BCF    0A.3
+0849:  CALL   0AF
+084A:  BSF    0A.3
+084B:  BTFSC  2B.7
+084C:  BSF    0B.7
+....................        printf(lcd_putc,"Ingresa RPM:"); 
+084D:  MOVLW  B6
+084E:  BSF    03.6
+084F:  MOVWF  0D
+0850:  MOVLW  04
+0851:  MOVWF  0F
+0852:  BCF    0A.3
+0853:  BCF    03.6
+0854:  CALL   5A7
+0855:  BSF    0A.3
+0856:  CLRF   2B
+0857:  BTFSC  0B.7
+0858:  BSF    2B.7
+0859:  BCF    0B.7
+....................        lcd_gotoxy(1,2); 
+085A:  MOVLW  01
+085B:  MOVWF  6F
+085C:  MOVLW  02
+085D:  MOVWF  70
+085E:  BCF    0A.3
+085F:  CALL   0AF
+0860:  BSF    0A.3
+0861:  BTFSC  2B.7
+0862:  BSF    0B.7
+....................        //printf(lcd_putc,"500 a 3600 "); 
+....................        RPM = get_num_lcd(1,3); 
+0863:  MOVLW  01
+0864:  MOVWF  43
+0865:  MOVLW  03
+0866:  MOVWF  44
+0867:  BCF    0A.3
+0868:  CALL   67A
+0869:  BSF    0A.3
+086A:  MOVF   79,W
+086B:  MOVWF  31
+086C:  MOVF   78,W
+086D:  MOVWF  30
+....................        if(RPM < 500 || RPM > 3600 ) 
+086E:  MOVF   31,W
+086F:  SUBLW  01
+0870:  BTFSS  03.0
+0871:  GOTO   078
+0872:  BTFSS  03.2
+0873:  GOTO   083
+0874:  MOVF   30,W
+0875:  SUBLW  F3
+0876:  BTFSC  03.0
+0877:  GOTO   083
+0878:  MOVF   31,W
+0879:  SUBLW  0D
+087A:  BTFSC  03.0
+087B:  GOTO   09B
+087C:  XORLW  FF
+087D:  BTFSS  03.2
+087E:  GOTO   083
+087F:  MOVF   30,W
+0880:  SUBLW  10
+0881:  BTFSC  03.0
+0882:  GOTO   09B
+....................        { 
+....................           
+....................             printf(lcd_putc,"\fValor Invalido"); 
+0883:  MOVLW  BD
+0884:  BSF    03.6
+0885:  MOVWF  0D
+0886:  MOVLW  04
+0887:  MOVWF  0F
+0888:  BCF    0A.3
+0889:  BCF    03.6
+088A:  CALL   5A7
+088B:  BSF    0A.3
+....................             delay_ms(500);          
+088C:  MOVLW  02
+088D:  MOVWF  43
+088E:  CLRF   2B
+088F:  BTFSC  0B.7
+0890:  BSF    2B.7
+0891:  BCF    0B.7
+0892:  MOVLW  FA
+0893:  MOVWF  6F
+0894:  BCF    0A.3
+0895:  CALL   12B
+0896:  BSF    0A.3
+0897:  BTFSC  2B.7
+0898:  BSF    0B.7
+0899:  DECFSZ 43,F
+089A:  GOTO   08E
+....................        } 
+....................         
+....................     }while(RPM < 1 || RPM > 3600); 
+089B:  MOVF   30,F
+089C:  BTFSS  03.2
+089D:  GOTO   0A1
+089E:  MOVF   31,F
+089F:  BTFSC  03.2
+08A0:  GOTO   040
+08A1:  MOVF   31,W
+08A2:  SUBLW  0D
+08A3:  BTFSC  03.0
+08A4:  GOTO   0AC
+08A5:  XORLW  FF
+08A6:  BTFSS  03.2
+08A7:  GOTO   040
+08A8:  MOVF   30,W
+08A9:  SUBLW  10
+08AA:  BTFSS  03.0
+08AB:  GOTO   040
+....................     c = 0; 
+08AC:  BCF    2D.2
+....................     ancho = 450; 
+08AD:  MOVLW  01
+08AE:  MOVWF  33
+08AF:  MOVLW  C2
+08B0:  MOVWF  32
+....................     a = 1; 
+08B1:  BSF    2D.1
+....................  
+....................    while(true) 
+....................    { 
+....................      
+....................        if(input(pin_b3) == 0 && a == 0) 
+08B2:  BSF    03.5
+08B3:  BSF    06.3
+08B4:  BCF    03.5
+08B5:  BTFSC  06.3
+08B6:  GOTO   155
+08B7:  BTFSC  2D.1
+08B8:  GOTO   155
+....................        { 
+....................          a = 1; 
+08B9:  BSF    2D.1
+....................          c = 1; 
+08BA:  BSF    2D.2
+08BB:  CLRF   2B
+08BC:  BTFSC  0B.7
+08BD:  BSF    2B.7
+08BE:  BCF    0B.7
+....................          do 
+....................             { 
+....................              lcd_gotoxy(1,1); 
+08BF:  MOVLW  01
+08C0:  MOVWF  6F
+08C1:  MOVWF  70
+08C2:  BCF    0A.3
+08C3:  CALL   0AF
+08C4:  BSF    0A.3
+08C5:  BTFSC  2B.7
+08C6:  BSF    0B.7
+....................              printf(lcd_putc,"Ingresa RPM     "); 
+08C7:  MOVLW  C5
+08C8:  BSF    03.6
+08C9:  MOVWF  0D
+08CA:  MOVLW  04
+08CB:  MOVWF  0F
+08CC:  BCF    0A.3
+08CD:  BCF    03.6
+08CE:  CALL   5A7
+08CF:  BSF    0A.3
+08D0:  CLRF   2B
+08D1:  BTFSC  0B.7
+08D2:  BSF    2B.7
+08D3:  BCF    0B.7
+....................              lcd_gotoxy(1,2); 
+08D4:  MOVLW  01
+08D5:  MOVWF  6F
+08D6:  MOVLW  02
+08D7:  MOVWF  70
+08D8:  BCF    0A.3
+08D9:  CALL   0AF
+08DA:  BSF    0A.3
+08DB:  BTFSC  2B.7
+08DC:  BSF    0B.7
+....................              //printf(lcd_putc,"500 a 3600 "); 
+....................              RPM = get_num_lcd(1,3); 
+08DD:  MOVLW  01
+08DE:  MOVWF  43
+08DF:  MOVLW  03
+08E0:  MOVWF  44
+08E1:  BCF    0A.3
+08E2:  CALL   67A
+08E3:  BSF    0A.3
+08E4:  MOVF   79,W
+08E5:  MOVWF  31
+08E6:  MOVF   78,W
+08E7:  MOVWF  30
+....................              if(RPM < 500 || RPM > 3600 ) 
+08E8:  MOVF   31,W
+08E9:  SUBLW  01
+08EA:  BTFSS  03.0
+08EB:  GOTO   0F2
+08EC:  BTFSS  03.2
+08ED:  GOTO   0FD
+08EE:  MOVF   30,W
+08EF:  SUBLW  F3
+08F0:  BTFSC  03.0
+08F1:  GOTO   0FD
+08F2:  MOVF   31,W
+08F3:  SUBLW  0D
+08F4:  BTFSC  03.0
+08F5:  GOTO   115
+08F6:  XORLW  FF
+08F7:  BTFSS  03.2
+08F8:  GOTO   0FD
+08F9:  MOVF   30,W
+08FA:  SUBLW  10
+08FB:  BTFSC  03.0
+08FC:  GOTO   115
+....................              { 
+....................                 
+....................                   printf(lcd_putc,"\fValor Invalido"); 
+08FD:  MOVLW  CE
+08FE:  BSF    03.6
+08FF:  MOVWF  0D
+0900:  MOVLW  04
+0901:  MOVWF  0F
+0902:  BCF    0A.3
+0903:  BCF    03.6
+0904:  CALL   5A7
+0905:  BSF    0A.3
+....................                   delay_ms(500);          
+0906:  MOVLW  02
+0907:  MOVWF  43
+0908:  CLRF   2B
+0909:  BTFSC  0B.7
+090A:  BSF    2B.7
+090B:  BCF    0B.7
+090C:  MOVLW  FA
+090D:  MOVWF  6F
+090E:  BCF    0A.3
+090F:  CALL   12B
+0910:  BSF    0A.3
+0911:  BTFSC  2B.7
+0912:  BSF    0B.7
+0913:  DECFSZ 43,F
+0914:  GOTO   108
+....................              } 
+....................           }while(RPM < 500 || RPM > 3600); 
+0915:  MOVF   31,W
+0916:  SUBLW  01
+0917:  BTFSS  03.0
+0918:  GOTO   11F
+0919:  BTFSS  03.2
+091A:  GOTO   0BB
+091B:  MOVF   30,W
+091C:  SUBLW  F3
+091D:  BTFSC  03.0
+091E:  GOTO   0BB
+091F:  MOVF   31,W
+0920:  SUBLW  0D
+0921:  BTFSC  03.0
+0922:  GOTO   12A
+0923:  XORLW  FF
+0924:  BTFSS  03.2
+0925:  GOTO   0BB
+0926:  MOVF   30,W
+0927:  SUBLW  10
+0928:  BTFSS  03.0
+0929:  GOTO   0BB
+092A:  CLRF   2B
+092B:  BTFSC  0B.7
+092C:  BSF    2B.7
+092D:  BCF    0B.7
+....................           PPRPM = (RPM*24)/60; 
+092E:  MOVF   31,W
+092F:  MOVWF  66
+0930:  MOVF   30,W
+0931:  MOVWF  65
+0932:  CLRF   68
+0933:  MOVLW  18
+0934:  MOVWF  67
+0935:  BCF    0A.3
+0936:  CALL   075
+0937:  BSF    0A.3
+0938:  BTFSC  2B.7
+0939:  BSF    0B.7
+093A:  MOVF   79,W
+093B:  MOVWF  44
+093C:  MOVF   78,W
+093D:  MOVWF  43
+093E:  CLRF   2B
+093F:  BTFSC  0B.7
+0940:  BSF    2B.7
+0941:  BCF    0B.7
+0942:  MOVF   44,W
+0943:  MOVWF  68
+0944:  MOVF   43,W
+0945:  MOVWF  67
+0946:  CLRF   6A
+0947:  MOVLW  3C
+0948:  MOVWF  69
+0949:  BCF    0A.3
+094A:  CALL   08A
+094B:  BSF    0A.3
+094C:  BTFSC  2B.7
+094D:  BSF    0B.7
+094E:  CLRF   40
+094F:  CLRF   3F
+0950:  MOVF   79,W
+0951:  MOVWF  3E
+0952:  MOVF   78,W
+0953:  MOVWF  3D
+....................           c = 0; 
+0954:  BCF    2D.2
+....................        } 
+....................         
+....................        if(RPM>0 && a == 1) 
+0955:  MOVF   30,F
+0956:  BTFSS  03.2
+0957:  GOTO   15B
+0958:  MOVF   31,F
+0959:  BTFSC  03.2
+095A:  GOTO   1CC
+095B:  BTFSS  2D.1
+095C:  GOTO   1CC
+095D:  CLRF   2B
+095E:  BTFSC  0B.7
+095F:  BSF    2B.7
+0960:  BCF    0B.7
+....................        { 
+....................  
+....................           lcd_gotoxy(1,1); 
+0961:  MOVLW  01
+0962:  MOVWF  6F
+0963:  MOVWF  70
+0964:  BCF    0A.3
+0965:  CALL   0AF
+0966:  BSF    0A.3
+0967:  BTFSC  2B.7
+0968:  BSF    0B.7
+....................           printf(lcd_putc,"RPM %Lu  A%Lu      ",RPM, ancho); 
+0969:  MOVLW  D6
+096A:  BSF    03.6
+096B:  MOVWF  0D
+096C:  MOVLW  04
+096D:  MOVWF  0F
+096E:  BCF    03.0
+096F:  BCF    03.6
+0970:  CLRF   2B
+0971:  BTFSC  0B.7
+0972:  BSF    2B.7
+0973:  BCF    0B.7
+0974:  MOVLW  04
+0975:  MOVWF  65
+0976:  BCF    0A.3
+0977:  CALL   2A1
+0978:  BSF    0A.3
+0979:  BTFSC  2B.7
+097A:  BSF    0B.7
+097B:  MOVLW  10
+097C:  MOVWF  04
+097D:  CLRF   2B
+097E:  BTFSC  0B.7
+097F:  BSF    2B.7
+0980:  BCF    0B.7
+0981:  MOVF   31,W
+0982:  MOVWF  66
+0983:  MOVF   30,W
+0984:  MOVWF  65
+0985:  BCF    0A.3
+0986:  CALL   2F8
+0987:  BSF    0A.3
+0988:  BTFSC  2B.7
+0989:  BSF    0B.7
+098A:  CLRF   2B
+098B:  BTFSC  0B.7
+098C:  BSF    2B.7
+098D:  BCF    0B.7
+098E:  MOVLW  20
+098F:  MOVWF  6E
+0990:  BCF    0A.3
+0991:  CALL   13F
+0992:  BSF    0A.3
+0993:  BTFSC  2B.7
+0994:  BSF    0B.7
+0995:  CLRF   2B
+0996:  BTFSC  0B.7
+0997:  BSF    2B.7
+0998:  BCF    0B.7
+0999:  MOVLW  20
+099A:  MOVWF  6E
+099B:  BCF    0A.3
+099C:  CALL   13F
+099D:  BSF    0A.3
+099E:  BTFSC  2B.7
+099F:  BSF    0B.7
+09A0:  CLRF   2B
+09A1:  BTFSC  0B.7
+09A2:  BSF    2B.7
+09A3:  BCF    0B.7
+09A4:  MOVLW  41
+09A5:  MOVWF  6E
+09A6:  BCF    0A.3
+09A7:  CALL   13F
+09A8:  BSF    0A.3
+09A9:  BTFSC  2B.7
+09AA:  BSF    0B.7
+09AB:  MOVLW  10
+09AC:  MOVWF  04
+09AD:  CLRF   2B
+09AE:  BTFSC  0B.7
+09AF:  BSF    2B.7
+09B0:  BCF    0B.7
+09B1:  MOVF   33,W
+09B2:  MOVWF  66
+09B3:  MOVF   32,W
+09B4:  MOVWF  65
+09B5:  BCF    0A.3
+09B6:  CALL   2F8
+09B7:  BSF    0A.3
+09B8:  BTFSC  2B.7
+09B9:  BSF    0B.7
+09BA:  MOVLW  DC
+09BB:  BSF    03.6
+09BC:  MOVWF  0D
+09BD:  MOVLW  04
+09BE:  MOVWF  0F
+09BF:  BSF    03.0
+09C0:  BCF    03.6
+09C1:  CLRF   2B
+09C2:  BTFSC  0B.7
+09C3:  BSF    2B.7
+09C4:  BCF    0B.7
+09C5:  MOVLW  06
+09C6:  MOVWF  65
+09C7:  BCF    0A.3
+09C8:  CALL   2A1
+09C9:  BSF    0A.3
+09CA:  BTFSC  2B.7
+09CB:  BSF    0B.7
+....................        } 
+....................        
+....................      if((RPM - RPMA) >500) 
+09CC:  MOVF   34,W
+09CD:  SUBWF  30,W
+09CE:  MOVWF  43
+09CF:  MOVF   31,W
+09D0:  MOVWF  44
+09D1:  MOVF   35,W
+09D2:  BTFSS  03.0
+09D3:  INCFSZ 35,W
+09D4:  SUBWF  44,F
+09D5:  MOVF   44,W
+09D6:  SUBLW  00
+09D7:  BTFSC  03.0
+09D8:  GOTO   1E2
+09D9:  XORLW  FF
+09DA:  BTFSS  03.2
+09DB:  GOTO   1E0
+09DC:  MOVF   43,W
+09DD:  SUBLW  F4
+09DE:  BTFSC  03.0
+09DF:  GOTO   1E2
+....................          x = 50; 
+09E0:  MOVLW  32
+09E1:  MOVWF  38
+....................       if((RPM - RPMA) >= 250 && (RPM - RPMA) < 500) 
+09E2:  MOVF   34,W
+09E3:  SUBWF  30,W
+09E4:  MOVWF  43
+09E5:  MOVF   31,W
+09E6:  MOVWF  44
+09E7:  MOVF   35,W
+09E8:  BTFSS  03.0
+09E9:  INCFSZ 35,W
+09EA:  SUBWF  44,F
+09EB:  MOVF   44,F
+09EC:  BTFSS  03.2
+09ED:  GOTO   1F2
+09EE:  MOVF   43,W
+09EF:  SUBLW  F9
+09F0:  BTFSC  03.0
+09F1:  GOTO   207
+09F2:  MOVF   34,W
+09F3:  SUBWF  30,W
+09F4:  MOVWF  43
+09F5:  MOVF   31,W
+09F6:  MOVWF  44
+09F7:  MOVF   35,W
+09F8:  BTFSS  03.0
+09F9:  INCFSZ 35,W
+09FA:  SUBWF  44,F
+09FB:  MOVF   44,W
+09FC:  SUBLW  01
+09FD:  BTFSS  03.0
+09FE:  GOTO   207
+09FF:  BTFSS  03.2
+0A00:  GOTO   205
+0A01:  MOVF   43,W
+0A02:  SUBLW  F3
+0A03:  BTFSS  03.0
+0A04:  GOTO   207
+....................          x = 20; 
+0A05:  MOVLW  14
+0A06:  MOVWF  38
+....................       if((RPM - RPMA) > 100 && (RPM - RPMA) < 250) 
+0A07:  MOVF   34,W
+0A08:  SUBWF  30,W
+0A09:  MOVWF  43
+0A0A:  MOVF   31,W
+0A0B:  MOVWF  44
+0A0C:  MOVF   35,W
+0A0D:  BTFSS  03.0
+0A0E:  INCFSZ 35,W
+0A0F:  SUBWF  44,F
+0A10:  MOVF   44,F
+0A11:  BTFSS  03.2
+0A12:  GOTO   217
+0A13:  MOVF   43,W
+0A14:  SUBLW  64
+0A15:  BTFSC  03.0
+0A16:  GOTO   229
+0A17:  MOVF   34,W
+0A18:  SUBWF  30,W
+0A19:  MOVWF  43
+0A1A:  MOVF   31,W
+0A1B:  MOVWF  44
+0A1C:  MOVF   35,W
+0A1D:  BTFSS  03.0
+0A1E:  INCFSZ 35,W
+0A1F:  SUBWF  44,F
+0A20:  MOVF   44,F
+0A21:  BTFSS  03.2
+0A22:  GOTO   229
+0A23:  MOVF   43,W
+0A24:  SUBLW  F9
+0A25:  BTFSS  03.0
+0A26:  GOTO   229
+....................          x = 15; 
+0A27:  MOVLW  0F
+0A28:  MOVWF  38
+....................       if((RPM - RPMA) <= 100 && (RPM - RPMA) < 50) 
+0A29:  MOVF   34,W
+0A2A:  SUBWF  30,W
+0A2B:  MOVWF  43
+0A2C:  MOVF   31,W
+0A2D:  MOVWF  44
+0A2E:  MOVF   35,W
+0A2F:  BTFSS  03.0
+0A30:  INCFSZ 35,W
+0A31:  SUBWF  44,F
+0A32:  MOVF   44,F
+0A33:  BTFSS  03.2
+0A34:  GOTO   24C
+0A35:  MOVF   43,W
+0A36:  SUBLW  64
+0A37:  BTFSS  03.0
+0A38:  GOTO   24C
+0A39:  MOVF   34,W
+0A3A:  SUBWF  30,W
+0A3B:  MOVWF  43
+0A3C:  MOVF   31,W
+0A3D:  MOVWF  44
+0A3E:  MOVF   35,W
+0A3F:  BTFSS  03.0
+0A40:  INCFSZ 35,W
+0A41:  SUBWF  44,F
+0A42:  MOVF   44,F
+0A43:  BTFSS  03.2
+0A44:  GOTO   24C
+0A45:  MOVF   43,W
+0A46:  SUBLW  31
+0A47:  BTFSS  03.0
+0A48:  GOTO   24C
+....................       { 
+....................          x = 1; 
+0A49:  MOVLW  01
+0A4A:  MOVWF  38
+....................          a = 0; 
+0A4B:  BCF    2D.1
+....................       } 
+....................       if((RPM - RPMA) <= 50) 
+0A4C:  MOVF   34,W
+0A4D:  SUBWF  30,W
+0A4E:  MOVWF  43
+0A4F:  MOVF   31,W
+0A50:  MOVWF  44
+0A51:  MOVF   35,W
+0A52:  BTFSS  03.0
+0A53:  INCFSZ 35,W
+0A54:  SUBWF  44,F
+0A55:  MOVF   44,F
+0A56:  BTFSS  03.2
+0A57:  GOTO   25C
+0A58:  MOVF   43,W
+0A59:  SUBLW  32
+0A5A:  BTFSC  03.0
+....................          x = 0; 
+0A5B:  CLRF   38
+0A5C:  GOTO   0B2
+....................    } 
+.................... } 
+0A5D:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F3A   HS NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

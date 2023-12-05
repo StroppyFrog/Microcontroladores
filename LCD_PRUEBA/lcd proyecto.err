@@ -1,0 +1,4 @@
+>>> Warning 202 "lcd proyecto.c" Line 63(9,14): Variable never used:   tecla
+      Memory usage:   ROM=29%      RAM=4% - 14%
+      0 Errors,  1 Warnings.
+Build Successful.

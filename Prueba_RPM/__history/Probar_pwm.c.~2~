@@ -1,0 +1,62 @@
+#include <16F877a.h>
+#device ADC=10
+#use delay(crystal=20Mhz)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+
+#include <lcd_c.c> //Incluir librería LCD
+#include <kbd4x4_d.c>
+#include <getNum16.c>
+
+#USE STANDARD_IO(A)
+#define LED PIN_A1
+
+int16 carga_alto, carga_bajo;
+
+#INT_TIMER0
+void desborde_timer_0()
+{
+   static short es_alto = 0;
+   if(es_alto){
+      set_timer0(carga_alto);
+      output_high(LED);
+   }else{
+      set_timer0(carga_bajo);
+      output_low(LED);
+   }
+   es_alto = !es_alto;
+}
+
+void actualizar_pwm(float porcentaje){
+   carga_bajo = (int) (256.0 * porcentaje / 100.0);
+   carga_alto = 256 - carga_bajo;
+}
+
+void pedir_porcentaje(){
+   printf(lcd_putc,"\fIngrese porcentaje");
+   int16 porcentaje = get_num_lcd(1,2);
+   
+   actualizar_pwm((float)porcentaje);
+   printf(lcd_putc,"\fCA:%lu\nCB:%lu",carga_alto,carga_bajo);
+}
+
+void main(){
+   lcd_init(); //Inicializar pantalla
+   kbd_init();
+   
+   setup_timer_0(RTCC_INTERNAL | RTCC_DIV_256);
+   
+   
+   pedir_porcentaje();
+ 
+   output_low(LED);  
+   set_timer0(carga_bajo);
+   
+   
+   enable_interrupts(INT_TIMER0);
+   enable_interrupts(GLOBAL);
+ 
+   while(1){
+      pedir_porcentaje();
+      delay_ms(2000);
+   } // while
+}

@@ -1,0 +1,199 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+008     kbd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     kbd_getc.kbd_call_count
+02C.0   kbd_getc.kbd_down
+02D     kbd_getc.last_key
+02E     kbd_getc.col
+02F-030 contador
+031     kbd_getc.kchar
+031-034 MAIN.tiempo_ms
+032     kbd_getc.row
+035-036 MAIN.pulsos
+037     lcd_init.i
+037-03A @PRINTF_L32D_645FPFPF.P1
+037-03A @SFTOI.P2
+037     @PSTRINGC7_645.@SCRATCH1
+037     MAIN.@SCRATCH1
+038-03B lcd_init.LCD_INIT_STRING
+038     @PSTRINGC7_645.@SCRATCH2
+038     MAIN.@SCRATCH2
+039     @PSTRINGC7_645.@SCRATCH3
+039     MAIN.@SCRATCH3
+03A     @PSTRINGC7_645.@SCRATCH4
+03A     MAIN.@SCRATCH4
+03B-03C @ITOF.P1
+03B     @PRINTF_L32D_645FPFPF.P2
+03B-03E @ADDFF.P3
+03B     MAIN.@SCRATCH5
+03C     lcd_init.@SCRATCH1
+03C     MAIN.@SCRATCH6
+03C     @PRINTF_L32D_645FPFPF.@SCRATCH1
+03D     MAIN.@SCRATCH7
+03D     @PRINTF_L32D_645FPFPF.@SCRATCH2
+03E     MAIN.@SCRATCH8
+03E     @PRINTF_L32D_645FPFPF.@SCRATCH3
+03F-042 @ADDFF.P1
+03F     @PRINTF_L32D_645FPFPF.@SCRATCH4
+040     @PRINTF_L32D_645FPFPF.@SCRATCH5
+041     @PRINTF_L32D_645FPFPF.@SCRATCH6
+042     @PRINTF_L32D_645FPFPF.@SCRATCH7
+043     @ADDFF.@SCRATCH1
+043     @PRINTF_L32D_645FPFPF.@SCRATCH8
+044-047 @MULFF.P1
+044-047 @DIV3232.P2
+044-047 @FTOSD.P3
+044     lcd_putc.c
+044     @ADDFF.@SCRATCH2
+045     @delay_ms1.P1
+045     lcd_gotoxy.x
+045     @ADDFF.@SCRATCH3
+046     lcd_gotoxy.y
+046     @ADDFF.@SCRATCH4
+047     lcd_gotoxy.address
+047     @ADDFF.@SCRATCH5
+048-04B @DIV3232.P1
+048-04B @MULFF.P2
+048     lcd_gotoxy.@SCRATCH1
+048     @ADDFF.@SCRATCH6
+048     @FTOSD.@SCRATCH1
+049     lcd_send_byte.address
+049     @ADDFF.@SCRATCH7
+04A     lcd_send_byte.n
+04A     @ADDFF.@SCRATCH8
+04B     lcd_read_byte.low
+04B     lcd_send_byte.@SCRATCH1
+04C     lcd_read_byte.high
+04C     lcd_send_nibble.n
+04C     @MULFF.@SCRATCH1
+04C     @DIV3232.@SCRATCH1
+04D     lcd_read_nibble.n
+04D     lcd_read_byte.@SCRATCH1
+04D     @MULFF.@SCRATCH2
+04D     @DIV3232.@SCRATCH2
+04E     lcd_read_nibble.@SCRATCH1
+04E     @MULFF.@SCRATCH3
+04E     @DIV3232.@SCRATCH3
+04F     @MULFF.@SCRATCH4
+04F     @DIV3232.@SCRATCH4
+050     @MULFF.@SCRATCH5
+050     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000051  @const690.call
+000054  t1_isr
+00005E  @const707.call
+000064  @delay_ms1
+000078  lcd_send_nibble
+0000A8  lcd_read_nibble
+0000D9  lcd_send_byte
+0000E1  lcd_read_byte
+000137  lcd_init
+00017D  kbd_init
+000180  lcd_gotoxy
+000192  lcd_putc
+0001BE  @PSTRINGC7_645
+000216  @ITOF
+000233  @MULFF
+0002A8  @ADDFF
+0003EB  @DIV3232
+00043A  @PRINTF_L32D_645FPFPF
+000461  @FTOSD
+00051C  @SFTOI
+00053D  MAIN
+00053D  @cinit1
+000547  @cinit2
+
+Project Directory:
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Replica_de_pulso\
+
+Project Files:
+    Replica_pulso_proyecto3-U3.c                            [13-nov.-23 13:53  CRC=7C74F1B9]
+    ..\..\..\..\Escritorio\PICC\Devices\16F877a.h           [12-nov.-13 14:35  CRC=81334808]
+    ..\..\..\..\Escritorio\PICC\Drivers\lcd.c               [19-sep.-13 15:38  CRC=D1A6378A]
+    ..\..\..\..\Escritorio\PICC\Drivers\kbd4x4_d.c          [13-sep.-23 13:25  CRC=6CBC6270]
+    ..\..\..\..\Escritorio\PICC\Drivers\getNum16.c          [15-sep.-23 13:24  CRC=EEBE17EA]
+
+Source signature=1987038F
+
+Units:
+    Replica_pulso_proyecto3-U3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Replica_pulso_proyecto3-U3.xsym
+    Errors:      Replica_pulso_proyecto3-U3.err
+    Ext Symbols: Replica_pulso_proyecto3-U3.esym
+    INHX8:       Replica_pulso_proyecto3-U3.hex
+    Symbols:     Replica_pulso_proyecto3-U3.sym
+    List:        Replica_pulso_proyecto3-U3.lst
+    Debug/COFF:  Replica_pulso_proyecto3-U3.cof
+    Project:     Replica_pulso_proyecto3-U3.ccspjt
+    Call Tree:   Replica_pulso_proyecto3-U3.tre
+    Statistics:  Replica_pulso_proyecto3-U3.STA

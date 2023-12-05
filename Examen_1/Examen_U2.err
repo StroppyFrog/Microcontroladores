@@ -1,0 +1,13 @@
+<<<<<<< Updated upstream
+Compiling C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen\Examen_U2 on 27-mar.-23 at 19:40
+>>> Warning 202 "C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen\Examen_U2.c" Line 34(9,14): Variable never used:   tecla
+      Memory usage:   ROM=12%      RAM=4% - 13%
+      0 Errors,  1 Warnings.
+=======
+Compiling C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen\Examen_U2 on 28-mar.-23 at 10:31
+>>> Warning 204 "C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen\Examen_U2.c" Line 51(1,1): Condition always FALSE
+>>> Warning 202 "C:\Users\Ernesto VC\Documents\GitHub\Microcontroladores\Examen\Examen_U2.c" Line 76(9,14): Variable never used:   tecla
+      Memory usage:   ROM=15%      RAM=4% - 14%
+      0 Errors,  2 Warnings.
+>>>>>>> Stashed changes
+Build Successful.

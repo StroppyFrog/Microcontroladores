@@ -1,0 +1,4 @@
+>>> Warning 203 "Probar_bluetooth.c" Line 28(1,1): Condition always TRUE
+      Memory usage:   ROM=4%      RAM=6% - 8%
+      0 Errors,  1 Warnings.
+Build Successful.

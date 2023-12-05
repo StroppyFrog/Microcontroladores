@@ -1,0 +1,19 @@
+[PROJECT]
+Target=Probar_bluetooth.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Probar_bluetooth.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Probar_bluetooth.c]
+Type=4
+[mru-list]
+1=Probar_bluetooth.c
+[Opened Files]
+1=Probar_bluetooth.c
+2=
+[Units]
+Count=1
+1=Probar_bluetooth (main)

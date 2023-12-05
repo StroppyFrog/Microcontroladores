@@ -1,0 +1,108 @@
+#include <16F877a.h> //Servo
+#device ADC = 10
+#use delay(crystal = 20000000)
+#FUSES NOWDT, NOBROWNOUT, NOLVP, HS
+#define LCD_ENABLE_PIN  PIN_A3                                    ////
+#define LCD_RS_PIN      PIN_A5                                    ////
+#define LCD_RW_PIN      PIN_A4                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7
+#include <lcd.c>
+#include <kbd4x4_b.c>
+#include <getNum16.c>
+
+#use STANDARD_IO(C)
+
+#define PWM_SERVO PIN_C0 
+
+void mover_servo(int8 grados){
+   
+   int16 t_alto = (float)0.544 + grados( 1,856 / 180 ); // Se calcula el tiempo en alto
+   int16 t_bajo = 20000.0 - t_alto; // Se calcula el tiempo en bajo
+
+   for(int8 i = 0; i < 10; i++) // Se ejecuta el pulso 10 veces
+   {
+     output_high(PWM_SERVO);
+     delay_us(t_alto);
+     output_low(PWM_SERVO);
+     delay_us(t_bajo);
+   }
+}
+
+void mover_servo_90(int8 grados){
+
+   int16 t_alto = (float)grados * 11.924 + 676.79; // Se calcula el tiempo en alto
+   int16 t_bajo = 20000.0 - t_alto; // Se calcula el tiempo en bajo
+
+   for(int8 i = 0; i < 10; i++) // Se ejecuta el pulso 10 veces
+   {
+     output_high(PWM_SERVO);
+     delay_us(t_alto);
+     output_low(PWM_SERVO);
+     delay_us(t_bajo);
+   }
+}
+
+void mover_servo_180(int8 grados){
+   
+   int16 t_alto = (float)grados * 9.693 + 900.32; // Se calcula el tiempo en alto
+   int16 t_bajo = 20000.0 - t_alto; // Se calcula el tiempo en bajo
+
+   for(int8 i = 0; i < 10; i++) // Se ejecuta el pulso 10 veces
+   {
+     output_high(PWM_SERVO);
+     delay_us(t_alto);
+     output_low(PWM_SERVO);
+     delay_us(t_bajo);
+   }
+}
+
+void mover_servo_181(){
+   
+   int16 t_alto = (float)177 * 11.024 + 685; // Se calcula el tiempo en alto
+   int16 t_bajo = 20000.0 - t_alto; // Se calcula el tiempo en bajo
+
+   for(int8 i = 0; i < 10; i++) // Se ejecuta el pulso 10 veces
+   {
+     output_high(PWM_SERVO);
+     delay_us(t_alto);
+     output_low(PWM_SERVO);
+     delay_us(t_bajo);
+   }
+}
+
+void main()
+{
+   // Inicializar pines
+   lcd_init();
+   kbd_init();
+   output_low(PWM_SERVO);
+   port_b_pullups(TRUE);
+   float grados = 0;
+   mover_servo(0);
+   while (TRUE){
+      printf(lcd_putc,"\fPosicion:%f", grados);
+      printf(lcd_putc,"\nGrado(0-180):");
+      grados = get_num_lcd(14,2);
+      if(grados < 0 || grados > 180){
+         printf(lcd_putc,"\f*ERROR* \nNumero no valido");
+         delay_ms(1000);
+      }
+      else if(grados==0){
+         mover_servo(grados);
+      }
+      else if(grados<91 && grados>0){
+         mover_servo_90(grados);
+      }
+      else if(grados>90 && grados<180){
+         mover_servo_180(grados);
+      }
+      else if(grados==180){
+         mover_servo_181();
+      }
+      printf(lcd_putc,"\fPosicion:%f", grados);
+      delay_ms(1000);
+   }
+}

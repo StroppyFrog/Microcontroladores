@@ -1,0 +1,21 @@
+[PROJECT]
+Target=RPM_Nuevo.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=RPM_Nuevo.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[RPM_Nuevo.c]
+Type=4
+[mru-list]
+1=RPM_Nuevo.c
+[Opened Files]
+1=..\Control_rpm_2\control rpm_proyecto.c
+2=..\Comunicacion_esc\comunicacion_serial_proyecto2.c
+3=..\..\..\..\..\Downloads\comunicacion_serial_proyecto2.c.txt
+4=
+[Units]
+Count=1
+1=RPM_Nuevo (main)

@@ -1,0 +1,21 @@
+[PROJECT]
+Target=Generador_frecuencia.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Generador_frecuencia.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Generador_frecuencia.c]
+Type=4
+[mru-list]
+1=Generador_frecuencia.c
+[Opened Files]
+1=..\Examen_UIII_Primeras\Examen_UIII_Primeras.c
+2=Generador_frecuencia.c
+3=..\..\..\..\..\Downloads\Examen_UIII_Ernesto\Examen_UIII.c
+4=
+[Units]
+Count=1
+1=Generador_frecuencia (main)

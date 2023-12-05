@@ -1,0 +1,227 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     kbd
+007     lcdlat
+007     lcd
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024     step_index
+025-026 MAIN.numero
+027-028 MAIN.tiempo
+029-02A MAIN.grados
+02B     MAIN.opci
+02C-02F MAIN.pos_actual
+030-033 MAIN.micro_paso
+034-037 MAIN.posi
+038-03B MAIN.time
+03C-03F MAIN.angulos
+040-043 MAIN.pasos_totales
+044-047 MAIN.pasos_moverse
+048-04B MAIN.pasos_diferencia
+04C-04D MAIN.i
+04E-04F MAIN.i
+050     @PSTRINGCN7_649.P1
+050-051 @ITOF.P2
+050     lcd_init.i
+050-053 @PRINTF_L32D_649FPFPF.P1
+050     get_num_lcd.x
+050-053 @FLT.P1
+050-053 @ADDFF.P2
+050     update_stepper.@SCRATCH1
+050     MAIN.@SCRATCH1
+051     get_num_lcd.y
+051     lcd_init.@SCRATCH1
+051     MAIN.@SCRATCH2
+051     @PSTRINGCN7_649.@SCRATCH1
+052-053 get_num_lcd.numero
+052     MAIN.@SCRATCH3
+052     @PSTRINGCN7_649.@SCRATCH2
+053     MAIN.@SCRATCH4
+053     @PSTRINGCN7_649.@SCRATCH3
+054     @PRINTF_L32D_649FPFPF.P1
+054-057 @DIVFF.P2
+054-058 get_num_lcd.cadena
+054-057 @ADDFF.P1
+054-057 @FLT.P2
+054     @PSTRINGCN7_649.@SCRATCH4
+055     @PRINTF_L32D_649FPFPF.@SCRATCH1
+056     @PRINTF_L32D_649FPFPF.@SCRATCH2
+057     @PRINTF_L32D_649FPFPF.@SCRATCH3
+058-05B @DIVFF.P1
+058     @ADDFF.@SCRATCH1
+058     @FLT.@SCRATCH1
+058     @PRINTF_L32D_649FPFPF.@SCRATCH4
+059     get_num_lcd.index
+059     @ADDFF.@SCRATCH2
+059     @FLT.@SCRATCH2
+059     @PRINTF_L32D_649FPFPF.@SCRATCH5
+05A     get_num_lcd.tecla
+05A     @ADDFF.@SCRATCH3
+05A     @PRINTF_L32D_649FPFPF.@SCRATCH6
+05B     get_num_lcd.i
+05B     @ADDFF.@SCRATCH4
+05B     @PRINTF_L32D_649FPFPF.@SCRATCH7
+05C     read_key.c
+05C     get_num_lcd.@SCRATCH1
+05C     @PSTRINGC7_649.@SCRATCH1
+05C     @DIVFF.@SCRATCH1
+05C     @ADDFF.@SCRATCH5
+05C     @PRINTF_L32D_649FPFPF.@SCRATCH8
+05D     kbd_getc.kchar
+05D-060 @FTOSD.P1
+05D-060 @DIV3232.P2
+05D-060 @MULFF.P3
+05D     get_num_lcd.@SCRATCH2
+05D     @PSTRINGC7_649.@SCRATCH2
+05D     @DIVFF.@SCRATCH2
+05D     @ADDFF.@SCRATCH6
+05E     kbd_getc.row
+05E     pow.base
+05E     get_num_lcd.@SCRATCH3
+05E     @PSTRINGC7_649.@SCRATCH3
+05E     @DIVFF.@SCRATCH3
+05E     @ADDFF.@SCRATCH7
+05F     lcd_putc.c
+05F     pow.power
+05F     kbd_getc.@SCRATCH1
+05F     @PSTRINGC7_649.@SCRATCH4
+05F     @DIVFF.@SCRATCH4
+05F     @ADDFF.@SCRATCH8
+060-063 pow.result
+060     @delay_ms1.P1
+060     lcd_gotoxy.x
+060     @DIVFF.@SCRATCH5
+061     lcd_gotoxy.y
+061-064 @DIV3232.P1
+061-064 @MULFF.P2
+061     @DIVFF.@SCRATCH6
+061     @FTOSD.@SCRATCH1
+062     lcd_gotoxy.address
+063     lcd_gotoxy.@SCRATCH1
+064     pow.i
+064     lcd_send_byte.address
+065-068 @MUL3232.P1
+065     lcd_send_byte.n
+065     @MULFF.@SCRATCH1
+065     @DIV3232.@SCRATCH1
+066     lcd_read_byte.low
+066     lcd_send_byte.@SCRATCH1
+066     @MULFF.@SCRATCH2
+066     @DIV3232.@SCRATCH2
+067     lcd_read_byte.high
+067     lcd_send_nibble.n
+067     @MULFF.@SCRATCH3
+067     @DIV3232.@SCRATCH3
+068     lcd_read_byte.@SCRATCH1
+068     @MULFF.@SCRATCH4
+068     @DIV3232.@SCRATCH4
+069-06C @MUL3232.P1
+069     @MULFF.@SCRATCH5
+069     @DIV3232.@SCRATCH5
+06D     @MUL3232.@SCRATCH1
+06E     @MUL3232.@SCRATCH2
+06F     @MUL3232.@SCRATCH3
+070     @MUL3232.@SCRATCH4
+071     @MUL3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+087     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  KEYS.call
+000010  KEYS.data
+000020  pasos.call
+000024  pasos.data
+00002E  @const688.call
+000031  @const714.call
+00003C  @const718.call
+000046  @const720.call
+00004C  @const722.call
+00005B  @const723.call
+00006A  @const724.call
+000079  @const741.call
+000089  @const753.call
+000099  update_stepper
+0000A2  @delay_ms1
+0000B6  lcd_send_nibble
+0000C7  lcd_read_nibble
+0000CD  lcd_send_byte
+0000CE  lcd_read_byte
+00010A  lcd_init
+00013A  kbd_init
+00013D  lcd_gotoxy
+00014F  lcd_putc
+000173  @PSTRINGC7_649
+0001C9  kbd_getc
+000232  @goto10645
+00023A  @MUL3232
+000264  get_num_lcd
+000271  read_key
+0002EA  pow
+00033A  @ITOF
+000357  @MULFF
+0003CC  @DIVFF
+000498  @ADDFF
+0005D9  @FLT
+000618  step_up
+000623  @PSTRINGCN7_649
+00067A  @DIV3232
+0006C9  @PRINTF_L32D_649FPFPF
+0006F0  @FTOSD
+0007A9  step_back
+000800  MAIN
+000800  @cinit1
+00080B  @cinit2
+
+Project Directory:
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_Tema_2_Ernesto_Velasco\
+
+Project Files:
+    Examen.c                                                [10-nov.-23 13:58  CRC=E93A13F0]
+    ..\..\..\..\Escritorio\PICC\Devices\16F877a.h           [12-nov.-13 14:35  CRC=81334808]
+    ..\..\..\..\Escritorio\PICC\Drivers\lcd_c.c             [13-sep.-23 13:21  CRC=B171009B]
+    ..\..\..\..\Escritorio\PICC\Drivers\kbd4x4_b.c          [13-sep.-23 13:25  CRC=DEF67D8A]
+    ..\..\..\..\Escritorio\PICC\Drivers\getNum16.c          [15-sep.-23 13:24  CRC=EEBE17EA]
+
+Source signature=D85109F1
+
+Units:
+    Examen (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Examen.xsym
+    Errors:      Examen.err
+    Ext Symbols: Examen.esym
+    INHX8:       Examen.hex
+    Symbols:     Examen.sym
+    List:        Examen.lst
+    Debug/COFF:  Examen.cof
+    Project:     Examen.ccspjt
+    Call Tree:   Examen.tre
+    Statistics:  Examen.STA

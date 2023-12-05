@@ -1,0 +1,23 @@
+[PROJECT]
+Target=Examen_UIII_Primeras.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Examen_UIII_Primeras.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Examen_UIII_Primeras.c]
+Type=4
+[mru-list]
+1=Examen_UIII_Primeras.c
+[Opened Files]
+1=Examen_UIII_Primeras.c
+2=..\Generador_frecuencia\Generador_frecuencia.c
+3=..\..\..\..\..\Downloads\Examen_UIII_Ernesto\Examen_UIII.c
+4=..\Control_rpm_2\control rpm_proyecto.c
+5=..\..\..\..\..\Downloads\Examen_UIII\examen III.c
+6=
+[Units]
+Count=1
+1=Examen_UIII_Primeras (main)

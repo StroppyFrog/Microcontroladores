@@ -1,0 +1,72 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+021     MAIN.op
+022     @PSTRINGCN7_9600_62_63.P1
+022     MAIN.@SCRATCH1
+022     @PSTRINGC7_9600_62_63.@SCRATCH1
+023     @delay_ms1.P1
+023     @PSTRINGC7_9600_62_63.@SCRATCH2
+023     @PSTRINGCN7_9600_62_63.@SCRATCH1
+024     @PSTRINGC7_9600_62_63.@SCRATCH3
+024     @PSTRINGCN7_9600_62_63.@SCRATCH2
+025     @PSTRINGC7_9600_62_63.@SCRATCH4
+025     @PSTRINGCN7_9600_62_63.@SCRATCH3
+026     @PSTRINGCN7_9600_62_63.@SCRATCH4
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const628.call
+00000F  @const635.call
+000017  @PSTRINGC7_9600_62_63
+000071  @delay_ms1
+000085  @PSTRINGCN7_9600_62_63
+0000E0  MAIN
+0000E0  @cinit1
+0000F2  @cinit2
+
+Project Directory:
+    C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Examen_UIV_presegundas\
+
+Project Files:
+    Examen_UIV_PreSegundas.c                                [04-dic.-23 13:49  CRC=A522A245]
+    ..\..\..\..\Escritorio\PICC\Devices\16F877a.h           [12-nov.-13 14:35  CRC=81334808]
+
+Source signature=A7893255
+
+Units:
+    Examen_UIV_PreSegundas (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Examen_UIV_PreSegundas.xsym
+    Errors:      Examen_UIV_PreSegundas.err
+    Ext Symbols: Examen_UIV_PreSegundas.esym
+    INHX8:       Examen_UIV_PreSegundas.hex
+    Symbols:     Examen_UIV_PreSegundas.sym
+    List:        Examen_UIV_PreSegundas.lst
+    Debug/COFF:  Examen_UIV_PreSegundas.cof
+    Project:     Examen_UIV_PreSegundas.ccspjt
+    Call Tree:   Examen_UIV_PreSegundas.tre
+    Statistics:  Examen_UIV_PreSegundas.STA

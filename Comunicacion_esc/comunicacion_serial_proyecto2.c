@@ -1,0 +1,105 @@
+///Esclavo
+#include <16F877a.h>
+#device ADC = 10
+#use delay(crystal = 20000000)
+#FUSES NOWDT, NOBROWNOUT, NOLVP, HS
+#define LCD_ENABLE_PIN  PIN_A3                                    ////
+#define LCD_RS_PIN      PIN_A5                                    ////
+#define LCD_RW_PIN      PIN_A4                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7 
+#include <lcd.c>
+#include <kbd4x4_b.c>
+#include <getNum16.c>
+
+#use rs232(BAUD = 9600, XMIT = PIN_C6, RCV = PIN_C7)
+
+#define MA1 PIN_B0
+#define MA2 PIN_B1
+
+char char_in;
+int16 tiempo;
+int1 cambio = 0;
+int1 delay_paro(int16 segundos);
+
+#INT_RDA
+void rda_isr() {
+  char_in = getc();
+  if (char_in == '1' || char_in == '3') {
+    tiempo = getc();
+  }
+  cambio = 1;
+}
+
+void paro(){
+   output_low(MA1);
+   output_low(MA2);
+}
+
+int1 delay_paro(int16 segundos)
+{
+   for(int16 i = 0; i < segundos * 100; i++){
+      delay_ms(10);
+      if(char_in == '='){
+         paro();
+         return 1;
+      }
+  }
+   return 0;
+}
+
+void girar_izq(){
+   int8 i = 0;
+   while(i < 1){
+      printf(lcd_putc,"\f%lu",tiempo);
+      output_low(MA1);
+      output_high(MA2);
+      if(delay_paro(tiempo) == 1)break;
+      paro();
+      i++;
+   }
+}
+
+void girar_der(){
+   int8 i = 0;
+   while(i < 1){
+      printf(lcd_putc,"\f%lu",tiempo);
+      output_high(MA1);
+      output_low(MA2);
+      if(delay_paro(tiempo) == 1)break;
+      paro();
+      i++;
+   }
+}
+
+void main() {
+  // Inicializar pines 
+  lcd_init();
+  kbd_init();
+  
+  setup_uart(9600); //Configurar baudios
+  
+  enable_interrupts(INT_RDA);
+  enable_interrupts(GLOBAL);
+  
+  output_high(MA1);
+  output_low(MA2);
+  delay_ms(2000);
+  paro();
+  
+  while (TRUE) {
+    if (cambio) {
+      cambio = 0;
+      switch (char_in) {
+      case '1':
+        girar_izq();
+        break;
+      case '3':
+        girar_der();
+        break;
+      }
+    }
+  }
+}

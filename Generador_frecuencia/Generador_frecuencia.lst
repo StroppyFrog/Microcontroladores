@@ -1,0 +1,144 @@
+CCS PCM C Compiler, Version 5.015, 5967               17-nov.-23 13:23
+
+               Filename:   C:\Users\strop\OneDrive\Documentos\GitHub\Microcontroladores\Generador_frecuencia\Generador_frecuencia.lst
+
+               ROM used:   81 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   12 (3%) at main() level
+                           12 (3%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   03A
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  BTFSS  0B.5
+0018:  GOTO   01B
+0019:  BTFSC  0B.2
+001A:  GOTO   02C
+001B:  MOVF   22,W
+001C:  MOVWF  04
+001D:  MOVF   23,W
+001E:  MOVWF  77
+001F:  MOVF   24,W
+0020:  MOVWF  78
+0021:  MOVF   25,W
+0022:  MOVWF  79
+0023:  MOVF   26,W
+0024:  MOVWF  7A
+0025:  MOVF   20,W
+0026:  MOVWF  0A
+0027:  SWAPF  21,W
+0028:  MOVWF  03
+0029:  SWAPF  7F,F
+002A:  SWAPF  7F,W
+002B:  RETFIE
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   02F
+.................... // Receptor 
+.................... #include <16F877a.h> 
+.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=10 
+.................... #use delay(crystal=20Mhz) 
+.................... #FUSES NOWDT, NOBROWNOUT, NOLVP 
+....................  
+.................... // Directiva para usar el puerto USART 
+.................... //#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7) 
+....................  
+.................... #define led PIN_A0 
+....................  
+.................... #use standard_io(A) 
+....................  
+.................... #define carga 93 
+....................  
+.................... #INT_TIMER0 
+.................... void timer0_interruption() 
+.................... { 
+....................    output_toggle(led); 
+002F:  BSF    03.5
+0030:  BCF    05.0
+0031:  MOVLW  01
+0032:  BCF    03.5
+0033:  XORWF  05,F
+....................    set_timer0(carga); 
+0034:  MOVLW  5D
+0035:  MOVWF  01
+0036:  BCF    0B.2
+0037:  BCF    0A.3
+0038:  BCF    0A.4
+0039:  GOTO   01B
+.................... } 
+....................     
+.................... void main(){ 
+003A:  MOVF   03,W
+003B:  ANDLW  1F
+003C:  MOVWF  03
+003D:  BSF    03.5
+003E:  BSF    1F.0
+003F:  BSF    1F.1
+0040:  BSF    1F.2
+0041:  BCF    1F.3
+0042:  MOVLW  07
+0043:  MOVWF  1C
+0044:  BCF    03.7
+....................    //setup_uart(9600); //Configurar baudios 
+....................  
+....................    setup_timer_0(RTCC_INTERNAL | RTCC_DIV_256); 
+0045:  MOVF   01,W
+0046:  ANDLW  C0
+0047:  IORLW  07
+0048:  MOVWF  01
+....................    // Habilitar interrupciones 
+....................    enable_interrupts(INT_TIMER0); 
+0049:  BCF    03.5
+004A:  BSF    0B.5
+....................    enable_interrupts(GLOBAL); 
+004B:  MOVLW  C0
+004C:  IORWF  0B,F
+....................    set_timer0(carga); 
+004D:  MOVLW  5D
+004E:  MOVWF  01
+....................    while(TRUE){ 
+004F:  GOTO   04F
+....................    } 
+....................  
+.................... } 
+0050:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

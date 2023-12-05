@@ -1,0 +1,10 @@
+>>> Warning 216 "RPM_Nuevo.c" Line 139(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "RPM_Nuevo.c" Line 139(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+>>> Warning 216 "RPM_Nuevo.c" Line 139(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 216 "RPM_Nuevo.c" Line 139(1,2): Interrupts disabled during call to prevent re-entrancy:  (@MUL1616)
+>>> Warning 216 "RPM_Nuevo.c" Line 139(1,2): Interrupts disabled during call to prevent re-entrancy:  (@DIV1616)
+>>> Warning 216 "RPM_Nuevo.c" Line 139(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGCN7_649)
+>>> Warning 216 "RPM_Nuevo.c" Line 139(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PRINTF_LU_649)
+      Memory usage:   ROM=32%      RAM=11% - 25%
+      0 Errors,  7 Warnings.
+Build Successful.

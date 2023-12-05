@@ -1,0 +1,20 @@
+[PROJECT]
+Target=Replica_pulso_proyecto3-U3.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Replica_pulso_proyecto3-U3.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[Replica_pulso_proyecto3-U3.c]
+Type=4
+[mru-list]
+1=Replica_pulso_proyecto3-U3.c
+[Opened Files]
+1=Replica_pulso_proyecto3-U3.c
+2=
+3=
+[Units]
+Count=1
+1=Replica_pulso_proyecto3-U3 (main)

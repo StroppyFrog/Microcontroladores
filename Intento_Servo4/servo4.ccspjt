@@ -1,0 +1,20 @@
+[PROJECT]
+Target=servo4.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=servo4.c
+[Directories]
+Include=C:\Users\strop\OneDrive\Escritorio\PICC\Devices\;C:\Users\strop\OneDrive\Escritorio\PICC\Drivers\
+[servo4.c]
+Type=4
+[mru-list]
+1=servo4.c
+[Opened Files]
+1=..\Servo_3\Servomotor_3.c
+2=..\ejemplo_servo\ejemploservo.c
+3=
+[Units]
+Count=1
+1=servo4 (main)

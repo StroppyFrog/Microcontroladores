@@ -1,0 +1,140 @@
+ÀÄservo_proyecto
+   ÀÄMAIN  1/352  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_init  0/70  Ram=6
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/48  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/48  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄlcd_send_byte  0/94  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/49  Ram=2
+      ³     ³  ÀÄlcd_read_nibble  0/49  Ram=2
+      ³     ÃÄlcd_send_nibble  0/48  Ram=1
+      ³     ÀÄlcd_send_nibble  0/48  Ram=1
+      ÃÄkbd_init  0/3  Ram=0
+      ÃÄmover_servo  0/145  Ram=9
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÀÄ@delay_us1  0/15  Ram=1
+      ÃÄ@PSTRINGCN7_645  0/87  Ram=5
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄlcd_send_byte  0/94  Ram=3
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÃÄlcd_send_byte  0/94  Ram=3
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄlcd_send_byte  0/94  Ram=3
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄlcd_send_byte  0/94  Ram=3
+      ³  ³     ÀÄ*
+      ³  ÀÄlcd_putc  0/44  Ram=1
+      ³     ÀÄ*
+      ÃÄ@PRINTF_L32D_645FPFPF  0/224  Ram=13
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@FTOSD  (Inline)  Ram=5
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄ@DIV3232  0/79  Ram=13
+      ÃÄ@PSTRINGC7_645  0/86  Ram=4
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_putc  0/44  Ram=1
+      ³     ÀÄ*
+      ÃÄget_num_lcd  0/216  Ram=5
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄread_key  (Inline)  Ram=1
+      ³  ³  ÀÄkbd_getc  0/105  Ram=3
+      ³  ³     ÃÄ@goto10703  0/8  Ram=0
+      ³  ³     ÀÄ@const658  0/20  Ram=0
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC7_645  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÃÄpow  (Inline)  Ram=6
+      ³  ³  ÀÄ@MUL3232  0/42  Ram=13
+      ³  ÀÄ@MUL3232  0/42  Ram=13
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄ@PSTRINGC7_645  0/86  Ram=4
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄ@SFTOI  0/31  Ram=4
+      ÃÄmover_servo  0/145  Ram=9
+      ³  ÀÄ*
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄ@SFTOI  0/31  Ram=4
+      ÃÄmover_servo_90  1/173  Ram=9
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÀÄ@delay_us1  0/15  Ram=1
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄ@SFTOI  0/31  Ram=4
+      ÃÄmover_servo_180  1/173  Ram=9
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÀÄ@delay_us1  0/15  Ram=1
+      ÃÄ@FLT  0/63  Ram=10
+      ÃÄmover_servo_181  1/101  Ram=5
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÀÄ@delay_us1  0/15  Ram=1
+      ÃÄ@PSTRINGCN7_645  0/87  Ram=5
+      ³  ÀÄ*
+      ÃÄ@PRINTF_L32D_645FPFPF  0/224  Ram=13
+      ³  ÀÄ*
+      ÀÄ@delay_ms1  0/20  Ram=1

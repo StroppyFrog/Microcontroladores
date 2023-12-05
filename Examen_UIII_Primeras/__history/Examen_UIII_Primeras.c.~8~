@@ -1,0 +1,41 @@
+#include <16F877a.h>
+#device ADC = 10
+#use delay(crystal = 20000000)
+#FUSES NOWDT, NOBROWNOUT, NOLVP, HS
+
+#include <lcd_d.c>
+#include <kbd4x4_b.c>
+#include <getNum16.c>
+
+#define señal PIN_A0
+#use standard_io(A)
+ double carga = 0; 
+
+#INT_TIMER1
+void timer1_isr()
+{
+}
+
+#INT_EXT
+void ext_isr()
+{
+}
+
+void main()
+{
+   // Inicializar pines
+   lcd_init();
+   kbd_init();
+
+   enable_interrupts(GLOBAL);
+   enable_interrupts(INT_RB);
+   enable_interrupts(INT_EXT);
+   int16 Frecuencia;
+   printf(lcd_putc,"\fFrecuencia:"); // Leer velocidad deseada desde el teclado
+   Frecuencia = get_num_lcd(1,2);
+   
+   while (TRUE)
+   {
+   }
+}
+

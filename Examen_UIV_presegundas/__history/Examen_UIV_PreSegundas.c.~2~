@@ -1,0 +1,43 @@
+#include <16F877a.h>
+#device ADC=10
+#use delay(crystal=20Mhz)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+
+#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
+
+#USE STANDARD_IO(A)
+
+void main(){
+
+   setup_adc(ADC_CLOCK_INTERNAL);
+   setup_adc_ports(AN0_AN1_AN3);
+   int16 lectura;
+   printf("\fSelecciona canal\r0 1 o 3\r");
+   delay_ms(1000);
+   while(1){
+      char num_rec=getc();
+      switch(num_rec){
+      case '0':
+         set_adc_channel(0);
+         delay_us(40);
+         lectura = read_adc();
+         printf("\rADC:%lu\r",lectura);
+         break;
+      case '1':
+         set_adc_channel(1);
+         delay_us(40);
+         lectura = read_adc();
+         printf("\rADC:%lu\r",lectura);
+         break;
+      case '3':
+         set_adc_channel(3);
+         delay_us(40);
+         lectura = read_adc();
+         printf("\rADC:%lu\r",lectura);
+         break;
+      default:
+         printf("\r%c no valido\r",num_rec);
+         break;
+   }
+   }
+}
